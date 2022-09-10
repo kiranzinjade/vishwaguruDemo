@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sales_Register" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59df503c-ffd9-4e89-b0b3-318a23b51f90">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[ select * from sales_register ]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="balance_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="paid_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="paid_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="sales_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="sales_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="sales_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="sales_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="sales_quantity" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="sales_quantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<field name="product_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="product_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales_register"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch"/>
+	</title>
+	<columnHeader>
+		<band height="91" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="20" width="100" height="20" uuid="887fd468-3e6e-4f63-ae09-22db53bccdb3"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="20" width="60" height="20" uuid="e1436a54-34fc-418f-9bdf-3468600a7aad"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill No  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="40" width="100" height="20" uuid="fe196d1e-51f2-4d14-bb5b-d5a1008d3950"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="40" width="60" height="20" uuid="3e426944-c860-43be-8b51-121dd2dcd88d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill Date  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="40" width="40" height="20" uuid="6647d92a-19d4-4d42-a31a-0773d65c9284"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mode  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="40" width="80" height="20" uuid="0300c769-de1b-405b-a200-9c5ec05ed1d7"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="20" width="80" height="20" uuid="333a06d8-8574-4ac5-bc67-0ad9f2b15b6a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member Name  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="40" width="80" height="20" uuid="60c1b53e-8668-4d1d-86a0-2b3ca4a1eb06"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="20" width="100" height="20" uuid="c4f4de71-50f0-4226-a120-cd22aa9194fe"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="40" width="100" height="20" uuid="7fd1033c-4c97-423a-a5bf-b35d0758006d"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="60" width="80" height="20" uuid="af744a7f-9b45-46c8-b9d9-4833c4a299ba"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="60" width="100" height="20" uuid="40a0c93b-d5a5-4497-8279-a0ae8f811915"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="195" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="2" width="110" height="98" uuid="7d292606-6d55-4bfc-977e-97710c463a39"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["sales_Register_subReport.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="120" y="170" width="80" height="20" uuid="62d8c729-9b83-48ca-ae79-8ea25b992652"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid Amount  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="170" width="120" height="20" uuid="01094e28-6272-45d8-bdce-6e9266fb5ab6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="340" y="170" width="110" height="20" uuid="d005d184-49c0-4111-b92b-3807f9dc3417"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance Amount :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="170" width="100" height="20" uuid="eae81252-0c5c-430d-9841-f457b609a6ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="600" y="170" width="80" height="20" uuid="7affa86b-fb38-4044-9a3b-585fe709b506"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="680" y="170" width="90" height="20" uuid="113afac9-17a6-44c8-9c1c-800dcbec7dd2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

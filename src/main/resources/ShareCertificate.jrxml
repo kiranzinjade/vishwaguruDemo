@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Shares" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d055879f-7b63-4b24-ac9e-dff0f447ebee">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="110"/>
+	<parameter name="Member_Name" class="java.lang.String"/>
+	<parameter name="Middle_Name" class="java.lang.String"/>
+	<parameter name="Last_Name" class="java.lang.String"/>
+	<parameter name="Father_Name" class="java.lang.String"/>
+	<parameter name="Mother_Name" class="java.lang.String"/>
+	<parameter name="Gender" class="java.lang.String"/>
+	<parameter name="Phone_Number" class="java.lang.String"/>
+	<parameter name="Aadhar_Card" class="java.lang.String"/>
+	<parameter name="PAN_Card" class="java.lang.String"/>
+	<parameter name="Email_Id" class="java.lang.String"/>
+	<parameter name="Category" class="java.lang.String"/>
+	<parameter name="Cast" class="java.lang.String"/>
+	<parameter name="Religion" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM vikas.trn_applicant;]]>
+	</queryString>
+	<field name="aadhar_card" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="applicant_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="application_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_user_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo_file_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="applicant_id" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="78" width="555" height="1" uuid="42eecaae-6630-4282-b80d-9a22460baa89"/>
+			</line>
+			<staticText>
+				<reportElement x="183" y="19" width="186" height="20" uuid="37da1d78-0f9b-460d-84f1-0ba6f3007684"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vividh Karyakari Society]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="183" y="19" width="186" height="20" uuid="c7db823c-77ea-4012-822c-13dd89a74853"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Applicant Form]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="281" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="12" width="84" height="20" uuid="0a59db70-9dd8-486e-b3ae-2cad42572b91"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="52" width="84" height="20" uuid="a295db63-0d97-47db-a449-5dba93a7ac00"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mother Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="32" width="84" height="20" uuid="9c0e6589-09d2-4287-bfc9-689b8f3ba580"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Father Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="72" width="85" height="20" uuid="8f553894-2e39-4492-aa0d-fc2b01e8dcff"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Of Birth :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="92" width="85" height="20" uuid="43fb87ca-61a3-4d82-a5fb-e1449fab8019"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="112" width="86" height="20" uuid="b01826ea-ada4-40f2-b9c2-12fbdbb54b65"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone Number :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="132" width="86" height="20" uuid="563a9f4b-e496-486d-904b-9d262de2e601"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aadhar Card :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="152" width="86" height="20" uuid="fd8d85d5-e9e5-4fcc-8e6e-154c6e7010d6"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAN Card :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="172" width="86" height="20" uuid="ef6e94c7-502a-4992-a19b-c71e5975bdad"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email-Id :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="232" width="85" height="20" uuid="9b713dad-0212-4076-8135-b8b18ae2b85a"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="192" width="86" height="20" uuid="b4b8bb1e-07ee-4edf-870c-cb41318d198b"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Religion :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="212" width="86" height="20" uuid="4153d0e3-3ec0-4d20-989e-dc8d2f22fe1e"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cast :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="1" width="554" height="1" uuid="9ef38747-d916-4e3f-bafe-71614959bb0c"/>
+			</line>
+			<textField>
+				<reportElement x="86" y="12" width="349" height="20" uuid="cb2f0268-4445-48a9-a9df-fdebbebb2636"/>
+				<textFieldExpression><![CDATA[$P{Member_Name}+" "+$P{Middle_Name}+" "+$P{Last_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="32" width="100" height="20" uuid="e74d553f-4310-4173-9cc6-1c295e17a85f"/>
+				<textFieldExpression><![CDATA[$P{Father_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="52" width="100" height="20" uuid="30fbf0b6-5170-4d01-8670-2e4a6cee0f27"/>
+				<textFieldExpression><![CDATA[$P{Mother_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="92" width="100" height="20" uuid="956fc640-e2b2-48e5-b849-79f830039b48"/>
+				<textFieldExpression><![CDATA[$P{Gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="112" width="100" height="20" uuid="c7a02062-2196-4be3-b272-76c59039c89a"/>
+				<textFieldExpression><![CDATA[$P{Phone_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="132" width="100" height="20" uuid="a1ee2598-d698-4e39-a52f-e237543b000a"/>
+				<textFieldExpression><![CDATA[$P{Aadhar_Card}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="152" width="100" height="20" uuid="d87898c2-25d8-4355-8446-74f53c5c08d4"/>
+				<textFieldExpression><![CDATA[$P{PAN_Card}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="172" width="100" height="20" uuid="4db5c952-3d78-4126-bb1f-c55637c94365"/>
+				<textFieldExpression><![CDATA[$P{Email_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="192" width="100" height="20" uuid="ee686e7c-eb6f-4ad9-b261-3852a2fbcd5c"/>
+				<textFieldExpression><![CDATA[$P{Religion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="212" width="100" height="20" uuid="8f5ae1b8-384a-4b7a-87b5-03a4607c9520"/>
+				<textFieldExpression><![CDATA[$P{Cast}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="232" width="100" height="20" uuid="6b3041b1-e9be-4b9f-a36f-42b62cbab295"/>
+				<textFieldExpression><![CDATA[$P{Category}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="58" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="44" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

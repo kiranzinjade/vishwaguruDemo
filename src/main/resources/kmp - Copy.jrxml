@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="kmp" pageWidth="900" pageHeight="599" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec768778-0205-400e-af06-bf3e6e3ee565">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="SocietyName" class="java.lang.String"/>
+	<parameter name="MemberId" class="java.lang.Integer"/>
+	<parameter name="MemberName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50">
+			<textField>
+				<reportElement x="220" y="10" width="350" height="30" uuid="fc313e4a-416b-4273-a161-a6d775d022e3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SocietyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="131">
+			<line>
+				<reportElement x="2" y="0" width="858" height="1" uuid="c75fbdbd-24bb-44cf-9ceb-d4d7817ce062"/>
+			</line>
+			<line>
+				<reportElement x="2" y="88" width="858" height="1" uuid="4a5af97b-3dfc-4826-8a49-5bce9b916d0b"/>
+			</line>
+			<line>
+				<reportElement x="2" y="105" width="858" height="1" uuid="8cef076f-59f8-42ad-897c-1627641302d6"/>
+			</line>
+			<line>
+				<reportElement x="17" y="1" width="1" height="103" uuid="43516738-2eae-4e31-a275-9a202aa71e9b"/>
+			</line>
+			<line>
+				<reportElement x="64" y="1" width="1" height="120" uuid="3a32360a-3912-4248-8866-5c4778fd7631"/>
+			</line>
+			<line>
+				<reportElement x="65" y="31" width="795" height="1" uuid="a6717272-7a95-4dd4-8983-9b7fc37ac257"/>
+			</line>
+			<line>
+				<reportElement x="65" y="57" width="795" height="1" uuid="d38b08e9-96e2-4b31-8b83-997ec71557d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="2" y="122" width="858" height="1" uuid="26a4859f-bbb5-4b2c-9a9f-19bb1f90e2ef"/>
+			</line>
+			<line>
+				<reportElement x="118" y="1" width="1" height="120" uuid="317802d8-dcb7-43e7-a679-f15f772d770a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="166" y="1" width="1" height="120" uuid="a0865d98-987f-4033-a10e-1432d2a0cd6a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="216" y="2" width="1" height="120" uuid="97a99916-c9e6-4d08-9526-0aedc1b47c40">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="252" y="57" width="1" height="65" uuid="20d68603-9c1e-46db-b5e2-39723369c7fe"/>
+			</line>
+			<line>
+				<reportElement x="294" y="58" width="1" height="63" uuid="3b894424-0388-477c-b9c5-2ebbe3db7e40">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="334" y="0" width="1" height="122" uuid="f5f91d39-b96f-49ac-9722-99a533b5d716"/>
+			</line>
+			<line>
+				<reportElement x="378" y="58" width="1" height="63" uuid="fd5e9f46-294d-4498-9762-b9fb169288e5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="424" y="58" width="1" height="63" uuid="6aa16a01-2cb3-499f-a154-e7e0f5a7ba0a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="473" y="2" width="1" height="120" uuid="5dbc8ed3-227c-4dfc-990f-b95e9880c4d0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="527" y="58" width="1" height="63" uuid="35476572-5239-4bf4-a37c-ea93b3e8692a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="573" y="58" width="1" height="63" uuid="0568cefd-e99e-4f44-9252-30658d008e99">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="616" y="1" width="1" height="120" uuid="21bc0fda-b5bf-4da3-b793-0bf95aba6bf6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="660" y="57" width="1" height="65" uuid="6c2f7586-ac15-47f5-a8b3-f9a7a45ef6e4"/>
+			</line>
+			<line>
+				<reportElement x="698" y="57" width="1" height="65" uuid="612514ea-6f56-486e-b445-9bd9f40a426a"/>
+			</line>
+			<line>
+				<reportElement x="739" y="1" width="1" height="120" uuid="841287a0-b244-480b-8890-60ade1062fba">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="817" y="58" width="1" height="63" uuid="5d375796-451f-470e-b5ef-ab8fce619cac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="2" y="-1" width="16" height="87" uuid="ae3527b2-6247-4c8a-85ef-cb8dc790ca89"/>
+				<text><![CDATA[Sr.No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="1" width="42" height="85" uuid="8b67be6c-efcd-4849-8325-ecaf82fdd405"/>
+				<text><![CDATA[Applicant Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="34" width="47" height="19" uuid="d2f26062-b5ec-46aa-9661-95204ead0db2"/>
+				<text><![CDATA[Page No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="31" height="30" uuid="89b47e1d-9584-47c3-92ed-82e78f377ae3"/>
+				<text><![CDATA[Z.P.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="32" width="40" height="24" uuid="500e277b-0ae3-482c-9641-59cb4fb7e255">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="2" width="41" height="27" uuid="60ed9722-33ba-4768-818c-32cafcd7bdb7"/>
+				<text><![CDATA[Owned]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="33" width="47" height="23" uuid="d5f7617d-ef33-4f0c-a0f5-a6c70f8db3f2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[Total Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="58" width="17" height="27" uuid="8123ac75-710f-4e4a-838c-92e8f6a87ea2"/>
+				<text><![CDATA[Hr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="31" width="109" height="26" uuid="9bb5743d-a75d-45f7-a2ef-9be0cb89c2ac"/>
+				<text><![CDATA[demand of local K.M. in Season Year 20-21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="2" width="104" height="29" uuid="d3ae4c7e-2b9b-4d54-91f1-49bf732cd888">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Local K.M. in Season Year 19-20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="58" width="30" height="27" uuid="463309ed-089f-414c-8c45-5e4806da41a7"/>
+				<text><![CDATA[Crop Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="58" width="38" height="27" uuid="4b5148cc-9b01-4687-ac5d-fac3e8d37bfa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Area Hr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="56" width="35" height="29" uuid="1a70fe8c-2dec-42cc-a49e-07828624fb46">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="2" width="105" height="26" uuid="0c296888-408d-4f23-baab-dfa3d5f1ea4b"/>
+				<text><![CDATA[Local K.M. in Season Year 20-21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="31" width="141" height="26" uuid="3ec10430-c9ec-460c-b47d-f75b64cf7352"/>
+				<text><![CDATA[Demand for extra area of local K.M. in season year 20-21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="58" width="37" height="27" uuid="7dfc9d05-248a-445f-abfb-39e83d2253f6"/>
+				<text><![CDATA[Crop Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="58" width="44" height="27" uuid="fbd59346-17e5-41cc-a6f2-f0a01899ad11"/>
+				<text><![CDATA[Area Hr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="58" width="48" height="27" uuid="52e95d35-791d-4169-9d14-c6d3563e9892"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="0" width="105" height="30" uuid="2427a02a-033b-4a59-80fb-a362f30453bd"/>
+				<text><![CDATA[Local K.M. in Season Year 20-21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="31" width="140" height="26" uuid="2b2698c0-6b26-4eaf-9c82-9b986783fb28"/>
+				<text><![CDATA[Demand for suppliment of K.M.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="58" width="40" height="28" uuid="c198d0fb-1f7a-49e2-9ee6-cae9ec6cffa3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Crop Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="531" y="58" width="40" height="27" uuid="205fb7c8-cd61-41b2-98bc-7f5788230df4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Area Hr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="577" y="57" width="40" height="28" uuid="01a6400d-35ae-4eae-b291-d76321385aef">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="1" width="120" height="28" uuid="61e9abe6-3ae6-4f54-a12e-df30bbb079c1"/>
+				<text><![CDATA[Local K.M. in Season Year 20-21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="31" width="120" height="26" uuid="aa501207-93b2-4dc2-b3e4-97ebdcd0cf3d"/>
+				<text><![CDATA[First Proposal Applicant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="57" width="41" height="28" uuid="6fe8cd29-e532-4093-95b0-927204539efc"/>
+				<text><![CDATA[Crop Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="57" width="41" height="28" uuid="dfb923e7-4ae3-490b-a45c-f119037b3161"/>
+				<text><![CDATA[Area Hr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="699" y="58" width="39" height="24" uuid="8a9bccad-68a3-4b60-b918-21aad7bf4e49"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="743" y="2" width="100" height="26" uuid="252f946b-2f5c-4c9c-90b9-9ec21f5e4f86"/>
+				<text><![CDATA[Season Year 20-21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="743" y="32" width="100" height="21" uuid="21957eb4-4fd0-46c8-aa2c-204f68a88db8"/>
+				<text><![CDATA[Total demand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="741" y="56" width="35" height="28" uuid="1bda0ec5-dff7-4230-8bfa-425af5779888"/>
+				<text><![CDATA[Crop Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="779" y="57" width="41" height="28" uuid="ed73cb58-1813-4b4e-afdf-a07ba0173165"/>
+				<text><![CDATA[Area Hr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="821" y="57" width="39" height="24" uuid="f7ee922c-9fa0-4871-b2d0-88a92b46b269"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="7" width="50" height="18" uuid="da7e52d1-65f5-4902-978b-fdccb8f6bfaa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Local K.M.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="89" width="10" height="15" uuid="256fb32f-65f8-47f1-888f-254794835455">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="88" width="27" height="15" uuid="5880e61f-93df-49aa-97f1-98523c61465a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="86" width="22" height="17" uuid="e8e2d7f6-3b6f-405d-aadb-b61a1562917c"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="86" width="25" height="17" uuid="11c5b9b4-017d-43a1-959e-b130858ed2c1"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="86" width="20" height="17" uuid="244f8205-902a-4899-91ed-b7c233af2934"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="86" width="11" height="17" uuid="71a49bfb-60ee-4e8b-b145-aa3b6b7ad775"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="86" width="16" height="17" uuid="105c5aad-76f6-4c7d-aa6e-ad09b33a83e1"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="86" width="14" height="17" uuid="0db8c202-1395-4cb1-9ddf-7d8301a48e8f"/>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="86" width="17" height="17" uuid="9b8dc469-cc95-46bd-89f9-b2349f377aa6"/>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="86" width="26" height="17" uuid="24256866-26f7-41d3-9220-c533d91135b4"/>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="86" width="23" height="17" uuid="f588fb42-d9dd-4570-a8be-2c185735b3af"/>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="86" width="31" height="17" uuid="20b5c1d7-93d6-4cd2-b7c6-9d988bd81487"/>
+				<text><![CDATA[12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="88" width="26" height="15" uuid="ff6ccf8e-ec59-43fa-93ee-e31d834c47b8"/>
+				<text><![CDATA[13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="582" y="86" width="23" height="17" uuid="12963988-677a-4497-9c87-35276239c962"/>
+				<text><![CDATA[14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="624" y="84" width="23" height="17" uuid="3b2ba1d9-4dfa-498d-8e32-6f54c618006c"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="669" y="86" width="20" height="17" uuid="1dece815-9d84-4d7f-be04-a34338a60c3c"/>
+				<text><![CDATA[16]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="707" y="86" width="20" height="17" uuid="aaa9c1e7-0730-4cd6-8e68-5f606b66c564"/>
+				<text><![CDATA[18]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="750" y="86" width="20" height="17" uuid="59edb953-3984-40e7-ab99-1a8362c85d5f"/>
+				<text><![CDATA[19]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="789" y="86" width="23" height="17" uuid="0765abe4-7378-4c8d-b916-4ffbe415294d"/>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="828" y="86" width="30" height="17" uuid="16aeac97-c096-481a-a963-70690386d647"/>
+				<text><![CDATA[21]]></text>
+			</staticText>
+			<line>
+				<reportElement x="860" y="2" width="1" height="119" uuid="da95e797-46b5-4f4b-9004-4474a78a1db2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="777" y="58" width="1" height="63" uuid="19355e6c-3086-4e3b-a9cc-016e97f5c17d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="1" y="1" width="1" height="120" uuid="9f245628-3b1d-4c46-b8bb-19a0db32aca1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="195">
+			<textField>
+				<reportElement x="134" y="18" width="100" height="30" uuid="ef47828a-32f2-48e3-a499-997cd7123e92"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="559" splitType="Stretch"/>
+	</summary>
+</jasperReport>

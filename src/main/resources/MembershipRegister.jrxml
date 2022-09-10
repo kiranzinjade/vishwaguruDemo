@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MembershipRegister" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dd6c2576-0056-44e5-b9de-75fda1a00fc9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="nomineeFirstName" class="java.lang.String"/>
+	<parameter name="nomineeRelation" class="java.lang.String"/>
+	<parameter name="dob" class="java.util.Date"/>
+	<parameter name="nominationDate" class="java.util.Date"/>
+	<parameter name="guardian" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="value" class="java.lang.Double"/>
+	<parameter name="area" class="java.lang.Double"/>
+	<parameter name="no" class="java.lang.String"/>
+	<parameter name="belType" class="java.lang.String"/>
+	<parameter name="belNo." class="java.lang.Integer"/>
+	<parameter name="belValue" class="java.lang.Double"/>
+	<parameter name="date" class="java.util.Date"/>
+	<parameter name="borrowingAmt" class="java.lang.Double"/>
+	<parameter name="depositeAmt" class="java.lang.Double"/>
+	<parameter name="shareAmount" class="java.lang.Double"/>
+	<parameter name="land" class="java.lang.Integer"/>
+	<parameter name="memberId" class="java.lang.Long"/>
+	<parameter name="id" class="java.lang.Long"/>
+	<queryString language="SQL">
+		<![CDATA[select * from member where id=  $P{memberId}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="aadhar_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="aadhar_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="application_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="board_resolution_no_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="board_resolution_no_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cast"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dependents" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dependents"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="family_member" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="family_member"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="father_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="inactive_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="inactive_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="kmp_status" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="kmp_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_unique_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_unique_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middle_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mother_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="occupation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="occupation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pan_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="phone_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="ration_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ration_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="religion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="802" splitType="Stretch">
+			<subreport>
+				<reportElement x="108" y="569" width="200" height="89" uuid="2147f4f7-d2aa-4275-a386-282a5dcdf8cd"/>
+				<subreportParameter name="belValue">
+					<subreportParameterExpression><![CDATA[$P{belValue}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="belType">
+					<subreportParameterExpression><![CDATA[$P{belType}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="belNo.">
+					<subreportParameterExpression><![CDATA[$P{belNo.}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="memberId">
+					<subreportParameterExpression><![CDATA[$P{memberId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["MembershipRegister_3.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="32" y="410" width="200" height="116" uuid="8472fed0-fc8e-4a14-a7a6-bf3681ed22d8"/>
+				<subreportParameter name="address">
+					<subreportParameterExpression><![CDATA[$P{address}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="value">
+					<subreportParameterExpression><![CDATA[$P{value}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="area">
+					<subreportParameterExpression><![CDATA[$P{area}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no">
+					<subreportParameterExpression><![CDATA[$P{no}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="memberId">
+					<subreportParameterExpression><![CDATA[$P{memberId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["MembershipRegister_2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="-16" y="0" width="200" height="200" uuid="ed31ebdb-789e-45d2-864c-8e7964d3a703"/>
+				<subreportParameter name="nomineeFirstName">
+					<subreportParameterExpression><![CDATA[$P{nomineeFirstName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="nomineeRelation">
+					<subreportParameterExpression><![CDATA[$P{nomineeRelation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="guardian">
+					<subreportParameterExpression><![CDATA[$P{guardian}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dob">
+					<subreportParameterExpression><![CDATA[$P{dob}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="nominationDate">
+					<subreportParameterExpression><![CDATA[$P{nominationDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="land">
+					<subreportParameterExpression><![CDATA[$P{land}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="id">
+					<subreportParameterExpression><![CDATA[$P{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="address">
+					<subreportParameterExpression><![CDATA[$P{address}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="memberId">
+					<subreportParameterExpression><![CDATA[$P{memberId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["MembershipRegister_1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="-14" y="730" width="200" height="72" uuid="21455e5a-2228-43ce-ba90-dcd51b800950"/>
+				<subreportParameter name="borrowingAmt">
+					<subreportParameterExpression><![CDATA[$P{borrowingAmt}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="shareAmount">
+					<subreportParameterExpression><![CDATA[$P{shareAmount}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="depositeAmt">
+					<subreportParameterExpression><![CDATA[$P{depositeAmt}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="date">
+					<subreportParameterExpression><![CDATA[$P{date}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="id">
+					<subreportParameterExpression><![CDATA[$P{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="memberId">
+					<subreportParameterExpression><![CDATA[$P{memberId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["MembershipRegister_4.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

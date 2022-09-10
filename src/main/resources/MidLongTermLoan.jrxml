@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MidLongTermLoan" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45edec25-cd04-4aa7-9804-c625d08c5967">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="borrowerName" class="java.lang.String"/>
+	<field name="loanAccountNo" class="java.lang.Long"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="memberId" class="java.lang.Long"/>
+	<field name="village" class="java.lang.String"/>
+	<field name="sanctionedLoanAmount" class="java.lang.Double"/>
+	<field name="loanAmount" class="java.lang.Double"/>
+	<field name="benefitingArea" class="java.lang.Double"/>
+	<field name="purpose" class="java.lang.String"/>
+	<field name="costOfInvestment" class="java.lang.Double"/>
+	<field name="resolutionNo" class="java.lang.Long"/>
+	<field name="resolutionDate" class="java.util.Date"/>
+	<field name="dccbLoanNo" class="java.lang.Long"/>
+	<field name="assigneeOfLand" class="java.lang.Boolean"/>
+	<field name="mortgageDeedNo" class="java.lang.Long"/>
+	<field name="mortgageDate" class="java.util.Date"/>
+	<field name="extentMorgage" class="java.lang.Double"/>
+	<field name="landAddress" class="java.lang.String"/>
+	<field name="valueOfProperty" class="java.lang.Double"/>
+	<field name="wet" class="java.lang.Double"/>
+	<field name="dry" class="java.lang.Double"/>
+	<field name="installmentDate" class="java.util.Date"/>
+	<field name="installmentAmt" class="java.lang.Double"/>
+	<field name="closingPrinciple" class="java.lang.Double"/>
+	<field name="interestPaid" class="java.lang.Double"/>
+	<field name="balanceInterest" class="java.lang.Double"/>
+	<field name="disbursementDate" class="java.util.Date"/>
+	<field name="disbursementAmt" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="51" y="-10" width="449" height="30" uuid="b5dd8a9c-2cef-4ee0-a5fe-d8a3254b8016"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[MEDIUM TERM/LONG TERM DISBURSEMENT CUM LOAN LEDGER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="505" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="8" width="554" height="1" uuid="98d8e928-a746-4530-b247-145c6ed80494"/>
+			</line>
+			<line>
+				<reportElement x="1" y="8" width="1" height="382" uuid="925f2256-c6a4-4cdc-b0aa-7e742a080793"/>
+			</line>
+			<line>
+				<reportElement x="555" y="8" width="1" height="382" uuid="6091a078-e8df-4f13-b705-5542a41b387e"/>
+			</line>
+			<line>
+				<reportElement x="1" y="30" width="554" height="1" uuid="526c3ed8-567a-419c-9f76-153c28f7c75f"/>
+			</line>
+			<line>
+				<reportElement x="1" y="51" width="554" height="1" uuid="2c78cef7-5889-46af-99e3-b8449b334f87"/>
+			</line>
+			<line>
+				<reportElement x="1" y="72" width="554" height="1" uuid="73c3dd5d-9236-4080-8e68-cebad7d5d128"/>
+			</line>
+			<line>
+				<reportElement x="1" y="93" width="554" height="1" uuid="f41d48a8-a66a-4175-b264-c74399686c77"/>
+			</line>
+			<line>
+				<reportElement x="1" y="115" width="554" height="1" uuid="46bd87a2-b764-47b1-aa76-bb2c5b6866e1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="137" width="554" height="1" uuid="3d86f1a4-5d5d-41a8-aca9-b45002372310"/>
+			</line>
+			<line>
+				<reportElement x="1" y="154" width="554" height="1" uuid="43bd9171-ddfc-4eb9-8d83-b2503cc26b83"/>
+			</line>
+			<line>
+				<reportElement x="1" y="171" width="554" height="1" uuid="a89636c2-9f8f-4b20-85f3-c7dc63bba7f1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="190" width="554" height="1" uuid="4f5c40e3-5a79-4186-ae1e-ae32cec7380b"/>
+			</line>
+			<line>
+				<reportElement x="1" y="210" width="554" height="1" uuid="a45b68b3-cd27-4e52-9c08-a6ebfcd684a4"/>
+			</line>
+			<line>
+				<reportElement x="1" y="225" width="554" height="1" uuid="36ca775a-7c47-4cd2-ad9d-4e0ac4c08e1d"/>
+			</line>
+			<line>
+				<reportElement x="281" y="8" width="1" height="130" uuid="da3c4e84-8148-4ffe-9fa0-82b9e389d739"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="10" width="100" height="20" uuid="93bc3b66-435c-4fd3-905d-27ce363f8741"/>
+				<text><![CDATA[Loan No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="31" width="100" height="20" uuid="d029ebb5-e800-487f-8d48-a4548ae925fa"/>
+				<text><![CDATA[Membership No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="52" width="100" height="20" uuid="d47e226d-11af-4744-b229-ea1ebc9fa3c0"/>
+				<text><![CDATA[Name of Borrower:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="73" width="100" height="20" uuid="881588e8-6c36-47ed-8b8c-1c88b6b647ed"/>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="94" width="100" height="20" uuid="fbc4bc97-1b58-44dc-a509-51f66e612faf"/>
+				<text><![CDATA[Village:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="117" width="271" height="20" uuid="8927fcb5-9792-4e51-923f-1ba35eaaf1ac"/>
+				<text><![CDATA[Maximum Borrowing Power as on date of sanction:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="139" width="120" height="15" uuid="45abbccb-d08f-4d05-bab6-7bae97d22c0e"/>
+				<text><![CDATA[Loan Amount sanctioned]]></text>
+			</staticText>
+			<line>
+				<reportElement x="155" y="137" width="1" height="73" uuid="ebaefca8-fc74-4526-838c-cbe9dd896908"/>
+			</line>
+			<line>
+				<reportElement x="243" y="137" width="1" height="73" uuid="4c6fbb0e-7096-472b-b357-522876e1949f"/>
+			</line>
+			<line>
+				<reportElement x="354" y="137" width="1" height="73" uuid="e5249bae-3390-4dc3-92fe-e14154e6fbbe"/>
+			</line>
+			<line>
+				<reportElement x="456" y="137" width="1" height="73" uuid="2e197cc2-d0a7-48c8-aca8-14cb1eb22db6"/>
+			</line>
+			<staticText>
+				<reportElement x="170" y="139" width="74" height="15" uuid="13d52743-990a-4744-9f0a-e743de409cd0"/>
+				<text><![CDATA[Purpose]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="139" width="100" height="15" uuid="e1feef67-0a7e-44d8-9789-2789aab88302"/>
+				<text><![CDATA[Cost of Investment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="139" width="100" height="15" uuid="effc9296-8002-4f4c-831b-ab144ad0194c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Loan Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="461" y="139" width="94" height="15" uuid="fe193903-51e8-488e-be35-1aae9508e8d2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Benefiting Area]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="240" width="554" height="1" uuid="7bf8e6a6-7b01-4de5-b96b-b412fc577ae3"/>
+			</line>
+			<line>
+				<reportElement x="1" y="255" width="554" height="1" uuid="d7a40709-44de-45a0-b459-41f1ae405727"/>
+			</line>
+			<line>
+				<reportElement x="1" y="270" width="554" height="1" uuid="a10caceb-d166-46ad-bae1-1483ffa01d2a"/>
+			</line>
+			<line>
+				<reportElement x="1" y="285" width="554" height="1" uuid="d1ed2414-85d8-4a1a-91a9-40be234dc140"/>
+			</line>
+			<line>
+				<reportElement x="1" y="300" width="554" height="1" uuid="3fb152e2-80f0-4dfa-93c8-e2e8d1ddbacc"/>
+			</line>
+			<line>
+				<reportElement x="1" y="315" width="554" height="1" uuid="6a93ad8a-2ce3-47cf-830b-a7b2113477c5"/>
+			</line>
+			<line>
+				<reportElement x="1" y="330" width="554" height="1" uuid="9ae36b64-a9db-40f5-a883-1581dcd8cbe6"/>
+			</line>
+			<line>
+				<reportElement x="1" y="345" width="554" height="1" uuid="0fdc9e17-6784-4b00-9857-b36e77ed482c"/>
+			</line>
+			<line>
+				<reportElement x="1" y="360" width="554" height="1" uuid="364be213-77fc-42b6-a79a-5516405aee09"/>
+			</line>
+			<line>
+				<reportElement x="1" y="375" width="554" height="1" uuid="465e7290-e1a8-453a-9a32-30ab3ee924d8"/>
+			</line>
+			<line>
+				<reportElement x="1" y="390" width="554" height="1" uuid="23d535c4-d9e0-497d-b178-2ed961022a2b"/>
+			</line>
+			<line>
+				<reportElement x="1" y="420" width="554" height="1" uuid="4c6eb0e4-9887-48e4-91b7-5176c4c5e521"/>
+			</line>
+			<line>
+				<reportElement x="155" y="224" width="1" height="62" uuid="939eb2cc-2b46-4c79-a95b-f8c62d9cf363"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="225" width="130" height="15" uuid="119c7a1f-7785-4d6c-b059-ab9806648e5e"/>
+				<text><![CDATA[Disbursement Voucher No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="255" width="130" height="15" uuid="2ffb207a-354e-454d-917b-3883156b7b2b"/>
+				<text><![CDATA[Resolution No. & Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="270" width="130" height="15" uuid="0c863860-6276-458f-9392-fac70d31b813"/>
+				<text><![CDATA[D.C.C.B. Loan No.:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="252" y="224" width="1" height="62" uuid="c201351c-e121-46b1-bfd3-d38576a56703"/>
+			</line>
+			<line>
+				<reportElement x="355" y="224" width="1" height="62" uuid="51753582-5e74-49e6-a55f-e1aa3221e66d"/>
+			</line>
+			<line>
+				<reportElement x="458" y="224" width="1" height="62" uuid="b00aebfe-d18b-4612-90b0-0c8c633b8da5"/>
+			</line>
+			<line>
+				<reportElement x="281" y="285" width="1" height="105" uuid="8773fcea-9b93-4a71-8ff1-79f8675022ce"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="285" width="242" height="15" uuid="01e8d7f2-5680-4be6-ba33-c75da64c4c14"/>
+				<text><![CDATA[Name of Village where land is situated:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="300" width="242" height="15" uuid="b6bb0ff8-2f75-4c76-a5fe-42783e20bb54"/>
+				<text><![CDATA[Total holding(Acre):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="315" width="242" height="15" uuid="f9027b26-3a89-4230-b0a7-9d58485f98b4"/>
+				<text><![CDATA[Value of the property:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="330" width="242" height="15" uuid="cfba77dd-e0a5-4989-a1bc-733407ac1f38"/>
+				<text><![CDATA[Whether assignee of land:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="345" width="242" height="15" uuid="035f392e-c7c5-4af2-8fa7-af8f27ed3fb1"/>
+				<text><![CDATA[Mortgage Deed No.& Date.(for LT Loan):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="360" width="242" height="15" uuid="956a6b77-0379-4bcb-9932-bd961bb88ca5"/>
+				<text><![CDATA[Extent Mortgaged (for LT loan):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="375" width="242" height="15" uuid="331cc7a0-d888-4422-90b8-61b84afa7701"/>
+				<text><![CDATA[Remarks:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="403" width="154" height="1" uuid="606b7254-1e13-45e5-97c9-eeff291491ff"/>
+			</line>
+			<line>
+				<reportElement x="1" y="450" width="554" height="1" uuid="7c6359c9-e7ef-494b-90db-d4e4b79532e0"/>
+			</line>
+			<line>
+				<reportElement x="1" y="463" width="554" height="1" uuid="797f7a1a-86fd-429a-bd06-c19381856a01"/>
+			</line>
+			<line>
+				<reportElement x="1" y="480" width="554" height="1" uuid="b65e6974-d8b4-452d-bfdc-86f41d0429be"/>
+			</line>
+			<line>
+				<reportElement x="1" y="497" width="554" height="1" uuid="c845fc2a-9791-47b3-92a2-0ceee5b944d8"/>
+			</line>
+			<line>
+				<reportElement x="1" y="421" width="1" height="76" uuid="ead3e88d-5106-4ba7-9c32-b31d241b56eb"/>
+			</line>
+			<line>
+				<reportElement x="39" y="421" width="1" height="76" uuid="53a33316-535f-47fb-a18a-ad4d943373e8"/>
+			</line>
+			<line>
+				<reportElement x="87" y="421" width="1" height="76" uuid="8516d2f8-2fdb-4ca9-b8dd-904b0edb9590"/>
+			</line>
+			<line>
+				<reportElement x="134" y="421" width="1" height="76" uuid="3c88ebc8-fdda-450e-abdc-27ac73951518"/>
+			</line>
+			<line>
+				<reportElement x="183" y="421" width="1" height="76" uuid="53adabf3-d768-44ab-8fa9-a7eba28e0820"/>
+			</line>
+			<line>
+				<reportElement x="239" y="421" width="1" height="76" uuid="d8ad3711-b202-4a68-b319-8932f92ba6f8"/>
+			</line>
+			<line>
+				<reportElement x="291" y="421" width="1" height="76" uuid="0c070eb9-cf4c-4552-999d-8ccf7ca92503"/>
+			</line>
+			<line>
+				<reportElement x="346" y="421" width="1" height="76" uuid="c0158165-0912-4edc-b306-ef3c4148ce32"/>
+			</line>
+			<line>
+				<reportElement x="399" y="421" width="1" height="76" uuid="44d70dbc-8f51-46f7-91f9-4a37ce157e5d"/>
+			</line>
+			<line>
+				<reportElement x="452" y="437" width="1" height="60" uuid="6e3fa530-9109-476b-8605-55c9d66201a7"/>
+			</line>
+			<line>
+				<reportElement x="504" y="421" width="1" height="76" uuid="84beb2d7-ea8e-47bb-95af-2516425514c5"/>
+			</line>
+			<line>
+				<reportElement x="554" y="421" width="1" height="76" uuid="2eef989a-df76-4d7c-bdf1-b779bf4d0dfb"/>
+			</line>
+			<staticText>
+				<reportElement x="8" y="430" width="31" height="20" uuid="f74af452-203f-47b2-8040-417ea4f46e20"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="430" width="49" height="20" uuid="d13f96a9-bdda-41cb-8cf0-86428b7fb89e"/>
+				<text><![CDATA[Particulars]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="430" width="35" height="20" uuid="78e55c73-27c4-4cee-bac3-91e1a1b2bd78"/>
+				<text><![CDATA[Debit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="430" width="35" height="20" uuid="7c0fed47-558a-47d8-8ac5-24009b4e1fc8"/>
+				<text><![CDATA[Credit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="430" width="35" height="20" uuid="e61a013a-6fae-41f6-b414-3b24f9d6fd27"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="421" width="43" height="29" uuid="9d11c93b-295e-4e24-92b3-757ff5efbd7a"/>
+				<text><![CDATA[No. of Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="430" width="43" height="20" uuid="71df6e5d-6781-44a0-9640-05ee6be51094"/>
+				<text><![CDATA[Initials]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="430" width="43" height="20" uuid="d26119c7-0dff-481c-9f83-731da487345f"/>
+				<text><![CDATA[Products]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="420" width="43" height="15" uuid="2d4e7288-783a-44f4-a7d5-543a4bf4d72a"/>
+				<text><![CDATA[Interest]]></text>
+			</staticText>
+			<line>
+				<reportElement x="400" y="435" width="104" height="1" uuid="22587a03-6ec0-4e3c-b3ca-d72b8404d814"/>
+			</line>
+			<staticText>
+				<reportElement x="405" y="435" width="43" height="15" uuid="99b20400-8ecc-4e06-96ab-1adcb9957d68"/>
+				<text><![CDATA[Due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="435" width="43" height="15" uuid="5cb25558-878d-4af1-8f68-91649b12cc5f"/>
+				<text><![CDATA[Recd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="429" width="43" height="20" uuid="59120c06-05f4-425c-910a-5a0c0c28240d"/>
+				<text><![CDATA[Initials]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="451" width="24" height="13" uuid="a757fc05-7c80-46ac-9f2f-0dfff755abf9"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="451" width="24" height="13" uuid="e34f6887-2a59-4889-bfe4-aa36f5840f90"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="451" width="24" height="13" uuid="ffcf3e4d-a862-4fff-9c9c-0b6d5a3c40fe"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="451" width="24" height="13" uuid="85969f2c-36de-4052-8b3f-a052332979ef"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="451" width="24" height="13" uuid="f26780b4-8006-4cb6-a89a-f97873d541bc"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="451" width="24" height="13" uuid="73177909-d5f6-473e-8c1f-de8b8f27ad23"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="451" width="24" height="13" uuid="b35674ff-357e-44b4-b12d-20da6b96d2f3"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="451" width="24" height="13" uuid="350caac9-393e-4a66-b82b-fb7341473535"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="450" width="24" height="13" uuid="685d867b-0b7a-4f61-8f21-b3ace60d49e5"/>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="450" width="24" height="13" uuid="065420b5-5924-4847-8bc0-136d98c02ff3"/>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="526" y="450" width="24" height="13" uuid="510ea912-dae3-4337-a5bd-95e4016dabe5"/>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="303" y="53" width="100" height="19" uuid="45dff161-a4c9-4dbf-afbd-b0ddfb818d43"/>
+				<textFieldExpression><![CDATA[$F{borrowerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="77" width="254" height="16" uuid="6c417cf4-45e8-480d-823c-8a17b39875c1"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="94" width="100" height="20" uuid="a61232bf-29e6-4ef5-aed7-3e7b75ab0871"/>
+				<textFieldExpression><![CDATA[$F{village}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="172" width="128" height="15" uuid="d3ee86bf-1307-490d-96b2-681f4a87db37"/>
+				<textFieldExpression><![CDATA[$F{sanctionedLoanAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="172" width="85" height="16" uuid="8d77aa08-97e1-4fb3-9061-234ad59f090b"/>
+				<textFieldExpression><![CDATA[$F{loanAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="298" y="301" width="43" height="14" uuid="8da2f84a-0e91-43f0-9f3c-9c456e046674"/>
+				<text><![CDATA[Wet:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="301" width="43" height="14" uuid="f8e347c9-f2d7-4f43-8aca-4b92c91a1a1c"/>
+				<text><![CDATA[Dry:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="172" width="82" height="18" uuid="faaede41-2f13-4565-b8b8-4c32409bb7fa"/>
+				<textFieldExpression><![CDATA[$F{purpose}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="172" width="100" height="15" uuid="e6962074-767c-44a3-86be-88082c8d37cb"/>
+				<textFieldExpression><![CDATA[$F{costOfInvestment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="458" y="172" width="92" height="15" uuid="dc6aa18e-c31d-4daf-88af-1921213dbad7"/>
+				<textFieldExpression><![CDATA[$F{benefitingArea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="270" width="86" height="15" uuid="4c4effe3-6ea6-474b-ad98-1b85d1fc7388"/>
+				<textFieldExpression><![CDATA[$F{dccbLoanNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="286" width="141" height="15" uuid="f979114b-b807-4202-9c30-ed2a6d670ed0"/>
+				<textFieldExpression><![CDATA[$F{landAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="317" width="151" height="13" uuid="4e3932b9-4cea-46d4-9651-0e5e550bc358"/>
+				<textFieldExpression><![CDATA[$F{valueOfProperty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="331" width="107" height="14" uuid="70302210-fe29-4a90-a4ce-b753b3173b93"/>
+				<textFieldExpression><![CDATA[$F{assigneeOfLand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="360" width="100" height="15" uuid="b2ca1d1e-c900-4618-9b9f-b19f33429742"/>
+				<textFieldExpression><![CDATA[$F{extentMorgage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="116" width="113" height="15" uuid="44a52f73-791c-4547-8ad6-b03bb9991907"/>
+				<textFieldExpression><![CDATA[$F{loanAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="256" width="100" height="14" uuid="4a1bac74-f0f6-4ca8-83ab-4fb0d3564826"/>
+				<textFieldExpression><![CDATA[$F{resolutionNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="255" width="92" height="15" isPrintInFirstWholeBand="true" uuid="4d84ea80-6984-4c6e-b451-a82d18d610fa"/>
+				<textFieldExpression><![CDATA[$F{resolutionDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd/mm/yyyy"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="345" width="100" height="15" uuid="e4e185da-2b9f-4fea-967c-6270cabbf0ec"/>
+				<textFieldExpression><![CDATA[$F{mortgageDeedNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="345" width="100" height="15" uuid="c25d46ad-604f-4b0b-b00b-5bf8bfcd41cd"/>
+				<textFieldExpression><![CDATA[$F{mortgageDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd/mm/yyyy"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="10" width="100" height="20" uuid="5024e12c-5a63-4076-aa65-0cfb0dfc1454"/>
+				<textFieldExpression><![CDATA[$F{loanAccountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="31" width="100" height="20" uuid="bce32cf7-0d57-4d06-aa5d-37f1de74149d"/>
+				<textFieldExpression><![CDATA[$F{memberId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="301" width="72" height="14" uuid="e541e046-3897-48ba-95fc-1782632c2065"/>
+				<textFieldExpression><![CDATA[$F{wet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="301" width="66" height="14" uuid="3c58171a-0c2d-41a6-b206-f12629d3598c"/>
+				<textFieldExpression><![CDATA[$F{dry}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="463" width="33" height="17" uuid="153504ac-8dea-4414-977a-de891e299d14"/>
+				<textFieldExpression><![CDATA[$F{disbursementDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="465" width="48" height="15" uuid="c6a25ff3-7ce3-4ea7-88dd-37f9de653cc8"/>
+				<textFieldExpression><![CDATA[$F{disbursementAmt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="482" width="37" height="15" uuid="94976222-7f78-45d4-aa45-abb58746e624"/>
+				<textFieldExpression><![CDATA[$F{installmentDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="480" width="46" height="17" uuid="eea79fd6-8b97-4ea6-91b1-fb0e5981cbf3"/>
+				<textFieldExpression><![CDATA[$F{installmentAmt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="482" width="57" height="15" uuid="91ecb39b-1f72-4835-8ac8-860615f790a9"/>
+				<textFieldExpression><![CDATA[$F{closingPrinciple}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="454" y="482" width="50" height="15" uuid="dd5510cc-7cca-4eee-ae7b-5a28d74fd372"/>
+				<textFieldExpression><![CDATA[$F{interestPaid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="480" width="50" height="17" uuid="d64e3874-0a08-4c20-8e2a-d488451d693f"/>
+				<textFieldExpression><![CDATA[$F{balanceInterest}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

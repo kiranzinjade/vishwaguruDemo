@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="imagetest" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="db1fe87c-1c35-4a97-9068-327c18df8e3d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="16"/>
+	<property name="ireport.y" value="461"/>
+	<import value="org.apache.commons.codec.binary.*"/>
+	<parameter name="para1" class="java.lang.String"/>
+	<parameter name="paratable" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="802" splitType="Stretch">
+			<image isLazy="true">
+				<reportElement mode="Opaque" x="-19" y="-18" width="592" height="301" uuid="42a3fe1f-ee88-4d65-8084-f8827172d0ce"/>
+				<imageExpression><![CDATA[new java.io.ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64($P{para1}.getBytes()))]]></imageExpression>
+			</image>
+			<image isLazy="true">
+				<reportElement mode="Opaque" x="-19" y="283" width="592" height="296" uuid="41a3fe1f-ee88-4d65-8084-f8827172d0ce"/>
+				<imageExpression><![CDATA[new java.io.ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64($P{paratable}.getBytes()))]]></imageExpression>
+			</image>
+		</band>
+	</title>
+</jasperReport>

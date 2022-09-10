@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SundryDebtor" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab142103-9ff1-4785-a77e-c44de14f011b">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date" class="java.util.Date"/>
+	<field name="particulars" class="java.lang.String"/>
+	<field name="transactionDate" class="java.util.Date"/>
+	<field name="debit" class="java.lang.Double"/>
+	<field name="credit" class="java.lang.Double"/>
+	<field name="balance" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="223" y="30" width="150" height="30" uuid="d1dce14a-aaed-493b-8e63-0d36aab92ce2"/>
+				<text><![CDATA[SUNDRY DEBTOR LEDGER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="71" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="9" width="551" height="1" uuid="dd211cd5-d818-4d43-8238-0a9ba2c89851"/>
+			</line>
+			<line>
+				<reportElement x="0" y="52" width="551" height="1" uuid="07c7e099-d4fb-42e5-bee4-b7f78eefe493"/>
+			</line>
+			<line>
+				<reportElement x="0" y="69" width="551" height="1" uuid="81ddb119-fc72-41cb-a66e-ecc601976614"/>
+			</line>
+			<line>
+				<reportElement x="0" y="10" width="1" height="59" uuid="1292dd46-1348-410c-9ce1-c76b85b4c14c"/>
+			</line>
+			<line>
+				<reportElement x="68" y="10" width="1" height="59" uuid="ba898c32-03fb-4695-9c7a-fab6c2ebc744"/>
+			</line>
+			<line>
+				<reportElement x="131" y="10" width="1" height="59" uuid="69fb0b0f-a95b-4b5e-978e-764d8662d4fb"/>
+			</line>
+			<line>
+				<reportElement x="178" y="10" width="1" height="59" uuid="4d2ed555-8324-4c78-9634-2fb2dbf2797d"/>
+			</line>
+			<line>
+				<reportElement x="243" y="10" width="1" height="59" uuid="85b6b1ee-30a7-45b2-8b53-3d3f170330a0"/>
+			</line>
+			<line>
+				<reportElement x="298" y="10" width="1" height="59" uuid="9c11c667-2ab7-4238-b126-39d3e14817c3"/>
+			</line>
+			<line>
+				<reportElement x="360" y="10" width="1" height="59" uuid="8c1f02eb-4e61-44b3-bf63-9b982922f163"/>
+			</line>
+			<line>
+				<reportElement x="420" y="10" width="1" height="59" uuid="d2601c79-ca9d-4579-808c-2e9e5e9c1c37"/>
+			</line>
+			<line>
+				<reportElement x="492" y="10" width="1" height="59" uuid="5536e56a-2a22-4de9-b346-55a19f04407b"/>
+			</line>
+			<line>
+				<reportElement x="550" y="10" width="1" height="59" uuid="06dafa8f-167a-49b1-8b88-62215c67aee7"/>
+			</line>
+			<staticText>
+				<reportElement x="13" y="20" width="48" height="30" uuid="d11098de-a557-49bd-b824-c2ea694c9e40"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="20" width="52" height="30" uuid="a5eb1e1c-0a52-4099-a7c7-91a4f7c7cb83"/>
+				<text><![CDATA[Folio of Day Book]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="20" width="40" height="26" uuid="a293ad7c-8236-4db4-b209-324b63807abd"/>
+				<text><![CDATA[Voucher No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="22" width="52" height="30" uuid="1fc2d6eb-37cf-4a48-ac63-124d5c25d249"/>
+				<text><![CDATA[Particulars]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="22" width="47" height="30" uuid="8a5eed0a-cfee-403a-8255-18778bc74553"/>
+				<text><![CDATA[Debit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="22" width="50" height="30" uuid="8c168ab2-1446-4fc7-a504-e186fbde6e21"/>
+				<text><![CDATA[Credit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="22" width="50" height="26" uuid="878daf2d-8901-4203-8e2f-fcb647f3dffb"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="22" width="64" height="30" uuid="58180b08-00e9-4c37-b86f-3f25ec2e39f0"/>
+				<text><![CDATA[Date of corresponding Debit $]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="22" width="49" height="30" uuid="f455c60f-7ea6-4c87-8a1a-9aef6b3186b3"/>
+				<text><![CDATA[Initials]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="53" width="38" height="15" uuid="92c7f7fa-1d77-4e4d-a7fa-e7f676f077ab"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="53" width="38" height="15" uuid="699d81ef-7ce6-400f-91a6-9227e8bb8ceb"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="53" width="38" height="15" uuid="1f85292b-e62b-4a7a-90b6-f714480e2be1"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="53" width="38" height="15" uuid="609ba146-462c-47ab-8c8a-31dd1d66cad9"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="53" width="38" height="15" uuid="c0da0112-7fc2-45ea-be1e-64a7cb6206b0"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="53" width="38" height="15" uuid="a2be068e-1c4f-4888-a20d-b2b74da103b2"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="53" width="38" height="15" uuid="eae72532-2371-475a-875d-ec215ea34813"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="53" width="38" height="15" uuid="dd7ac52b-0cbd-4bb7-bf78-6663e4df7191"/>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="520" y="53" width="29" height="15" uuid="12826dae-58a0-40c4-a83a-c3d3799c88e6"/>
+				<text><![CDATA[9]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="17" width="551" height="1" uuid="6f97e873-17bf-402c-a8c2-07eef53f89be"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="1" height="19" uuid="3d337637-52d8-4d42-ae66-99978e3a0ffe"/>
+			</line>
+			<line>
+				<reportElement x="68" y="-1" width="1" height="19" uuid="f6c513cd-8e77-4cda-8a0c-8448c76e9c9f"/>
+			</line>
+			<line>
+				<reportElement x="131" y="-2" width="1" height="19" uuid="9d16a782-01dd-4d9f-863f-8a3e49a366e8"/>
+			</line>
+			<line>
+				<reportElement x="178" y="-2" width="1" height="19" uuid="af83a4d8-8c63-4dbe-82c5-f25d8091d48b"/>
+			</line>
+			<line>
+				<reportElement x="243" y="-2" width="1" height="19" uuid="695e14b6-338f-41af-b475-bdf047e8c522"/>
+			</line>
+			<line>
+				<reportElement x="298" y="-2" width="1" height="19" uuid="e6b90ca0-de51-45ec-be65-0584e81d16d0"/>
+			</line>
+			<line>
+				<reportElement x="360" y="-2" width="1" height="19" uuid="3b088ebb-b161-4cf5-8d3e-76391d2cd03c"/>
+			</line>
+			<line>
+				<reportElement x="420" y="-2" width="1" height="19" uuid="8805a803-8aa9-4286-bc49-5a321b300b27"/>
+			</line>
+			<line>
+				<reportElement x="492" y="-2" width="1" height="19" uuid="5789ba3e-d2ea-4f51-9a8e-3e1123eb4eba"/>
+			</line>
+			<line>
+				<reportElement x="550" y="-2" width="1" height="19" uuid="99c2833c-47de-4ae3-bcd6-9f0d709663f8"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="68" height="17" uuid="5c7b4223-856f-4618-a89f-4995ea145905">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1531beb7-2a9b-4284-9d3c-4dc7bb0d90d5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd/mm/yyyy"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="0" width="65" height="17" uuid="62bf4e8f-4155-4449-bdb7-acc8a8467895"/>
+				<textFieldExpression><![CDATA[($F{particulars}==null)?0:$F{particulars}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="48" height="17" uuid="79d29f67-eeda-40cc-ac49-1d639399d141"/>
+				<textFieldExpression><![CDATA[($F{debit}==null)?0:$F{debit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="-1" width="50" height="18" uuid="37b4f8d1-239b-4e2d-a734-2cadc76a482e"/>
+				<textFieldExpression><![CDATA[($F{credit}==null)?0:$F{credit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="0" width="55" height="17" uuid="ad4dc096-dde0-4cf1-8c26-4aebb9de5a82"/>
+				<textFieldExpression><![CDATA[$F{transactionDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd/mm/yyyy"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="-1" width="51" height="18" uuid="2d29a4e9-e7d5-4067-adf9-4c7f4f6b3604"/>
+				<textFieldExpression><![CDATA[($F{balance}==null)?0:$F{balance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

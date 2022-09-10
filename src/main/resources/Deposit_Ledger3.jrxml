@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Deposit_Ledger3" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="77b849bc-7269-4421-a566-cb2906fea972">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Vikas"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="loanStatus" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="depositId" class="java.lang.Long"/>
+	<queryString>
+		<![CDATA[select * from  deposits
+ join loan_details on deposits.member_id=loan_details.member_id
+where  deposits.id=$P{depositId}  and loan_details.loan_status="A"]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="deposit_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="deposit_closing_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_closing_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="deposit_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="deposit_frequency" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_frequency"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="deposit_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="interest_earned" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="interest_earned"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="maturity_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="maturity_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="maturity_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="maturity_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="receipt_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="receipt_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="recurring_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="recurring_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="reinvestment_status" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="reinvestment_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="deposit_account_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_account_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposits"/>
+	</field>
+	<field name="benefiting_area" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="benefiting_area"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="cost_of_investment" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="cost_of_investment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="dccb_loan_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="dccb_loan_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="disbursement_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="disbursement_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="disbursement_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="disbursement_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="extent_morgage" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="extent_morgage"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="installment_frequency" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="installment_frequency"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_acc_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_acc_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="loan_account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="loan_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_classfication" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_classfication"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_closer_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_closer_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_effective_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_effective_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_installment_end_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_installment_end_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_installment_start_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_installment_start_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_planned_closure_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_planned_closure_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="mortgage_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="mortgage_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="mortgage_deed_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="mortgage_deed_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="parent_acc_head_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="parent_acc_head_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="parent_acc_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="parent_acc_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="resolution_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="resolution_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="resolution_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="resolution_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="society_meeting_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="society_meeting_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_demand_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="loan_demand_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_product_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="loan_product_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="320" height="30" uuid="4ad1b25e-29dd-4cdd-be28-50d371c66b9c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[          PARTICULARS OF LIEN ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="70" height="40" uuid="25faa6b7-cccc-4bea-8cf2-b3fd6bf73052"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LOAN  A/C No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="0" width="70" height="40" uuid="06aabe14-38fc-4bde-8724-49107178e1eb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Sanction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="100" height="39" uuid="c3aaeb37-dd4a-486c-b492-dafaebc64a4c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Initials]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="0" width="80" height="40" uuid="4cbe6353-7c65-4907-b5f2-16ed10ce7167"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Release]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="70" height="30" uuid="c23c0227-73c4-4568-ab52-245b338e8850"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="0" width="70" height="30" uuid="3ad6e95d-4604-4aed-8b23-97276a7ac258"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="0" width="80" height="30" uuid="ed00997f-c3d1-4f61-8d46-c6a5c380f094"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="-1" width="101" height="32" uuid="72ab5d11-fdfe-47c7-850f-dbe0e37a5551"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="9" y="0" width="60" height="30" uuid="350d8539-eb5c-4552-b025-cfc0be5f4b2f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2300dffe-6186-470c-b81c-3352ecf87cbf"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{loan_account_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="79" y="0" width="60" height="30" uuid="a7e5c69b-a7fc-4c9a-a2f4-46547fa09857">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59ace383-8044-43a1-9ad4-7060c268e49f"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{loan_effective_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="0" width="70" height="30" uuid="8c26a8be-9c82-4b5a-aea8-206c54d29962"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{loanStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

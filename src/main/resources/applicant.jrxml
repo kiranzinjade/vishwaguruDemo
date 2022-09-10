@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Shares" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d055879f-7b63-4b24-ac9e-dff0f447ebee">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="306"/>
+	<parameter name="Member_Name" class="java.lang.String"/>
+	<parameter name="Middle_Name" class="java.lang.String"/>
+	<parameter name="Last_Name" class="java.lang.String"/>
+	<parameter name="Father_Name" class="java.lang.String"/>
+	<parameter name="Mother_Name" class="java.lang.String"/>
+	<parameter name="Gender" class="java.lang.String"/>
+	<parameter name="Phone_Number" class="java.lang.String"/>
+	<parameter name="Aadhar_Card" class="java.lang.String"/>
+	<parameter name="PAN_Card" class="java.lang.String"/>
+	<parameter name="Email_Id" class="java.lang.String"/>
+	<parameter name="Category" class="java.lang.String"/>
+	<parameter name="Cast" class="java.lang.String"/>
+	<parameter name="Religion" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM vikas.trn_applicant;]]>
+	</queryString>
+	<field name="aadhar_card" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="applicant_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="application_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_user_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo_file_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="member_id" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="156" y="2" width="230" height="20" uuid="0fc8f91d-459c-43e0-814e-cfccf1ddab07"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[सदस्य होण्यासाठी करावयाचा अर्ज​]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="22" width="100" height="17" uuid="c0db00cc-d905-4037-8615-3d33f0510c62"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[नियम १९| i |]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="617" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="1" width="554" height="1" uuid="9ef38747-d916-4e3f-bafe-71614959bb0c"/>
+			</line>
+			<textField>
+				<reportElement x="129" y="12" width="277" height="20" uuid="cb2f0268-4445-48a9-a9df-fdebbebb2636"/>
+				<textFieldExpression><![CDATA[$P{Member_Name}+" "+$P{Middle_Name}+" "+$P{Last_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="12" width="128" height="20" uuid="f265c78c-097d-45a2-8824-4f5b9a6b2c13"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मी खाली सही करणार श्री.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="43" width="20" height="20" uuid="5421bb71-d458-4d9e-9058-e955f6cef510"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ता.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-132" y="100" width="100" height="20" uuid="db3bff93-38d6-4c19-9f66-864886546177"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[पत्ता]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="100" height="20" uuid="72f78710-2a19-4aaf-8393-e5bf3ba36612"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[महाशय]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="43" width="38" height="20" uuid="c1dcc254-4c9d-4ae0-8588-18ab3d08bd13"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[जि.पुणे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-132" y="5" width="30" height="20" uuid="9a21382c-615f-4b8d-a5d5-936c94f1df4b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मु.पो.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="161" width="457" height="20" uuid="423a7ed3-dc67-4f3a-9c0c-73076c441163"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[आपले संस्थॆचा सदस्य होण्याकरीता मी माझ्यासंबधी खलीलप्रमाने तपशील महिती देत आहे.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="104" width="323" height="20" uuid="2310f87f-f917-4b1e-a281-7fa6ea660b2a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[संस्थेचा उपविधी अन्वये लागणारया माहीतीचा तपशील]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="43" width="161" height="20" uuid="a219cb19-95dc-41f7-bf53-97abe0a53bd6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[माझा संपुर्ण पत्ता]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-142" y="104" width="100" height="20" uuid="8f732117-d088-4137-9be7-038b6108b643"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[पत्ता]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="135" width="161" height="20" uuid="9e622bb2-9160-423a-9eb3-f68372534dfb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[माझॆ संपुर्ण नाव(आडनाव प्रथम​)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="187" width="524" height="32" uuid="b3c1e659-ed9e-4c46-a817-91b78343e6ed"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मी प्रतिसोबत असे जहिर करतो की आपल्या संस्थेचे उपविधी मी बांधिल असुन संस्थेशी होणारया माझ्या
+व्यवाहारासंबंधीचा बाबतीत त्या उपविधींनी बांधला जाण्यास मी या अर्जाने कबुली देत आहे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="248" width="213" height="18" uuid="3e09ceff-deb8-4eb0-ac99-4365f62223e1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[कोणत्या वर्गाच्या सदस्याकरिता मी अर्ज करीत आहे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="224" width="161" height="20" uuid="f08b4f6d-95ef-4439-bbda-77124ce7cb56"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[अर्जाचे तारखेचे दिवशी माझे वय]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="268" width="141" height="18" uuid="144cedd6-71ba-4834-a6cd-4bf6de2f38bc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[माझॆ राष्ट्रीयत्व]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="289" width="213" height="20" uuid="d227f88d-8bc4-4ba9-9694-2bd48a3ba190"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[या अर्जासोबत भरलेली प्रवेश फी रक्कम]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="338" width="419" height="40" uuid="f5e0b8c8-81b6-4e0d-9605-86433f4c1ee5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[अर्जदाराच्या कुटुंबातील(महाराष्ट्र सहकारी कायदा कलम ६ मध्ये कुटुंबाच्या कलेल्या अर्जानुसार) हल्ली असणारया इसमाची नावे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="312" width="231" height="20" uuid="36bb55a4-5f6b-4631-a709-5282ab58bb8d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मागाचे भागांचे खरेदीबद्दल अर्जासोबत भरलेली रक्कम]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="43" width="182" height="20" uuid="df56cda5-94e9-49c7-8f79-5dac796a0cba"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[वि.का.स सहकारी संस्था मर्या.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="104" width="61" height="20" uuid="9e74815b-823c-4d88-8404-30f6d863bdea"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मे.सभापती]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="380" width="357" height="18" uuid="b7dd7a8f-e7d8-492f-962b-917d66e7bc32"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मालक अगर कुळ या नात्याने केलेल्या स्थावर जिंदगीचा तपशील]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="400" width="357" height="19" uuid="b9d7b099-40d1-4513-89c1-b4b6947c8064"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[संस्थेकडुन जास्तीत जास्त कीती रक्कम कर्जाऊ घेऊ इच्छितो]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="420" width="440" height="34" uuid="52cb8bd7-2a59-407a-82ae-d54e80537d70"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[दुसरया सहकारी संस्थेचा सदस्य असल्यास त्याबद्दल व संस्थेचे किती कर्ज देणे थकलेले आहे
+(तसे असल्यास )माहीतीचा तपशील]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="456" width="469" height="33" uuid="49d0c974-2c05-4d2a-9cd3-3ba64b5065ac"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मी प्रतीसोबत असे जाहीर करतो की वर दिलेली माहीती माझ्या माहीतीप्रमाने खरी व बिनचुक अशी आहे मी अशी हमी देतो की.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="490" width="405" height="34" uuid="6733cf24-8b37-45fb-86bd-1e6f693af3ae"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[मी धारण केलेली स्थावर व जंगम जिंदगी व माझे कुटुंबातील आपले संस्थेचे सदस्य इत्यादी उपविधी अन्वये लागणारी माहिती पुरविन]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="526" width="376" height="33" uuid="d3dd5cf2-581f-45ca-b2b3-ff43f8636d1c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[आपली संस्था मला आदेश देईल तेव्हा कोणतेही प्रतिज्ञापञ,करार अगर दस्ताऐवज मी करुन देईल ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="564" width="100" height="20" uuid="d2fbcce3-98f3-498c-8076-64028a3a0279"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[साक्षीदाराची सही]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="561" width="100" height="20" uuid="68002c5c-735b-45a4-a9d9-2bdf0b3890d7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[अर्जदाराची सही]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="81" width="524" height="57" uuid="0712f036-67ba-4cb3-af0d-95e4da7d5940"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[अर्जदार हा एखाद्या एक व्यक्तीभूत संस्था(काॅपोरेट बाॅडी) असेल तर त्या एक व्यक्तीभूत संस्थेतर्फे अर्जावर सही
+करणारया इसमाचा हुद्दा दर्शवला पाहिजे तसेच त्या संस्थेतर्फे या अर्जावर सही करणारया इसमास दस्ताऐवजाची (संबंधित कागदपत्राची,डाॅक्यूमेंटची) प्रत या अर्जासोबत जोडली पाहिजे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="29" width="524" height="50" uuid="d1e5d27f-bc90-4281-aba7-6c759a133a15"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[अर्जदार एखाद्या संस्थेचा प्रतिनिधी असेल तर अर्जावर सही करणारा इसम हा त्या संस्थेच्या समितीचा सदस्य आहे किंवा नाही हे अर्जात नमुद करुन केले पहिजे व अर्जावर त्या संस्थेतफे सही करणारा त्याला अधिकृत
+करणारया संस्थेच्या समितीच्या ठरावाची एक प्रत या अर्जासोबत जोडली पाहिजे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="8" width="100" height="20" uuid="3a982f6a-6832-4f6a-8ca2-96975479bcc5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[विशेष सुचना]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

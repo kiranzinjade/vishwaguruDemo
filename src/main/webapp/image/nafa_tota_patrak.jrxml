@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demo" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57e8fbd9-2822-43f9-a58d-39b011ac53e0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="197" y="75" width="416" height="32" forecolor="#003399" uuid="3387b9b8-1560-43a6-b37f-70083bf1fd82"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[प्राथमिक कृषी सहकारी संस्थेचे नफा-तोटा पत्रक दिनांक- ३१/०३/२०१९]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="52" width="100" height="22" forecolor="#009900" uuid="9fbbe4e1-8eb7-4c04-a18c-726cc0c6dac5"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[जि-पुणे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="74" width="129" height="32" forecolor="#FF0000" uuid="4d6ef5f2-07ae-444b-adac-55af66914fe6"/>
+				<textElement>
+					<font size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[नफा-तोटा पत्रक]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="55" width="100" height="20" forecolor="#009999" uuid="a7ac8a17-81ee-4254-aadc-373383cb5c5a"/>
+				<text><![CDATA[परिशिष्ट-३]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="721" y="86" width="31" height="20" uuid="fa40ba9b-05b3-4b6f-8cf0-cd3915cd0593"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="87" y="19" width="634" height="33" forecolor="#660000" uuid="96b4b610-7f66-4ef7-967d-94b756f3e6f6"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[विविध कार्यकारी सेवा सहकारी संस्था]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="762" y="86" width="40" height="20" uuid="5196208c-9c16-42b0-a440-de5b29da2dd6"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="752" y="86" width="10" height="20" uuid="930829aa-9775-4088-adfc-16bb5cf8d51a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="723" y="0" width="79" height="36" uuid="71ac72e2-ea22-4ad1-a17f-71cf770c6cf7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[मागील वर्ष २०१७-२०१८]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="0" width="59" height="36" uuid="d13de4e5-7eda-4e05-bde4-d84eb2b28f68"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[BreakUp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="73" height="36" uuid="d5cb24f6-9c57-4acb-851c-b497f2dbc8f9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[चालू वर्ष २०१८-२०१९]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="79" height="36" uuid="c5a83ecf-d050-4195-9203-a175d6b550df"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[मागील वर्ष २०१७-२०१८]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="172" height="36" uuid="55340cc7-2641-40a1-8aaf-33fffb4810cc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[उत्पन्न]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="188" height="36" uuid="ce9b5262-21d8-4941-b9e1-d239b0bb450b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[खर्च]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="0" width="77" height="36" uuid="15b11187-2b40-415f-9433-35eeba5f86e1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[BreakUp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="0" width="73" height="36" uuid="1b42461e-0421-4a7e-97aa-0dbf7bccba3c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[चालू वर्ष २०१८-२०१९]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="334" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="63" width="154" height="20" uuid="59657e5d-8b46-4343-bc9c-9752196aa7aa"/>
+				<text><![CDATA[रजि.नं.-१२०००-दिनांक-१२/०५/१९६०]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="135" width="188" height="75" uuid="56bfb96f-aa30-424c-83ad-5336a0cfd2c9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[३ कर्मचाऱ्यांचे पगार व इतर भत्ते
+(३.i.) पगार व भत्ते तसेच भविष्य निधी वर्गणी,बोन
+स,ग्रॅच्युटी व पेन्शन इत्यादी
+(३.ii.) व्यवस्थापन खर्च व्यवस्थापक मंडळाच्या
+सभा खर्च इत्यादी ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="39" width="73" height="96" uuid="6c918a10-3caf-4a1c-823a-8b35f12b9e8a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="39" width="188" height="96" uuid="bf02e3f3-9c55-4da4-9782-b6e990b65a2f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[२ व्याज(दिलेले व देणे असलेले)
+२ व्याज(दिलेले व देणे असलेले)
+(i) ठेवीवर
+(ii) जि.म.सह.बँक राज्य सह.बँक कर्जावर
+(iii) सरकारकडून घेतलेल्या कर्जावर
+(iv) इतरांकडून घेतलेल्या कर्जावर]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="172" height="39" uuid="3351b908-11b6-4df9-8366-117841a690ce"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[१ ढोबळ नफा-व्यापारी पत्रकावरुन स्थानांतरीत]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="210" width="79" height="35" uuid="0a865834-6394-4449-8b13-46a3cc479b7b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="245" width="73" height="27" uuid="3fd6feeb-5b24-4cd9-bf94-b1b09d490e0f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="210" width="77" height="35" uuid="4c087bbd-d72c-412d-b51a-3369f2716790"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="152" width="172" height="28" uuid="67447bab-751a-4769-91a1-185d8c405444"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[४ भाडे प्राप्त
+४ भाडे प्राप्त]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="180" width="79" height="30" uuid="7400f244-9da0-460e-bee0-642427f32e35"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="0" width="59" height="39" uuid="e9fd96ae-a4f9-4340-bfca-0295b184baf1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="245" width="79" height="27" uuid="2d1a4ae9-eba2-420f-8779-90c0fb47d403"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="188" height="35" uuid="8f85124a-5508-4ccf-b70a-33dff4abef61"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[४ भाडे,कर,दिवाबत्ती खर्च व इमारत दुरुस्ती खर्च
+४ भाडे,कर,दिवाबत्ती खर्च व इमारत दुरुस्ती खर्च]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="39" width="77" height="96" uuid="8711e5e4-622c-46d5-8284-f4785efa3c42"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="210" width="73" height="35" uuid="87006f40-0b90-4089-9abc-0de8e2e47d51"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="39" width="73" height="33" uuid="cfbb8da7-4592-4a00-aab4-70cf4cef4c54"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="72" width="172" height="43" uuid="c34159e0-4337-4320-8e91-32613d482f24"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[३ गुंतवणूकीवरील व्याज
+(i)बँकेत/इतर संस्थांमध्ये ठेवलेल्या ठेवीवर]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="0" width="79" height="39" uuid="63fa47c7-e423-451a-a00b-a98a9434ec2f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="0" width="73" height="39" uuid="b136a2e9-70d3-4629-9a5b-4edc6e8cff04"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="152" width="73" height="28" uuid="60791488-9bc2-4c76-ae46-2b06dbb49497"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="272" width="73" height="30" uuid="4ef0596f-0257-4ef5-96e5-058d3e904332"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="73" height="39" uuid="ea68c30f-5a7c-41c6-ae58-bded257c4aa2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="115" width="79" height="37" uuid="ae41a3c5-6795-4c1b-9dc3-4050d1895acc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="210" width="73" height="35" uuid="39d797b7-4120-4a0f-816b-4a5ab683dea5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="152" width="79" height="28" uuid="18d08be8-c0e2-40c0-9d7e-0d152537f866"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="272" width="79" height="20" uuid="8aaa5111-a012-4d2b-8e8d-913b6b552d96"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="72" width="79" height="43" uuid="0e3d3cb0-8f68-4769-9555-1e628ac272d5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="188" height="39" uuid="45fa3428-8aa7-4c61-8455-46f97d94d481"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[१ ढोबळ तोटा व्यापारी पत्रकावरुन
+१ ढोबळ तोटा व्यापारी पत्रकावरुन]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="79" height="39" uuid="ca8d5303-55d5-49b6-8787-1a9d64308c2a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="245" width="59" height="27" uuid="b6f07a85-562c-42ed-b715-8d9017c58de4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="72" width="59" height="43" uuid="30d165cd-0db3-46ac-a2d9-26586c7d20a0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="180" width="73" height="30" uuid="d4b79dab-a968-4fa6-8168-2c82ec93927e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="115" width="59" height="37" uuid="88a8a358-803d-4c6a-9129-caa0a9d3ff3b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="245" width="73" height="27" uuid="94668bbe-9f94-4d8e-a429-b84cca7746e3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="210" width="79" height="35" uuid="50f24261-3afa-48a0-9af3-6778b7efd30a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="180" width="172" height="30" uuid="1ab6c3c5-be1b-4d1c-bfc7-fd9955257f5f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[५ प्रवेश फी
+५ प्रवेश फी]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="135" width="79" height="75" uuid="d40cefe7-d7d1-4fe6-b21b-2e164d32167f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="115" width="73" height="37" uuid="a4543f69-b128-44f7-9a58-6f1e89e5f3c8"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="152" width="59" height="28" uuid="69502709-2c3a-49cc-bb76-1b881f4b4954"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="39" width="59" height="33" uuid="19460ac9-f728-4c7f-a39e-3b48977f4ebf"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="723" y="39" width="79" height="33" uuid="2bb7b9b4-bb32-4320-b072-8c7ce23d4f81"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="245" width="79" height="27" uuid="cec6f090-0a77-4074-8759-c835547a9488"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="245" width="77" height="27" uuid="45236fd6-d5c6-4686-954a-50e75f694f35"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="210" width="59" height="35" uuid="74fa930c-7b56-4c03-92aa-da40ad95d22b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="272" width="77" height="30" uuid="3e83066b-f945-4adb-9d54-35f957d86cd1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="180" width="59" height="30" uuid="0f2e71a1-8919-4a51-8529-3bf35e9bc302"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="245" width="172" height="27" uuid="f020644d-64db-4d84-ba4a-dd59303dcc83"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[७ शिल्लक तोटा
+७ शिल्लक तोटा]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="210" width="172" height="35" uuid="c48fca8b-c87d-4edd-a568-25cb180b74a7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[६ इतर किरकोळ उत्पन्न​
+६ इतर किरकोळ उत्पन्न​]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="115" width="172" height="37" uuid="f87d70c4-739c-49ed-94de-b3e0db3131d2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[३ गुंतवणूकीवरील व्याज
+(ii) गुंतवणूकीवरील लाभांश]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="135" width="73" height="75" uuid="bd0d8e6b-55e0-490a-ba1d-47a13f0a195f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="72" width="73" height="43" uuid="44f12bca-905a-46f1-b973-2bef36bb6c64"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="39" width="172" height="33" uuid="376d4f8f-1ea9-4a5c-9cd4-93f968203bb2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[२ कर्जावरील व्याज (मिळालेले व अप्राप्त व्याज)
+२ कर्जावरील व्याज (मिळालेले व अप्राप्त व्याज)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="272" width="73" height="20" uuid="e95a7f63-7b37-42bd-8a94-7fed8c273943"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="245" width="188" height="27" uuid="fee6de4d-4b01-4c54-89d9-588e344dd64d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[५ विमा
+५ विमा]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="39" width="79" height="96" uuid="2f76a578-6f49-4cb4-af88-3f986f426d4b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="272" width="100" height="20" uuid="0444e3a2-9dc7-4acf-a1ec-f7f6412007ec"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[एकूण]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="135" width="77" height="75" uuid="4f70496f-5bd9-4e2f-9e10-eb18a3699998"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="272" width="188" height="30" uuid="dbfca9b0-545c-4e5d-84b3-cf17d6930996"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[६ न्यायालयीन खर्च
+६ न्यायालयीन खर्च]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="0" width="77" height="39" uuid="68426095-211a-4ffb-815b-de8d029f5013"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="272" width="59" height="20" uuid="b6d794d2-c744-4062-818b-02d5ee0fc7c6"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="272" width="79" height="30" uuid="4506670c-93e4-447a-a834-a08b053ef72c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="302" width="188" height="28" uuid="641672de-ae63-41af-8776-75c5179d700f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[७ डाक व टेलीफोन खर्च
+७ डाक व टेलीफोन खर्च]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="302" width="77" height="28" uuid="f609e24a-8ce7-4de5-8e59-ceb3386cdc31"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="302" width="73" height="28" uuid="fca35a0e-dfb3-4dc7-a511-f11d01de627c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="302" width="79" height="28" uuid="bf35e7a4-dbd3-4227-a0b1-d6b53e24d104"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+		<band height="334">
+			<staticText>
+				<reportElement x="0" y="0" width="188" height="30" uuid="f6afc789-159f-4911-8edc-aca7e784d641"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[८ मुद्रण व लेखन खर्च
+८ मुद्रण व लेखन खर्च]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="0" width="77" height="30" uuid="ca678990-8b37-449f-85db-5a767062ef81"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="73" height="30" uuid="707bd023-986c-416b-b27a-9deeede7bf2c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="79" height="30" uuid="780b7a05-ce46-41cf-8ab7-a68cef25e41d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="124" width="73" height="29" uuid="138943f7-1637-4a85-b7de-547d32b6ed59"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="124" width="77" height="29" uuid="4ba4cf22-c9b8-41ec-ae6a-b08b3a8a2a40"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="124" width="79" height="29" uuid="f402c82e-acd3-405a-a4bd-047e223a769b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="216" width="73" height="118" uuid="5561f40c-8a48-4bc4-ae27-9b215854797d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="30" width="73" height="31" uuid="c5631e3b-351e-445f-a32f-d7872d18d6e0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="153" width="73" height="31" uuid="9eaba5c9-abd5-4796-add4-b687c5020b27"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="153" width="79" height="31" uuid="25ceb97f-a01e-46de-bf54-72bfb1675d60"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="184" width="77" height="32" uuid="dc1a66eb-b277-4a9f-afa8-cacff9ab7116"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="61" width="73" height="31" uuid="6c5b83ff-5779-44bf-ad81-43f4f3a4e6cb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="153" width="187" height="31" uuid="33c7256c-4486-4e6e-ad69-887c30c19cb9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[१३ झिज/ घसारा (मालमत्तेवर)
+१३ झिज/ घसारा (मालमत्तेवर)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="30" width="77" height="31" uuid="d406d2e0-259e-4cb2-9a29-d96be7a69d17"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="216" width="77" height="118" uuid="3cce78d9-247a-465b-b36f-c51bfb081966"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="184" width="79" height="32" uuid="93d487c0-9ff6-4d52-a4c9-8c78a695015f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="30" width="79" height="31" uuid="c1735783-314e-4da8-bdaa-16e641ed6a97"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="124" width="187" height="29" uuid="ca828062-15a8-4cda-81ac-097623e67509"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[१२ देणग्या व वर्गण्या
+१२ देणग्या व वर्गण्या]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="92" width="73" height="32" uuid="33d85bfb-abb7-4106-99a7-890867ef9b40"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="216" width="187" height="118" uuid="c86f4c47-ede9-4cf0-80e7-ad62d2ac1ed2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[१५ तरतूदी
+
+(i)उत्तम कर्ज
+(ii)एन.पी.ए.
+(ii)अ अंशतः उत्पादित(अनियमित) कर्ज
+(substandard)
+(ii)ब संशयित कर्ज(doubtfull)
+(ii)क बुडीत कर्ज(loss Assets)
+(iii)संशयित व बुडीत कर्ज(उधार विक्री)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="61" width="187" height="31" uuid="fa5d2c9f-a8ad-4e5f-8b99-ef617d0a5db5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[१० वाहन खर्च
+१० वाहन खर्च]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="153" width="77" height="31" uuid="da55e8ac-2f86-4ba1-a12b-71f99a048edf"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="184" width="187" height="32" uuid="4672004d-949b-4c69-8598-0cc2d4f0eff3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[१४ इतर खर्च
+१४ इतर खर्च]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="30" width="187" height="31" uuid="e7d57c28-d8c7-41ee-ba5e-13a2ff45bff9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[९ ऑडीट फी
+९ ऑडीट फी]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="92" width="79" height="32" uuid="df9544d0-cdbf-4af1-b1fb-4f6cbc78bd5f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="61" width="77" height="31" uuid="098232d9-91db-4c51-908b-f312261f1657"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="216" width="79" height="118" uuid="23abd3e0-c131-4249-8306-0ba93838fee0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="61" width="79" height="31" uuid="50c99533-2ccd-4647-a085-507fce8ce7f7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="184" width="73" height="32" uuid="12b0cf9c-3f3c-48c6-9af2-eabf492d8c38"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="92" width="77" height="32" uuid="8074d7b7-b4b4-4993-a620-371676212ed4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="92" width="187" height="32" uuid="80c4437d-e2c5-465c-a820-92485b2636ad"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[११ प्रवास खर्च व वाहन भत्ता
+११ प्रवास खर्च व वाहन भत्ता]]></text>
+			</staticText>
+		</band>
+		<band height="296">
+			<staticText>
+				<reportElement x="0" y="0" width="188" height="51" uuid="2c8e50fd-e5d5-4644-a001-a0ecf30cf426"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[(vi)कर्जावरील थकीत व्याज
+(vii)गुंतवणूकीवरील थकीत व्याज
+(viii)इतर (तपशिल द्या)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="0" width="77" height="51" uuid="ca128945-d3ef-48bb-b043-b12451c4f779"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="73" height="51" uuid="538f7dd3-8ba3-4d7c-b4ad-e923fc00c503"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="79" height="51" uuid="141612c3-516d-4413-8e81-00fc02a44470"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="51" width="77" height="28" uuid="28b200f9-cb68-4137-b57f-d1cdcee2dea2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="51" width="79" height="28" uuid="1d00580e-182b-4848-864b-2ea5bc5ae3ba"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="51" width="188" height="28" uuid="87499cee-d486-46eb-8f59-5c3c7f98795f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[१६ शिल्लक नफा]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="51" width="73" height="28" uuid="992798dc-11e9-48ff-93ab-1425d69640a9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="591" y="90" width="59" height="20" uuid="8adeee9d-2336-4de5-ab44-1ca8e0566285"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="90" width="77" height="20" uuid="1fef4a29-637e-459c-8e26-2ca79ac73f60"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="187" height="20" uuid="ae4ea65d-f5ad-44c3-843a-2dac758ded91"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[एकूण]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="90" width="78" height="20" uuid="d99f0eb8-b118-43b3-9b07-6e7dee61e538"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="90" width="172" height="20" uuid="ef78f9c5-d042-4ffb-906e-f71467ad511c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[एकूण]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="90" width="75" height="20" uuid="e7f0849f-add5-4e28-83b6-d6b23182b89e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="90" width="76" height="20" uuid="2ba0f469-3014-47ea-8653-21acd56ed7cb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="90" width="75" height="20" uuid="5ad90ed3-b66e-4ff2-9723-2e13525b0708"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="552" y="154" width="149" height="20" uuid="36dff095-c04f-481c-86d2-00df1592db94"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[सेक्रेटरी / सचिव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="552" y="174" width="249" height="20" uuid="d3eba346-9aed-4bb0-9f48-6ea76b1cac19"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[विविध कार्यकारी सेवा सहकारी संस्था,पुणे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="701" y="154" width="100" height="20" uuid="b1430834-d4ca-460f-bac9-ed988b391629"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[चेअरमन]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="16" width="213" height="20" uuid="a1bf7a21-8b41-427d-a809-776f098d2d2d"/>
+				<text><![CDATA[रजि.नं.-१२०००-दिनांक-१२/०५/१९६०]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>

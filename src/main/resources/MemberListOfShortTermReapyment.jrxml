@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MemberListOfShortTermReapyment" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="79a77a34-e406-4322-bcbd-bdfe3dc9a280">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SocietyName" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="memberId" class="java.lang.String"/>
+	<field name="loanCloserDate" class="java.lang.String"/>
+	<field name="loanStatus" class="java.lang.String"/>
+	<field name="loanAccountNo" class="java.lang.String"/>
+	<field name="loanAmt" class="java.lang.Double"/>
+	<field name="centralGovInterest" class="java.lang.Double"/>
+	<field name="stateGovInterest" class="java.lang.Double"/>
+	<field name="distBankInterest" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="103" y="0" width="599" height="41" uuid="ea7b03cf-4667-43ec-980c-1ff4afd5f4fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member List Of Short Term Loan Repayment with State And Central Government]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="0" width="135" height="25" uuid="10a83459-f957-4884-aea6-ed2b0e8b84da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[List  of All Members of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="0" width="200" height="25" uuid="3a0ef98d-27e7-46df-adf3-d45ff038c399"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SocietyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="46" uuid="0bb64f1a-17c4-4390-8bbf-d48a6ffccdd8"/>
+			</rectangle>
+			<line>
+				<reportElement x="34" y="0" width="1" height="46" uuid="109ac7ee-9e07-4746-8a49-3acf3bbf5d2a"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="34" height="46" uuid="aa4198d8-31f1-48a5-b545-c06e1b2f9439"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SR.No.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="169" y="0" width="1" height="46" uuid="91a50a34-0fd6-411b-bfc5-80de9dcd1c08"/>
+			</line>
+			<staticText>
+				<reportElement x="35" y="0" width="134" height="46" uuid="c2bbb3bd-afd7-4372-9306-8da03b8a75bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Member Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="293" y="0" width="1" height="46" uuid="e59e101e-1cd2-4e26-a4e1-db998d09e3cf"/>
+			</line>
+			<staticText>
+				<reportElement x="170" y="0" width="123" height="46" uuid="da3f38da-6ab4-44ed-939b-e60ba5802c8e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Loan Account Number]]></text>
+			</staticText>
+			<line>
+				<reportElement x="413" y="0" width="1" height="46" uuid="1ed1f1b0-9c94-4a15-8de9-5110b5196b41"/>
+			</line>
+			<staticText>
+				<reportElement x="294" y="0" width="119" height="46" uuid="90c117c4-03ad-493b-8417-cb0535754c1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Loan Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="490" y="0" width="1" height="46" uuid="e9b93b75-8da7-41b7-83a8-850c9f9f6d7f"/>
+			</line>
+			<line>
+				<reportElement x="560" y="0" width="1" height="46" uuid="68b0f348-a583-4e25-8476-f7aae135a79f"/>
+			</line>
+			<line>
+				<reportElement x="628" y="0" width="1" height="46" uuid="e8397233-ae8e-4813-909d-f424c0d395d5"/>
+			</line>
+			<line>
+				<reportElement x="702" y="0" width="1" height="46" uuid="d0287cdc-6b5b-4f97-a57f-1e2bc1fd7693"/>
+			</line>
+			<staticText>
+				<reportElement x="414" y="0" width="77" height="46" uuid="3abe373c-fd79-4ccf-8cd0-f0356a76deec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Central Government Subsidy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="0" width="70" height="46" uuid="57b7adaf-c3ba-4f66-99ea-bc29ea6f81ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[State Government Sbsidy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="0" width="68" height="46" uuid="e9fff9c1-b727-4952-9a73-777ed97a41a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DCC Bank Subsidy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="629" y="0" width="73" height="46" uuid="ae6ba46f-308a-437d-bf09-b2267ff73e91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Loan Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="703" y="0" width="99" height="46" uuid="77da9c3b-2b10-4d46-9947-9ee9be513d6e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Loan Clouser Date]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="46" width="802" height="29" uuid="52d5a1fe-d8a3-4a30-b4f1-d9b160149dd7"/>
+			</rectangle>
+			<line>
+				<reportElement x="34" y="46" width="1" height="29" uuid="2674d333-5e26-4184-9121-987c5b567641"/>
+			</line>
+			<line>
+				<reportElement x="169" y="46" width="1" height="29" uuid="d88c4305-28ad-4495-a963-1304c183f744"/>
+			</line>
+			<line>
+				<reportElement x="293" y="46" width="1" height="29" uuid="29773091-fde1-4075-928a-edb8ba5b05ea"/>
+			</line>
+			<line>
+				<reportElement x="413" y="46" width="1" height="29" uuid="c2cb7f04-27fd-4feb-9a30-ec4e81974e34"/>
+			</line>
+			<line>
+				<reportElement x="490" y="46" width="1" height="29" uuid="6d7bb22f-ae7a-4faa-827f-d911cc03da8c"/>
+			</line>
+			<line>
+				<reportElement x="560" y="46" width="1" height="29" uuid="c6a404d1-53c0-4837-a92b-13cf3a4da9bd"/>
+			</line>
+			<line>
+				<reportElement x="628" y="46" width="1" height="29" uuid="780a7515-b55c-4b4a-88d6-e72f80cc722e"/>
+			</line>
+			<line>
+				<reportElement x="702" y="46" width="1" height="29" uuid="bbfa15a6-3d80-4a8f-abfa-e90a92894964"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="46" width="34" height="29" uuid="aa508e7f-7919-4bb7-b592-c175b655794e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="46" width="134" height="29" uuid="b4a6294b-b706-4a5d-8ce3-f2ac9e1d0ddf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="46" width="123" height="29" uuid="43818304-0486-42e4-a515-faf485d07e3b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="46" width="119" height="29" uuid="b69e539d-a699-418b-97f7-c2881a5f7cce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="46" width="77" height="29" uuid="cac65dc3-58ea-4c7b-80d4-f06c77f0d829"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="46" width="69" height="29" uuid="7f54e0e6-301e-4ff0-b919-9c5a2b6f3f23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="561" y="46" width="67" height="29" uuid="9c6cceaa-a863-48fa-9c2e-fe5c6792e557"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="629" y="46" width="73" height="29" uuid="a3c15c28-3df9-4736-b08a-bf16ac93d824"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="46" width="100" height="29" uuid="22fac9a4-22c5-430f-9249-3661d7112957"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="34" height="36" uuid="4df189dc-2877-41ee-8f41-dcdc4c15bf87"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="34" y="0" width="135" height="36" uuid="d69208be-a2f8-4f32-a4c0-2cd89c16996f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="0" width="124" height="36" uuid="c71c868f-b33c-4d42-a0f4-7f11167f5d95"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="293" y="0" width="120" height="36" uuid="cf48e63d-25ca-44ef-a736-7c5cfbb0fedd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="413" y="0" width="77" height="36" uuid="2bb518fe-865a-47f8-8989-58bfc5f96db8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="490" y="0" width="70" height="36" uuid="18160ae8-6b8e-49c5-b81d-5c106d3fbbab"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="560" y="0" width="68" height="36" uuid="c86cd53d-4c46-477c-806d-623c5992b431"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="628" y="0" width="74" height="36" uuid="390c59d7-cff8-4d77-9340-d0f3c0914827"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="702" y="0" width="100" height="36" uuid="ad366fd7-6cba-4329-9e30-86ecb3edd9d9"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="1" width="34" height="35" uuid="ba85d566-53fa-49d5-9e90-08263a56da68"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="0" width="134" height="36" uuid="f1b84fc6-450c-43e8-b81e-8b5460a0775d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="123" height="36" uuid="c4a69d96-d206-45c2-b109-bd20b0d28a0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{loanAccountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="629" y="1" width="73" height="36" uuid="24273abc-5ef4-4ef6-8dc1-77f32b95b0c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{loanStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="704" y="1" width="98" height="35" uuid="f7ac4b1c-fe85-481a-addc-b62774408621"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{loanCloserDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="294" y="1" width="119" height="35" uuid="8cde4e08-b290-4bd4-a187-b81d9a4dec79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{loanAmt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="1" width="76" height="35" uuid="08cd0229-829c-4a4f-a0f0-4e0e4d3daa25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{centralGovInterest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="1" width="70" height="35" uuid="de33649c-7709-4c51-aac4-e6de75d47133"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stateGovInterest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="1" width="68" height="35" uuid="291edaee-a3e0-4b21-aaa2-0eb3e953157e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{distBankInterest}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DayBookReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" uuid="876095dc-7500-4d53-ba19-d355d4c9ef2f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Vikas"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="SocietyName" class="java.lang.String"/>
+	<parameter name="transDate" class="java.util.Date"/>
+	<parameter name="totalCashCredit" class="java.lang.Double"/>
+	<parameter name="totalCashDebit" class="java.lang.Double"/>
+	<parameter name="balance" class="java.lang.Double"/>
+	<parameter name="lastBalance" class="java.lang.Double"/>
+	<parameter name="creditTotal" class="java.lang.Double"/>
+	<parameter name="debitTotal" class="java.lang.Double"/>
+	<parameter name="totalTranfCredit" class="java.lang.Double"/>
+	<parameter name="totalTranfDebit" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[select * from daybook]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="authorised_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="authorised_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="credit_balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="credit_balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="credit_cash_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="credit_cash_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="credit_total_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="credit_total_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="credit_transfer_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="credit_transfer_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="debit_balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="debit_balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="debit_cash_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="debit_cash_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="debit_total_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="debit_total_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="debit_transfer_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="debit_transfer_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="mode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="particulars" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="particulars"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="trans_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="trans_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="trans_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="trans_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<field name="voucher_count" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="voucher_count"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daybook"/>
+	</field>
+	<title>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="7" width="300" height="30" uuid="90dd5e2f-41d8-407c-87ce-112af52abbe4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SocietyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="0" width="150" height="36" uuid="3732c370-8573-4901-b2c6-d0990dd4126d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Day Book]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="5" width="60" height="30" uuid="f4373b19-7ae9-4528-8bc6-5525c6e04f33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="5" width="50" height="30" uuid="87e0d3f7-bb7c-45a8-b238-b6c3d566e4e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="640" y="5" width="50" height="30" uuid="5a4b0fd0-0db2-4c29-aa69-2f484007e218"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="692" y="3" width="100" height="30" uuid="164c69be-3269-4483-9422-1f585827111b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{transDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="259" splitType="Stretch">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="20" width="230" height="232" uuid="be3038e5-b20d-4345-9754-a266da0b54e8"/>
+				<subreportParameter name="SocietyName">
+					<subreportParameterExpression><![CDATA[$P{SocietyName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="transDate">
+					<subreportParameterExpression><![CDATA[$P{transDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalCashDebit">
+					<subreportParameterExpression><![CDATA[$P{totalCashDebit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalTranfDebit">
+					<subreportParameterExpression><![CDATA[$P{totalTranfDebit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="debitTotal">
+					<subreportParameterExpression><![CDATA[$P{debitTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastBalance">
+					<subreportParameterExpression><![CDATA[$P{lastBalance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalCashCredit">
+					<subreportParameterExpression><![CDATA[$P{totalCashCredit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="balance">
+					<subreportParameterExpression><![CDATA[$P{balance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="creditTotal">
+					<subreportParameterExpression><![CDATA[$P{creditTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalTranfCredit">
+					<subreportParameterExpression><![CDATA[$P{totalTranfCredit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["DayBookReport_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="410" y="20" width="230" height="232" uuid="a8af8c5b-2172-474a-8082-85b475590587"/>
+				<subreportParameter name="SocietyName">
+					<subreportParameterExpression><![CDATA[$P{SocietyName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="transDate">
+					<subreportParameterExpression><![CDATA[$P{transDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalCashCredit">
+					<subreportParameterExpression><![CDATA[$P{totalCashCredit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalTranfCredit">
+					<subreportParameterExpression><![CDATA[$P{totalTranfCredit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="creditTotal">
+					<subreportParameterExpression><![CDATA[$P{creditTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="balance">
+					<subreportParameterExpression><![CDATA[$P{balance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalCashDebit">
+					<subreportParameterExpression><![CDATA[$P{totalCashDebit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastBalance">
+					<subreportParameterExpression><![CDATA[$P{lastBalance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="debitTotal">
+					<subreportParameterExpression><![CDATA[$P{debitTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalTranfDebit">
+					<subreportParameterExpression><![CDATA[$P{totalTranfDebit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["DayBookReport_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

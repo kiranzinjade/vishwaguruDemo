@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FD_SLIPS_REPORT" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41180950-cadf-4fcc-a2b1-821838db9a5c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="346"/>
+	<parameter name="SocietyName" class="java.lang.String"/>
+	<field name="accountNo" class="java.lang.Long"/>
+	<field name="accountType" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="receiptNo" class="java.lang.Long"/>
+	<field name="durationDays" class="java.lang.Integer"/>
+	<field name="depositDate" class="java.util.Date"/>
+	<field name="maturityDate" class="java.util.Date"/>
+	<field name="interest" class="java.lang.Double"/>
+	<field name="depositAmount" class="java.lang.Double"/>
+	<field name="maturityAmount" class="java.lang.Double"/>
+	<field name="depositId" class="java.lang.Long"/>
+	<field name="depositInWords" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="77" splitType="Stretch">
+			<rectangle>
+				<reportElement x="19" y="17" width="517" height="57" uuid="a5824cab-abbf-452c-8d4b-43071f935c2d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="111" y="28" width="334" height="34" uuid="4f4bb878-f6fb-4d6f-a0e6-a420f1a4f66e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SocietyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="685" splitType="Stretch">
+			<rectangle>
+				<reportElement x="19" y="10" width="517" height="386" uuid="bf47e98b-63f1-4be6-944f-653d59a1faa3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="41" y="34" width="100" height="20" uuid="1d7c9c5d-e296-42be-aab1-25a98916a5fe"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account No  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="68" width="100" height="20" uuid="0f5a2e3e-cfc4-4e9b-9f22-a3c31d03f5eb"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Type  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="103" width="100" height="20" uuid="c5ecc402-fa6c-4a63-a230-df16a03a393b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="34" width="100" height="20" uuid="bfa9e9b3-8613-4725-924b-87e87bd1c666"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Receipt No  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="68" width="100" height="20" uuid="0a7460cd-1c34-49f1-9f69-7ece1e569b65"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tenure (In Days)  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="103" width="100" height="20" uuid="a22dfec7-868c-44d5-93d6-cb8fe079943f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deposit Date  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="135" width="100" height="20" uuid="f0d17bcf-5783-41c8-8f30-c8882bb04453"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maturity Date  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="166" width="100" height="20" uuid="2063f675-83de-452f-8410-71803b6bb512"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interest (in %)  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="197" width="100" height="20" uuid="80ae15ab-38a3-4807-a811-39dccc15ad82"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deposit Amount  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="228" width="100" height="20" uuid="3c7e8989-24bb-4a3c-b724-74850e41aa3b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maturity Amount  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="197" width="100" height="20" uuid="8420edd7-f16d-4700-b341-c471576c0064"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount in Words  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="320" width="100" height="20" uuid="63271af0-4554-49c9-9d83-37f8880e57b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Secretary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="320" width="100" height="20" uuid="864c72e6-0080-499a-8814-514f2fd2a6c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chairman]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="34" width="173" height="20" uuid="7c160a83-5b00-4379-9155-01b9da5931c2"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="68" width="173" height="20" uuid="d7c18f8a-e0ef-480c-b1e7-00ad96bde38f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accountType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="103" width="173" height="20" uuid="850a09fc-04cc-41a0-99a7-db1615fba649"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="34" width="100" height="20" uuid="5a17b78d-70d2-416e-9e5f-bcaff6a3c9c6"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receiptNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="68" width="100" height="20" uuid="50fe72c6-bbfc-4e87-944d-3be20e2242e3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{durationDays}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="424" y="103" width="100" height="20" uuid="440c59b1-b2b5-429a-aa75-3e28e95ad359"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depositDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="424" y="135" width="100" height="20" uuid="d886a222-0bc5-49d5-a001-3925f29019d2"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maturityDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#0.00">
+				<reportElement x="424" y="166" width="100" height="20" uuid="de1441f5-8432-480b-89e7-16f9ddcfc518"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interest}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#0.00">
+				<reportElement x="424" y="197" width="100" height="20" uuid="63dc0c71-1599-42f6-b450-6fdecd4d4483"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depositAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#0.00">
+				<reportElement x="424" y="228" width="100" height="20" uuid="8b86ce32-6814-462a-b594-1c3cd6e3b849"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maturityAmount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="41" y="422" width="483" height="1" uuid="9fd9bacb-d537-4993-adf7-466bc3ad5859"/>
+			</line>
+			<textField>
+				<reportElement x="141" y="197" width="173" height="20" uuid="94a90a1d-2ba8-4628-8139-90bfb1068a37"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depositInWords}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="19" y="446" width="517" height="219" uuid="8bac61bc-b1ba-4415-b2cc-124e3f077765"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="41" y="463" width="100" height="20" uuid="616399e5-77fe-47ab-a00d-7420b6ed658c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="463" width="173" height="20" uuid="0456446e-239c-461c-9959-d10ccf8c5318"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="463" width="100" height="20" uuid="13b1afec-deb4-4579-976a-0e5837262b3f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Receipt No  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="463" width="100" height="20" uuid="b81fe48c-f347-4f5d-9767-cc6de4006cc3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receiptNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="496" width="100" height="20" uuid="5f5e9e28-8aa7-4780-9580-351a3f3463b6"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deposit No  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="496" width="100" height="20" uuid="a79cd893-9a33-4151-8c7c-5bc1f24e796f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depositId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="559" width="100" height="20" uuid="278f70ab-56c7-4106-8493-55e60a0f8c6c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account No  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="559" width="173" height="20" uuid="998a1ee8-19b6-49bd-be73-3c2099e44597"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accountNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="496" width="100" height="20" uuid="d847ac50-4773-4475-a05e-51970053bf42"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deposit Amount  :]]></text>
+			</staticText>
+			<textField pattern="#0.00">
+				<reportElement x="141" y="496" width="173" height="20" uuid="c150af3f-20c2-4be5-91b5-aa4c03a703f5"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depositAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="527" width="100" height="20" uuid="b546da02-032b-43ea-a93d-8937bc2216fc"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deposit Date  :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="141" y="527" width="173" height="20" uuid="551d7c07-f148-42b5-b553-b89d02e6e1d3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{depositDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="527" width="100" height="20" uuid="73bc53a0-2bfe-4681-bb86-3b54f2f53cc4"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Interest (in %)  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="527" width="100" height="20" uuid="0a1c230c-7901-436f-ad84-140922fd5a92"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interest}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="94" y="616" width="100" height="20" uuid="9946b9ff-2f20-497f-9b21-480ff0ea73ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Secratary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="616" width="100" height="20" uuid="3fccfeec-3e03-4a0a-90a5-8b1aa23b8095"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chairman]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="27" splitType="Stretch"/>
+	</summary>
+</jasperReport>

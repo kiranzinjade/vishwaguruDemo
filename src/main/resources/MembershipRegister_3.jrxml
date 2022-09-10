@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MembershipRegister_3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd9dceda-8823-4b96-9b77-dd46a18a7b76">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<parameter name="belValue" class="java.lang.Double"/>
+	<parameter name="belType" class="java.lang.String"/>
+	<parameter name="belNo." class="java.lang.Integer"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.Long"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM member_belonging JOIN member ON member.id=member_belonging.member_id where member_belonging.member_id= $P{memberId}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="belonging_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="belonging_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="count" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="count"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_belonging"/>
+	</field>
+	<field name="COLUMN_11" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_12" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_14" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_15" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_16" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="aadhar_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="aadhar_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="application_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="board_resolution_no_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="board_resolution_no_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cast"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dependents" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dependents"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="family_member" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="family_member"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="father_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="inactive_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="inactive_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="kmp_status" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="kmp_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_unique_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_unique_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middle_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mother_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="occupation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="occupation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pan_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="phone_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="ration_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ration_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="religion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="2" width="167" height="18" uuid="972fc5d4-18f8-4b6f-882c-c233fda0c275"/>
+				<text><![CDATA[Details of farm machinery owned]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="3" y="-1" width="308" height="1" uuid="525fae73-6bf3-423d-b8ae-e9dea795097f"/>
+			</line>
+			<line>
+				<reportElement x="3" y="18" width="307" height="1" uuid="e5f59aff-606f-4ed2-bf7e-1a184b1a0e60"/>
+			</line>
+			<line>
+				<reportElement x="3" y="-1" width="1" height="19" uuid="bcaa5124-0b24-4b62-b379-3f07cd4ee2dc"/>
+			</line>
+			<line>
+				<reportElement x="98" y="-1" width="1" height="19" uuid="9e996669-c991-4e92-a59e-0444d93b6949"/>
+			</line>
+			<line>
+				<reportElement x="190" y="-1" width="1" height="19" uuid="1b63b5a9-0459-4580-a0d0-300d4baa8600"/>
+			</line>
+			<line>
+				<reportElement x="310" y="-1" width="1" height="19" uuid="2dd483c6-a363-4526-aa5b-8b921dac3e62"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="0" width="70" height="18" uuid="c6eac0bd-5688-4b94-805d-cc77969a990e"/>
+				<text><![CDATA[Item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="0" width="74" height="18" uuid="e5157070-88f4-4d17-ab4d-3c714716388e"/>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="0" width="74" height="18" uuid="d496edf2-465d-431c-bded-28a3f497b498"/>
+				<text><![CDATA[Value]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement x="3" y="-1" width="1" height="21" uuid="abda81f2-2cad-4f06-b5a1-5b750738352e"/>
+			</line>
+			<line>
+				<reportElement x="4" y="20" width="306" height="1" uuid="de0addd8-255d-489a-bef8-91717d308573"/>
+			</line>
+			<line>
+				<reportElement x="98" y="-1" width="1" height="21" uuid="3866b16a-333f-40b7-b826-fb58040ddccd"/>
+			</line>
+			<line>
+				<reportElement x="190" y="-1" width="1" height="22" uuid="97934382-692b-4070-be08-49f64163dbab"/>
+			</line>
+			<line>
+				<reportElement x="310" y="-2" width="1" height="22" uuid="e97c1557-c41d-49b4-854a-cf770a0ef8c7"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="0" width="80" height="20" uuid="262eed13-ae6b-45e6-b82c-5dc293e0423b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dce74ea1-a46c-425e-98b8-95552503a971"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{belonging_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="-1" width="74" height="21" uuid="3eb00ab4-8dc5-4a8d-bb8c-e6609fd0eb8b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="443298d3-d1e0-41d9-afea-04769ff6b56d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="a79f99c1-1309-426b-b2d4-1d687b9471d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="202d8d39-93d3-47ab-bff0-8f38718090bc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

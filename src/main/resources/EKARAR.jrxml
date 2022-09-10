@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EKARARFREASH" pageWidth="667" pageHeight="1345" whenNoDataType="AllSectionsNoDetail" columnWidth="627" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9cc628dc-b5b5-471f-b03f-c5852527d5a8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="249"/>
+	<import value="org.apache.commons.codec.binary.*"/>
+	<parameter name="para1" class="java.lang.String"/>
+	<parameter name="parasample" class="java.lang.String"/>
+	<parameter name="paratable" class="java.lang.String"/>
+	<parameter name="FullName" class="java.lang.String"/>
+	<parameter name="age" class="java.lang.String"/>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="KrushiSansthaName" class="java.lang.String"/>
+	<parameter name="LoanAmount" class="java.lang.String"/>
+	<parameter name="SignDate" class="java.lang.String"/>
+	<parameter name="para4" class="java.lang.String"/>
+	<parameter name="para5" class="java.lang.String"/>
+	<parameter name="garanter1" class="java.lang.String"/>
+	<parameter name="garanter2" class="java.lang.String"/>
+	<parameter name="landvillage" class="java.lang.String"/>
+	<parameter name="landtaluka" class="java.lang.String"/>
+	<parameter name="landcity" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="1305" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="627" height="309" uuid="c2458053-38eb-47c7-bb65-9a0ca39d187a"/>
+				<imageExpression><![CDATA[$P{para1}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="252" width="627" height="524" uuid="428e614a-fe3d-41b7-a649-3eb98752abde"/>
+				<imageExpression><![CDATA[$P{paratable}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="662" width="627" height="535" uuid="7659274d-ab04-4ddd-97b3-c696fd72cdc4"/>
+				<imageExpression><![CDATA[$P{para4}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="1098" width="627" height="207" uuid="b97b0c17-b606-4408-989f-436f30dd4c1c"/>
+				<imageExpression><![CDATA[$P{para5}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="30" y="95" width="184" height="20" uuid="867a3a60-0ced-427b-a02e-45362163a670"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="95" width="17" height="20" uuid="4e9c7004-d8c6-4fb3-bb08-62bffc3d5e72"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="95" width="311" height="20" uuid="042d68f6-b73d-4f25-9f05-c38b66542fdb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="125" width="413" height="20" uuid="1b5d5acb-3905-4f07-846d-526a7ccac1ef"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{KrushiSansthaName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="538" y="193" width="49" height="20" uuid="32dd8c1f-0488-40dd-a95c-51f17f20341f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoanAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="662" width="212" height="20" uuid="afafb980-974b-4aba-8998-b0d804cd33f8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="408" y="662" width="109" height="20" uuid="68293764-c9fa-4aca-aec0-434397827052"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SignDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="1088" width="275" height="20" uuid="a1f3314f-178a-4c96-9e12-5ae180bf2f73"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{KrushiSansthaName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="1108" width="303" height="26" uuid="7341edfe-0dd7-4479-ae51-5072fb7b5a3d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{KrushiSansthaName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="793" width="316" height="20" uuid="8c4ef555-be7d-4ed8-9739-2857386f6d7c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{garanter1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="830" width="316" height="20" uuid="6620d0fd-94f9-4a24-8aad-d9f72a953342"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{garanter2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="403" width="66" height="20" uuid="dab960eb-9ef7-4bc1-9314-885034997375"/>
+				<textFieldExpression><![CDATA[$P{landvillage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="403" width="90" height="20" uuid="5cef51e5-bf93-4084-a2e8-481d2d22ef36"/>
+				<textFieldExpression><![CDATA[$P{landtaluka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="403" width="100" height="20" uuid="9d78cd49-c70b-4069-b4ab-63834b2cf63b"/>
+				<textFieldExpression><![CDATA[$P{landcity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

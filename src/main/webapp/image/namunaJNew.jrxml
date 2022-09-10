@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="namunaJNew" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a24fcb4f-e374-4ee2-9442-6357ca949405">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="account_number" class="java.lang.String"/>
+	<parameter name="category" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="account_number" class="java.lang.String"/>
+	<field name="category" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="44" y="19" width="471" height="31" forecolor="#990000" uuid="f42627bf-ca50-449a-b90f-cf7d352a31e9"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[विविध कार्यकारी सेवा सहकारी संस्था]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="59" width="100" height="20" uuid="e70aac99-6354-4ff4-9154-270f6b6826d6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[जि-पुणे]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="15" width="170" height="20" forecolor="#009900" uuid="6cd01b9e-0169-4c3f-8dfb-e095468b6a11"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[शेअर्स जे नमुना रजिस्टर]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="44" height="20" uuid="07fbf27f-19e6-4c8f-844f-9d670650200f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[अ.क्रमांक]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="41" width="179" height="20" uuid="d43861f5-a029-45c3-a90e-921a467ec8a2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[सभासदाचे नाव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="41" width="162" height="20" uuid="1e580b9a-45ff-46c2-91f7-545fce672c0c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[सभासद पत्ता]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="41" width="100" height="20" uuid="3c78397c-dfec-4db8-9b61-779370cc9f49"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[खाते क्रमांक]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="41" width="70" height="20" uuid="7a359863-95ac-4287-a9f3-c2c414f3e136"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[वर्ग]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="11" width="10" height="20" uuid="5f020d79-c0a0-42e8-849c-5d38233ec4b8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="11" width="23" height="20" uuid="0a3722b8-8af5-454e-98a2-9f16ce8cdf90"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="33" y="11" width="40" height="20" uuid="9261382d-71db-46e5-a5b8-a637c5a36ae4"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="44" y="0" width="179" height="20" uuid="ef2e297a-1811-493d-a274-e236b0e08d98"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[मंदार चौधरी]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="0" width="162" height="20" uuid="4fcf5b54-d919-4f7b-a7e1-a00a5cdc648e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[कोंढवा, पुणे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="0" width="100" height="20" uuid="b71f5e00-f34d-4445-a464-fcabed42ae15"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[४५६७]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="0" width="70" height="20" uuid="a1d50fce-efcf-463e-8e94-d11e01679971"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ओबीसी]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="44" height="20" uuid="5c69744b-0323-4e40-862e-ee249824418c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[१]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="20" width="70" height="20" uuid="b11e8e58-1143-4211-83aa-5a3ad5b432c4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ओबीसी]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="20" width="162" height="20" uuid="43906345-e4d3-4d8f-8b04-980fcaf94a42"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[वारजे, पुणे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="44" height="20" uuid="ef967686-4f1d-49c9-a2ca-5062b1123513"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[२]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="20" width="179" height="20" uuid="f5f880d4-8dd4-47e6-b7a9-39eb494d087d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[रोहित कांबळे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="20" width="100" height="20" uuid="bbfd217d-9acb-42c8-a609-1443e1238328"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[७६५४]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="29" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="1" width="555" height="1" uuid="623f443f-db58-4f9e-a515-6d0f9327b49e"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="2" width="127" height="20" forecolor="#990000" uuid="771c97ba-b810-45f9-8680-8522a9f8ac13"/>
+				<text><![CDATA[डीबीसाॅफ़्ट, संगमनेर]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ShareReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f775fd51-c849-4ff5-8084-42cfa40adf72">
+	<property name="ireport.zoom" value="1.1000000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="135"/>
+	<parameter name="member_id" class="java.lang.Integer"/>
+	<parameter name="Member_Name" class="java.lang.String"/>
+	<parameter name="Shares_From" class="java.lang.Integer"/>
+	<parameter name="Shares_To" class="java.lang.Integer"/>
+	<parameter name="Nominee_Name" class="java.lang.String"/>
+	<parameter name="Middle_Name" class="java.lang.String"/>
+	<parameter name="Last_Name" class="java.lang.String"/>
+	<parameter name="Address_Line_1" class="java.lang.String"/>
+	<parameter name="Address_Line_2" class="java.lang.String"/>
+	<parameter name="Tahasil" class="java.lang.String"/>
+	<parameter name="City" class="java.lang.String"/>
+	<parameter name="District" class="java.lang.String"/>
+	<parameter name="Pin" class="java.lang.Integer"/>
+	<parameter name="State" class="java.lang.String"/>
+	<parameter name="Share_Ammount" class="java.lang.Double"/>
+	<parameter name="Number_of_Shares" class="java.lang.Integer"/>
+	<parameter name="date" class="java.lang.Date"/>
+	<parameter name="Nom_Middle_Name" class="java.lang.String"/>
+	<parameter name="Nom_Last_Name" class="java.lang.String"/>
+	<parameter name="No_of_shares" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT * FROM vikas.member_ship_application;]]>
+	</queryString>
+	<field name="member_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="aadhar_card" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="applicant_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="applicant_step" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="application_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_user_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo_file_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reciept_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="row_upd_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="signature" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="signature_file_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="upd_user_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="upd_user_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="voucher_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="voucher_ids" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="291" y="25" width="324" height="23" uuid="531ae2ef-1f6f-4f41-9b55-40a1e79a9eb4"/>
+				<textElement textAlignment="Justified">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vividh Karyakari Seva Sahakari Sanstha]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="88" width="802" height="1" uuid="ef3ce148-04c0-40ba-b245-cffb92b9d67c"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="308" y="15" width="186" height="20" uuid="2e9d6579-eab6-400f-9644-dd1d1ff75938"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Share Certificate]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="155" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="50" width="354" height="20" uuid="b0fe0281-d988-4b46-a6d1-73e7ff5c2d2c"/>
+				<textFieldExpression><![CDATA[$P{Nominee_Name}+" "+$P{Nom_Middle_Name}+" "+$P{Nom_Last_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="110" width="100" height="20" uuid="94d7bba2-45aa-4151-a171-90e1b23c809e"/>
+				<textFieldExpression><![CDATA[$P{Shares_From}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="90" width="116" height="20" uuid="97021be1-af54-446a-abc6-1a24f6d0aaef"/>
+				<textFieldExpression><![CDATA[$P{Number_of_Shares}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="90" width="100" height="20" uuid="ba0aab23-56e4-4b67-9067-06fabe90fa9c"/>
+				<textFieldExpression><![CDATA[$P{Share_Ammount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="130" width="100" height="20" uuid="259e18ea-3943-482f-a4c8-64786e5ccda0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Issue Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="10" width="100" height="20" uuid="c9db5f0d-2c48-4d7f-8c01-67a3cb14168b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificate Number :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="90" width="100" height="20" uuid="0b445711-9cc4-46b0-932a-4bf2c860b0eb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Share Amount :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="10" width="100" height="20" uuid="9a685e60-ed33-49c7-87a1-33d726ea6d1e"/>
+				<textFieldExpression><![CDATA[$P{member_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="110" width="100" height="20" uuid="fbc9d228-07c3-4053-9c8b-bdbbc6d2ac28"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Share From :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="30" width="295" height="20" uuid="3d381b07-446e-436d-a69a-1a62f064133c"/>
+				<textFieldExpression><![CDATA[$P{Member_Name}+" "+$P{Middle_Name}+" "+ $P{Last_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="30" width="100" height="20" uuid="b650e69c-b41d-404e-b0ea-1f005d35402a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="70" width="100" height="20" uuid="8e5c3de2-eda3-4a7e-ac0c-25f28dc65d95"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="70" width="534" height="20" uuid="71238dc6-d6b3-46e4-bad4-adf5f6ea9083"/>
+				<textFieldExpression><![CDATA[$P{Address_Line_1}+", "+$P{Address_Line_2}+", "+$P{Tahasil}+", "+$P{City}+", "+$P{District}+", "+$P{Pin}+", "+$P{State}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="110" width="100" height="20" uuid="389888ca-b935-4555-bbc6-6f8388ee1443"/>
+				<textFieldExpression><![CDATA[$P{Shares_To}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="496" y="110" width="54" height="20" uuid="73dc580c-c1d3-4b15-96f1-cdf13508f736"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Share To :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="100" height="20" uuid="6a8d0acf-3835-421f-9cee-ff824fa2804c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member  Id :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="90" width="73" height="20" uuid="99277a42-9240-4aec-9a31-9d98f37b5aee"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Shares  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="50" width="100" height="20" uuid="fac60864-9ed1-4c59-a147-af5e56f2780a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nominee Name :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="110" y="130" width="100" height="20" uuid="e2c9e1dd-ddd0-4ff0-b899-4566a39f3755"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="496" y="131" width="100" height="20" uuid="c75aaa92-7193-44c0-830c-b97570d6901f"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of shares :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="596" y="130" width="100" height="20" uuid="3ae0745d-09d3-48d3-91ba-7c08d3e4b208"/>
+				<textFieldExpression><![CDATA[$P{No_of_shares}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="53" y="0" width="100" height="20" uuid="d2e551f3-d787-4209-b698-6eec2c97cdc9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stamp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="0" width="100" height="20" uuid="b5871e03-1d8b-40c7-ab74-9edf4d2539d7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clerk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="0" width="100" height="20" uuid="51d4a990-1dc0-4be4-9bba-ab2b0227eeb3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chairman]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

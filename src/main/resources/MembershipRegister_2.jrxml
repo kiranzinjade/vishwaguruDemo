@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MembershipRegister_2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eb4294fa-f87e-49d8-bdf1-715367116370">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="value" class="java.lang.Double"/>
+	<parameter name="area" class="java.lang.Double"/>
+	<parameter name="no" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.Long"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM house JOIN member_house ON member_house.house_id=house.id WHERE member_house.member_id= $P{memberId}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="address_line1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address_line1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="address_line2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address_line2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="address_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="city" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="city"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="count" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="count"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="district" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="district"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="house_area" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="house_area"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="house_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="house_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="is_owned" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_owned"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="pincode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pincode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="state" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="state"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="tehsil" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tehsil"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="house_valuation" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="house_valuation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="house"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_house"/>
+	</field>
+	<field name="house_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="house_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member_house"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="21" width="460" height="2" uuid="9f72987a-b38c-4f3e-87f5-51f98f117744"/>
+			</line>
+			<line>
+				<reportElement x="0" y="43" width="460" height="1" uuid="9dc79a73-ae5e-4bf8-8c29-6de07db15713"/>
+			</line>
+			<line>
+				<reportElement x="0" y="22" width="1" height="21" uuid="cd496202-623f-4fe0-bf1a-d46faa69205a"/>
+			</line>
+			<line>
+				<reportElement x="84" y="23" width="1" height="21" uuid="8ef084cc-dde7-465c-874d-b60ab0735557"/>
+			</line>
+			<line>
+				<reportElement x="237" y="23" width="1" height="19" uuid="1a733c81-3618-4f6e-a954-aa1b7e59636a"/>
+			</line>
+			<line>
+				<reportElement x="359" y="23" width="1" height="19" uuid="93cb807d-3105-4c02-b1b1-f2d95a6c069e"/>
+			</line>
+			<line>
+				<reportElement x="460" y="23" width="1" height="19" uuid="6c89d8eb-4442-489d-aa53-5916bd1b4449"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="22" width="60" height="21" uuid="b425f18c-223a-452f-8baf-cf7dae079613"/>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="23" width="100" height="19" uuid="42bcd7d8-f049-4e3f-8814-b00047c5c46e"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="23" width="80" height="18" uuid="4ff14fba-5ef8-4403-ba2e-19e8bd093f53"/>
+				<text><![CDATA[Built up Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="23" width="70" height="18" uuid="5abb87d8-5698-4f4a-b460-2002c0b6ff8e"/>
+				<text><![CDATA[Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="-1" width="390" height="21" uuid="6fc9a819-2b19-4784-b768-7a9db7beb2f9"/>
+				<text><![CDATA[House(s) owned by Member]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="30" width="460" height="1" uuid="b01544ad-3fe2-49cf-941e-b07dad6f1b07"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-2" width="1" height="33" uuid="3936aa5f-220f-46b3-bd2d-e7693f30e918"/>
+			</line>
+			<line>
+				<reportElement x="84" y="-3" width="1" height="33" uuid="acec3fc9-0120-4015-b5e9-8a60323bfd2b"/>
+			</line>
+			<line>
+				<reportElement x="237" y="-4" width="1" height="34" uuid="f1526ecc-07d3-4b0b-8312-2a92b013c0e0"/>
+			</line>
+			<line>
+				<reportElement x="359" y="-4" width="1" height="34" uuid="2b134406-31cc-4c2b-abcf-b09dc456f13b"/>
+			</line>
+			<line>
+				<reportElement x="460" y="-2" width="1" height="32" uuid="aebe17e1-f653-4ac7-866d-af87e95595c2"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="0" width="70" height="30" uuid="33056d33-5b79-4549-82c2-78aa801ef2ba">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fcd0236a-31b3-4cec-99b7-2dcbe12505b0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="-1" width="147" height="30" uuid="3baec703-620f-400f-a5ae-3b4365aae566">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e8bb2e49-4212-4d25-87ac-f593fd18769e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{address_line1}+" "+$F{address_line2}+" "+$F{city}+" "+$F{state}+" "+$F{pincode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="-2" width="100" height="30" uuid="af686521-7003-4b6d-85fa-c55a7ad96b62">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d2872e87-e3ec-4e56-aedd-e7fe4a72dad0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{house_area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="-1" width="85" height="30" uuid="b49f97c5-bda9-4c6c-8c20-961bb9ad6651">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30f57dec-8766-41d2-92c6-5da656833aba"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{house_valuation}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

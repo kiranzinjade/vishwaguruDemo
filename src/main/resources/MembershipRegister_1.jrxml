@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MembershipRegister_1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c95f8e9-4b37-4ede-a77a-5571d336a370">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<parameter name="nomineeFirstName" class="java.lang.String"/>
+	<parameter name="nomineeRelation" class="java.lang.String"/>
+	<parameter name="guardian" class="java.lang.String"/>
+	<parameter name="dob" class="java.util.Date"/>
+	<parameter name="nominationDate" class="java.util.Date"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="land" class="java.lang.Integer"/>
+	<parameter name="id" class="java.lang.Long"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.Long"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM member JOIN saving_account ON member.id=saving_account.member_id where member.id= $P{memberId} ]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="aadhar_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="aadhar_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="application_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="board_resolution_no_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="board_resolution_no_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cast"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dependents" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dependents"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="family_member" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="family_member"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="father_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="inactive_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="inactive_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="kmp_status" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="kmp_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_unique_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_unique_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middle_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mother_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="occupation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="occupation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pan_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="phone_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="ration_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ration_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="religion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_32" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_33" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_34" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_35" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_36" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_37" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_closing_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_closing_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_opening_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_opening_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_42" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="deposit_account_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_account_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="365" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="275" height="1" uuid="04b6af25-d380-45fd-8f7b-2371e7d2ccf7"/>
+			</line>
+			<line>
+				<reportElement x="0" y="17" width="276" height="1" uuid="b58b4744-793b-4bd2-b521-6a975ec1522e"/>
+			</line>
+			<line>
+				<reportElement x="0" y="50" width="560" height="1" uuid="e9ba37bf-bc81-42c0-a695-55c08959eeb5"/>
+			</line>
+			<line>
+				<reportElement x="133" y="-1" width="1" height="362" uuid="3f96dc9a-c98e-483b-a247-43affea6f48b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="78" width="560" height="1" uuid="c631b0bc-c3dc-44dd-b221-0e3c48c512f8"/>
+			</line>
+			<line>
+				<reportElement x="0" y="100" width="560" height="1" uuid="faebed58-d4bc-4823-ba9a-cbeed9887c67"/>
+			</line>
+			<line>
+				<reportElement x="0" y="119" width="560" height="1" uuid="337c1968-6907-4725-8069-c2f0d823087d"/>
+			</line>
+			<line>
+				<reportElement x="0" y="137" width="560" height="1" uuid="4bbaeb7f-45ec-44c9-a5cd-943cfb37bc60"/>
+			</line>
+			<line>
+				<reportElement x="0" y="159" width="560" height="1" uuid="d13ab251-d285-4f33-ba24-e5edb6d1c506"/>
+			</line>
+			<line>
+				<reportElement x="0" y="186" width="560" height="1" uuid="169a7701-a060-4e77-a0f7-b4b54427d018"/>
+			</line>
+			<line>
+				<reportElement x="0" y="217" width="560" height="1" uuid="9f7073bb-a681-40b7-821a-a982901ee960"/>
+			</line>
+			<line>
+				<reportElement x="0" y="231" width="560" height="1" uuid="b4317f63-48e0-4559-8088-d434c365e9db"/>
+			</line>
+			<line>
+				<reportElement x="0" y="264" width="560" height="1" uuid="50531038-2fd1-4ba5-8c70-661b1a43a8dc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="295" width="560" height="1" uuid="293ca885-8103-4fc2-91e1-bc7730bbfe5d"/>
+			</line>
+			<line>
+				<reportElement x="0" y="313" width="560" height="1" uuid="68b98101-381e-460f-b481-ed0012724be3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="344" width="560" height="1" uuid="4b82657e-dcd4-4017-b008-0a0cd047ba63"/>
+			</line>
+			<line>
+				<reportElement x="0" y="362" width="560" height="1" uuid="01444278-985d-41d3-916e-3cbbdfc23693"/>
+			</line>
+			<line>
+				<reportElement x="275" y="-1" width="1" height="364" uuid="8d643b0c-52e6-4b31-9333-4845d84aee3b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="361" uuid="e4a6ffd5-c692-4687-87eb-a9fa8c6c7cbd"/>
+			</line>
+			<line>
+				<reportElement x="423" y="51" width="1" height="310" uuid="c47672e1-7514-4944-890b-0a7d4909d8f0"/>
+			</line>
+			<line>
+				<reportElement x="559" y="59" width="1" height="302" uuid="c585699a-43a6-4740-9d8b-c73bed74c4a2"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="0" width="120" height="17" uuid="0e376405-a9e8-4c1e-98bd-93c632011c9c"/>
+				<text><![CDATA[Membership No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="18" width="110" height="29" uuid="cfc66bb8-00f7-4499-9054-942bd09bbaf5"/>
+				<text><![CDATA[Board Resolution No. and date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="54" width="100" height="18" uuid="3a4157d9-bf4e-4397-ac45-7895541570e7"/>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="79" width="100" height="21" uuid="8c879d03-2654-4289-ac15-af16d7e54bcf"/>
+				<text><![CDATA[Date of Birth:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="101" width="120" height="18" uuid="98076995-2971-40d9-9e0e-c6e035b5ae23"/>
+				<text><![CDATA[Father's/Husband's Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="120" width="120" height="17" uuid="806a72f4-e0a2-4bb0-9875-d887e4b0de19"/>
+				<text><![CDATA[Educational Qualification:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="137" width="120" height="22" uuid="b080efe2-1f3a-4e50-a617-d00ba0cf554f"/>
+				<text><![CDATA[Catagory of Community:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="160" width="100" height="23" uuid="e0933140-bb3e-4be2-a114-00186e50234f"/>
+				<text><![CDATA[Occupation:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="199" width="100" height="18" uuid="c2b2ea22-8f7d-43a2-ba4d-552a17eb4467"/>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="242" width="140" height="20" uuid="b77c8832-ed4f-4ec5-b869-901e8c442e70"/>
+				<text><![CDATA[No. of family members :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="272" width="100" height="21" uuid="a2b9dc4f-6c40-4c27-9156-e37e504f0c0f"/>
+				<text><![CDATA[No of depends :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="345" width="120" height="18" uuid="928074bf-c09d-4242-b12b-6534960860ac"/>
+				<text><![CDATA[Land owned :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="60" width="100" height="18" uuid="9282a1a0-675b-432e-a0df-421bc5286390"/>
+				<text><![CDATA[Male/Female :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="79" width="100" height="18" uuid="89ca3b32-9ca7-4c58-a044-85b6c7e4df88"/>
+				<text><![CDATA[Ration Card No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="101" width="100" height="18" uuid="d89e7050-1ec5-45c9-b27d-32429118a0f3"/>
+				<text><![CDATA[Voter ID No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="121" width="100" height="16" uuid="9f2ab657-f53e-4100-9a36-2e518cf27540"/>
+				<text><![CDATA[IT Pan No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="140" width="100" height="16" uuid="a606b659-e5fe-44ba-bd30-dbc8fa8b8b16"/>
+				<text><![CDATA[S.B.A/c No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="160" width="100" height="16" uuid="1f96a7eb-b5e2-44db-b23a-c4538fab4247"/>
+				<text><![CDATA[Telephone No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="187" width="139" height="29" uuid="857c1636-1c4c-46e3-b1e6-1b0dbd9add52"/>
+				<text><![CDATA[Small Farmer/Marginal Farmer/Others:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="233" width="139" height="29" uuid="a0d6a470-3ed9-4036-a0a1-6ccc67700f39"/>
+				<text><![CDATA[Name and Address of Nominee:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="266" width="139" height="29" uuid="3b7f837f-d109-41d3-bb59-c78a250611d5"/>
+				<text><![CDATA[Relationship of Nominee to Member:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="316" width="139" height="27" uuid="5c917d54-3044-4d9d-9b2f-01bc19dff3cb"/>
+				<text><![CDATA[Name and Address of Grardian if Nominee is minor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="346" width="100" height="15" uuid="349f6c7a-fd74-45f6-b096-e097780cc86e"/>
+				<text><![CDATA[Date of Nomination:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="501" y="7" width="59" height="1" uuid="a554e2ab-4164-45ad-bb5f-e5500013be6b"/>
+			</line>
+			<line>
+				<reportElement x="502" y="8" width="1" height="42" uuid="bfacb8e1-0e22-44f9-bfb2-9d7250049b88"/>
+			</line>
+			<line>
+				<reportElement x="559" y="8" width="1" height="51" uuid="5776425a-1887-43ee-8f93-620e8319cc71"/>
+			</line>
+			<textField>
+				<reportElement x="170" y="0" width="100" height="14" uuid="82e363a4-634c-4908-9ec4-422089796ace"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="30" width="115" height="17" uuid="b3292bc5-993a-4432-8b3e-81baf42a3e31"/>
+				<textFieldExpression><![CDATA[$F{board_resolution_no_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="51" width="138" height="27" uuid="9be9bcf9-2f58-4ea8-b788-127993ffb320"/>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{middle_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="78" width="100" height="19" uuid="f4c79180-d8b5-4c6a-ab6b-0ab2140e6fe6"/>
+				<textFieldExpression><![CDATA[$F{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="100" width="130" height="19" uuid="a62f231e-0746-448f-bf18-877474f7497d"/>
+				<textFieldExpression><![CDATA[$F{middle_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="139" width="100" height="18" uuid="d53ae36b-9279-4fee-a2f2-29ede0596cf4"/>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="160" width="130" height="24" uuid="cb570bfa-b3d0-4049-99d3-3b2c6e155738"/>
+				<textFieldExpression><![CDATA[$F{occupation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="265" width="100" height="25" uuid="45193542-b2c3-418b-ae59-58eae05eb160"/>
+				<textFieldExpression><![CDATA[$F{dependents}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="237" width="100" height="16" uuid="81e9cda3-f814-459b-8361-69cda9318968"/>
+				<textFieldExpression><![CDATA[$F{family_member}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="54" width="100" height="18" uuid="05f8a30b-169e-45fe-84e6-7b3f83bd9b5f"/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="80" width="100" height="17" uuid="09f7ff2c-42ee-41d3-a76d-24274ffadbe3"/>
+				<textFieldExpression><![CDATA[$F{ration_card}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="120" width="100" height="17" uuid="92a9cb02-d8af-4c4b-94c2-dcef4b176398"/>
+				<textFieldExpression><![CDATA[$F{pan_card}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="138" width="100" height="19" uuid="7090ac3b-44ec-453f-bd3c-7f5bfb78552e"/>
+				<textFieldExpression><![CDATA[$F{account_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="161" width="100" height="15" uuid="f4f4de85-ec7b-43a3-b7b6-19db2e20b7a5"/>
+				<textFieldExpression><![CDATA[$F{phone_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="187" width="100" height="20" uuid="98ec17e9-6e4a-46ba-b339-33ee33f5c80c"/>
+				<textFieldExpression><![CDATA[$F{member_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="232" width="100" height="30" uuid="d0ceedfd-919e-469d-bc2f-509f6074fc9a"/>
+				<textFieldExpression><![CDATA[$P{nomineeFirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="270" width="114" height="20" uuid="191db7e8-121a-443d-8e3e-96af80fb72ee"/>
+				<textFieldExpression><![CDATA[$P{nomineeRelation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="313" width="129" height="30" uuid="1456f4bb-6cd9-43a7-a540-bd5689d6602e"/>
+				<textFieldExpression><![CDATA[$P{guardian}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="278" y="297" width="135" height="14" uuid="d0f5cd30-4437-47dc-90c2-7151a01fe0d5"/>
+				<text><![CDATA[dob of nominee if minor]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="295" width="100" height="16" uuid="615e5495-8fb6-48f0-82d4-09bf987b38d7"/>
+				<textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="345" width="115" height="16" uuid="969baa65-7a8d-489a-83b1-bac2fd01eb7a"/>
+				<textFieldExpression><![CDATA[$P{nominationDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="345" width="100" height="16" uuid="f13cbb22-ccfc-4f74-95f3-63b56953b836"/>
+				<textFieldExpression><![CDATA[$P{land}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="188" width="133" height="28" uuid="8006dab3-17ef-4446-88b8-2d7961a3b6dd"/>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

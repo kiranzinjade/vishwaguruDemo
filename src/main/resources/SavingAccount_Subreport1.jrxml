@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SavingAccount_Subreport1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d934ecea-faee-40f6-a476-d8869d17887b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="162"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="831"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="accountNo" class="java.lang.Long"/>
+	<parameter name="nomineeFirstName" class="java.lang.String"/>
+	<parameter name="nomineeRelation" class="java.lang.String"/>
+	<parameter name="guardian" class="java.lang.String"/>
+	<parameter name="dob" class="java.util.Date"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="lastDate" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[Select * from member JOIN saving_account ON member.id=saving_account.member_id]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="aadhar_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="aadhar_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="application_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="board_resolution_no_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="board_resolution_no_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cast"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dependents" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dependents"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="family_member" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="family_member"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="father_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="inactive_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="inactive_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="kmp_status" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="kmp_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_unique_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_unique_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middle_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mother_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="occupation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="occupation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pan_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="phone_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="ration_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ration_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="religion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_31" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_32" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_33" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_34" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_35" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_36" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_closing_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_closing_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_opening_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_opening_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_41" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="deposit_account_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_account_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="249" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="7" width="554" height="1" uuid="8805fd3b-2a95-4bfb-aa54-d1de4e0e9ce4"/>
+			</line>
+			<line>
+				<reportElement x="0" y="25" width="270" height="1" uuid="808e3590-4137-4ea8-9f93-93d62c080cba"/>
+			</line>
+			<line>
+				<reportElement x="0" y="43" width="270" height="1" uuid="9260d0e9-db53-4a67-8bc0-f9d917dacd7c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="60" width="552" height="1" uuid="9c3c2ed1-a072-417f-b1f8-15ec2a09abf7"/>
+			</line>
+			<line>
+				<reportElement x="270" y="7" width="1" height="230" uuid="b7d71847-490e-4eac-a3d6-cb7fa096b23d"/>
+			</line>
+			<line>
+				<reportElement x="129" y="7" width="1" height="230" uuid="61d15f34-872c-422c-a6ad-b692eafb7bd3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="84" width="552" height="1" uuid="911ca115-ef77-41ca-ae9a-99d6ac2138be"/>
+			</line>
+			<line>
+				<reportElement x="0" y="120" width="551" height="1" uuid="2d350cd0-095d-46a0-984b-595bc805a54f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="142" width="553" height="1" uuid="a5ff9c88-c932-4aea-9f68-f0826971fa15"/>
+			</line>
+			<line>
+				<reportElement x="0" y="174" width="552" height="1" uuid="2d484863-bd1b-42b8-b743-247dd62491a0"/>
+			</line>
+			<line>
+				<reportElement x="0" y="200" width="553" height="1" uuid="9c394292-27bd-4e1c-8426-4b9635a82673"/>
+			</line>
+			<line>
+				<reportElement x="0" y="219" width="553" height="1" uuid="1ccd3de8-1054-4e3b-af59-8736680e249f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="7" width="1" height="230" uuid="a038b6e6-e125-43b2-ad87-c81a696401b1"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="7" width="129" height="18" uuid="4a153abf-dd59-42a8-ace1-d7b3d8527ea0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Account No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="25" width="128" height="17" uuid="fa0a4b52-e343-4e12-ba8f-cb81f7d95ad1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Membership No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="42" width="128" height="18" uuid="9b536af6-2938-4dda-a94d-540612149c16"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="60" width="128" height="24" uuid="817d29ea-dbf0-4f28-9159-53636fc20a44"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Occupation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="85" width="128" height="35" uuid="20b07ea6-9ef8-422e-808c-5e445399cbc4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="120" width="128" height="20" uuid="31ad789c-1689-41c9-955a-2aba52126f70"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telephone No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="174" width="128" height="26" uuid="3484d840-b6aa-4dca-a178-d9382d877213"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Income Tax Permanent Account No. (PAN)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="200" width="128" height="18" uuid="1f64ebc5-9ed9-4f98-ac27-739bf0505d52"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Standing Instructions:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="129" height="17" uuid="743006fc-4ae4-4021-a5d5-d4a5549e1fd2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Register Serial No:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="237" width="553" height="1" uuid="a01025ae-e098-406c-97a5-ee2f18371f4e"/>
+			</line>
+			<line>
+				<reportElement x="552" y="7" width="1" height="230" uuid="277039d3-9a8e-4bb6-aa8b-f3ed476e623c"/>
+			</line>
+			<line>
+				<reportElement x="441" y="7" width="1" height="230" uuid="ca973919-e053-4162-8772-555ee4d07fdd"/>
+			</line>
+			<staticText>
+				<reportElement x="271" y="60" width="170" height="24" uuid="1c699c8a-bbc0-4bb9-ae71-5f74e20b66c3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name of the Nominee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="86" width="170" height="31" uuid="0901ac6c-1e36-497f-b64c-ca3fd5591935"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Relationship with depositer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="122" width="170" height="20" uuid="fa53ff64-b50b-4735-8f78-b795ab3a6267"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Date of Birth if minor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="145" width="170" height="29" uuid="5c8507b5-0bc6-48d4-8f30-fd6517490a8a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name and Address of guardian, in case of minor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="177" width="170" height="23" uuid="24e69dd8-3c80-43da-a1f3-ceb7b8c488eb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Operational Instructions:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="202" width="170" height="16" uuid="ca158eaf-11ed-4167-97a7-28ccf7d3c62c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Initials of authorised person/s:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="220" width="170" height="16" uuid="febb449b-d20e-4122-8c37-99c458643615"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Last day of Operation:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="17" width="170" height="24" uuid="7a05ab53-ff30-4187-b70c-f782606ea632"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Photo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="9" width="136" height="16" uuid="89887b6f-580e-42b5-a0a6-8beb69d6825a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{accountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="27" width="138" height="16" uuid="34cf3a25-4bcd-4ab5-96d5-1b31292fdaec"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="61" width="136" height="23" uuid="4b42e868-7635-4b1e-ad07-de89f02a804c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{occupation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="122" width="138" height="18" uuid="c0fab700-4c66-46da-9e93-c3fc3964c840"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{phone_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="175" width="139" height="25" uuid="3be061d2-012e-4a1f-bd3e-2b3237ebd55d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pan_card}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="61" width="108" height="23" uuid="ed9d852b-39cf-48fe-a883-4fbca9ba4c45"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{nomineeFirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="43" width="138" height="17" uuid="3bfd8a3a-0902-4fd0-bc2d-9c4cd0e449fd"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{first_name}+" "+$F{middle_name}+" "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="85" width="100" height="30" uuid="152968ce-0124-4b9a-8124-000a2134fec4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{nomineeRelation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="144" width="107" height="30" uuid="d4182e86-18dc-4fd2-a5ba-6d7437ee2133"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{guardian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="123" width="107" height="19" uuid="4a28fa06-e2e8-476b-a8df-16ff540ad25a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd/mm/yyyy"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="87" width="139" height="30" uuid="3c4e8be3-3df2-48f0-9e4d-53f7dfd48045"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="219" width="108" height="18" uuid="65db9f48-04f5-4a66-a3c4-42699b1cc70d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{lastDate}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd/mm/yyyy"]]></patternExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

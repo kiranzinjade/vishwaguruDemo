@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="namuna J-1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="71cf7bdb-806a-4cf0-9d45-fd1555fe0a3b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SampleBeanDataAdapter"/>
+	<parameter name="SocietyName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="classificationDate" class="java.util.Date">
+		<fieldDescription><![CDATA[classificationDate]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="206" y="0" width="143" height="22" uuid="07645e11-0087-4213-b089-a5df1f55e122"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORM - 'J-1']]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="24" width="200" height="26" uuid="c1e576d9-395b-41bb-8750-e6b94690183c"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[(See Section 26 and Rule 33)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="150" height="30" uuid="4f29f227-dafd-4180-af32-e4055a5dcdc0"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[List of Active members of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="0" width="200" height="30" uuid="3c78ab54-f37a-4d86-98a4-cfc0453a821c"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SocietyName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="340" y="0" width="210" height="30" uuid="86ae54a1-abf6-4fd6-b02a-9b8d02be8004"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Society Limited / Unlimited.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="80" height="40" uuid="5023455e-7cf8-409b-b5f5-afc8610f4782"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="1" width="80" height="39" uuid="1f05b78c-38bb-4476-a484-fcde511396de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr. No.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="80" y="0" width="169" height="40" uuid="62ab970e-5469-440c-8019-353c8db58aa6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="248" y="0" width="160" height="40" uuid="f26f0441-464e-4fca-b16a-3ca7955ae801"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="248" y="40" width="160" height="20" uuid="62e691c6-ffaf-4831-8b4f-910cc17130a3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="408" y="0" width="141" height="40" uuid="6907c710-945a-4198-986a-f83dd846d8ed"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="408" y="40" width="141" height="20" uuid="1e8ccb42-66c4-487c-a147-64622ed6332a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="90" y="0" width="150" height="41" uuid="923aa574-6cdd-4f94-b86b-30ed342a9ce4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full name of the Member  (Surname first)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="1" width="159" height="38" uuid="c06c7eed-45ad-4b0b-aa8a-040e6451586a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Postal Address and e-mail Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="0" width="142" height="39" uuid="535bae6a-b38a-4d23-a2e8-d5f0d974be63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Classification as Active Member]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="40" width="160" height="19" uuid="eac77901-68f7-4def-a1dd-2827a6a5561d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="40" width="140" height="19" uuid="553d2103-71ab-42f3-b819-4a13046c169e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="40" width="80" height="20" uuid="0a856065-31b6-412a-803d-725f517a7c67"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="40" width="80" height="19" uuid="e8435fde-d84f-47f6-9189-c0655788366b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="80" y="40" width="168" height="20" uuid="8adb5451-f76a-4c93-9b33-694c38927e8b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="80" y="40" width="168" height="19" uuid="f92d97b4-03ba-4dd5-b1ef-6f9d6599baa1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="76" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-2" width="80" height="78" uuid="e8ece43d-4863-467b-9607-47e0c394e472"/>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="9" width="60" height="30" uuid="1ab1adfc-6311-4c67-a03b-99a5dc2f804c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="80" y="-2" width="168" height="78" uuid="635ac328-47ae-4753-89a4-de5ddaaf18d7"/>
+			</rectangle>
+			<textField>
+				<reportElement x="90" y="9" width="150" height="30" uuid="2c5a23cd-0b70-42f6-ae57-43b15200e789">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4da86979-27b4-4ae3-996e-6c00ddcebf88"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="248" y="-2" width="161" height="78" uuid="0530abb0-7706-4953-99b0-167f2316cd7f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="262" y="1" width="131" height="57" uuid="f7c80036-84f8-4f8f-bd56-5ca0d87dae0e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11ecf3d4-0dde-4b8e-b3ba-b88fdf176db2"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="58" width="129" height="16" uuid="78a208a6-a320-40cc-b5b6-59e30c66603c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb2ab5d4-9418-432a-b289-71638700beba"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="408" y="-2" width="141" height="78" uuid="a6aba984-081e-4646-a1a4-d85433505e6e"/>
+			</rectangle>
+			<textField>
+				<reportElement x="421" y="9" width="118" height="30" uuid="8458ea65-4d42-45f9-bc27-63c6ee21bb04">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f2510fef-02e9-410a-844f-ec942dfef704"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{classificationDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="48" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="450" y="30" width="100" height="20" uuid="61f83986-0b5c-48f4-976e-406c1ad9989d"/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="548" height="20" uuid="785b7bc8-16c8-4300-a8c3-8d2ad1b30deb"/>
+				<text><![CDATA[Note : -  All pages of list shall have seal and signature of the competent authority of the society]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

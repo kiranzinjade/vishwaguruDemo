@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SavingAccount_Subreport2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f42a4b7d-826d-484d-be29-001cf1eb7d7f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="220"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="769"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="accountNo" class="java.lang.Long"/>
+	<parameter name="date" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[Select * FROM saving_account JOIN deposit_ledger ON saving_account.account_no=deposit_ledger.account_no 
+WHERE saving_account.account_no= $P{accountNo}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_closing_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_closing_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_opening_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_opening_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="deposit_account_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_account_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_14" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_15" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_16" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_17" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_18" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_19" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_20" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="balance_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="credit_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="credit_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="debit_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="debit_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="deposit_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="narration" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="narration"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="particulars" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="particulars"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="voucher_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="voucher_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="96" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="13" width="553" height="1" uuid="b2422046-cde1-4713-ba7b-77a30196e826"/>
+			</line>
+			<line>
+				<reportElement x="1" y="75" width="550" height="1" uuid="86e964d6-64e5-4cc0-84ae-e8e968d60255"/>
+			</line>
+			<line>
+				<reportElement x="1" y="95" width="550" height="1" uuid="e1f43655-6bcd-49f0-8840-134183f177a4"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="26" width="35" height="20" uuid="577cf436-21d1-4f49-9bcb-a47293493ef0"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="26" width="48" height="20" uuid="c12fac9c-2f19-4afa-b1f1-715916f996f8"/>
+				<text><![CDATA[Particulars]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="26" width="46" height="30" uuid="30eb92ed-e751-4f02-b942-09fdab6c4739"/>
+				<text><![CDATA[Amount Deposited]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="26" width="48" height="20" uuid="1c82ee84-d531-4fce-adad-b0db8152e433"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="26" width="35" height="20" uuid="cdf3b6eb-1f7f-4f64-af48-e7f54e3e531a"/>
+				<text><![CDATA[Initials]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="26" width="50" height="39" uuid="8f39c877-873b-4f04-a3ea-9a0d812807e5"/>
+				<text><![CDATA[Monthly minimum balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="26" width="35" height="20" uuid="1cfddeb4-79ca-4a6b-979b-514d6d111923"/>
+				<text><![CDATA[Interest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="26" width="48" height="20" uuid="8810b8a0-69f7-4c0d-843d-7e3f8666831e"/>
+				<text><![CDATA[Remark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="76" width="29" height="14" uuid="eeaf04a8-4638-4daa-a0cc-622a37c7b43c"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="76" width="29" height="14" uuid="1fcdc65b-f7b7-43c0-866d-b780051c2557"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="76" width="29" height="14" uuid="c2e636f7-b9cb-4ab6-af7a-e1d7fb2d4ee9"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="26" width="48" height="39" uuid="498cb220-925f-43e6-a42c-2adfadae9394"/>
+				<text><![CDATA[Amount Withdrawn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="76" width="29" height="14" uuid="1b13f8f8-b7af-4fb5-acd9-fd1b4c6cb3c6"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="75" width="29" height="14" uuid="64d5c562-97c8-4e08-a26a-f3d520ab1fb9"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="75" width="29" height="14" uuid="5ef60543-dc91-4dcc-8b22-b2cda2e4771d"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="76" width="29" height="14" uuid="a4743122-ccdf-4b1a-8e10-db9313d7c780"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="76" width="29" height="14" uuid="54925d56-3f19-4e17-acd8-6493df017a6a"/>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="76" width="29" height="14" uuid="547d2ae2-6ffc-498f-8f93-995a4a5047a8"/>
+				<text><![CDATA[9]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="18" width="553" height="1" uuid="0b6e3cfc-9a2e-48e2-b37a-fbc1915849a8"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-83" width="1" height="82" uuid="1f0ad761-d8d1-4ad3-973c-d030ae3832e3"/>
+			</line>
+			<line>
+				<reportElement x="58" y="-83" width="1" height="82" uuid="c0bb1d35-a455-4d39-b61d-1af3bb33a8d4"/>
+			</line>
+			<line>
+				<reportElement x="116" y="-82" width="1" height="82" uuid="9ce58b46-0340-42f3-8e83-732ba1517a5e"/>
+			</line>
+			<line>
+				<reportElement x="180" y="-83" width="1" height="83" uuid="6a96e2b9-0d22-4110-b1b8-3c11bf9453a8"/>
+			</line>
+			<line>
+				<reportElement x="240" y="-82" width="1" height="82" uuid="cc7b5928-fac1-456f-af1f-3aee4dfbbf1f"/>
+			</line>
+			<line>
+				<reportElement x="305" y="-82" width="1" height="81" uuid="f3fff45b-610d-4eb0-bf28-a1239d37541d"/>
+			</line>
+			<line>
+				<reportElement x="368" y="-82" width="1" height="81" uuid="7eddc7c0-8d3d-4443-8d83-404dec163c09"/>
+			</line>
+			<line>
+				<reportElement x="430" y="-83" width="1" height="83" uuid="313b399b-38f5-4c88-b78e-0dff173aabbf"/>
+			</line>
+			<line>
+				<reportElement x="493" y="-83" width="1" height="82" uuid="b6ce5777-bfbb-47a2-8f8d-9014c0bbfe63"/>
+			</line>
+			<line>
+				<reportElement x="552" y="-83" width="1" height="83" uuid="ff79e591-9d0a-411e-af9e-5b3bc6226cab"/>
+			</line>
+			<textField>
+				<reportElement x="119" y="1" width="62" height="17" uuid="091a1bf4-15bc-4cb3-a783-a3cbb117104e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71b3c720-2aad-4a1e-807c-7646157a0d79"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{debit_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="0" width="58" height="18" uuid="a1e0c395-7e15-4fed-96b3-4218eb2cb181">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9146ed91-12ec-4b8e-aad2-0d4ec49fe3a1"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{credit_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="0" width="65" height="18" uuid="139e3ce0-1178-4fcc-a517-a164309defad">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3c10162-e7a9-4325-90d6-130900980660"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{balance_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="1" width="57" height="17" uuid="991cd0ac-dede-4d23-9185-7ac02270ca67">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfd9d2b0-b143-41aa-9d54-e07b7563fa70"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{particulars}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="-3" width="1" height="21" uuid="a6763c4f-fb09-41ac-83ac-639e0a163419"/>
+			</line>
+			<line>
+				<reportElement x="58" y="-3" width="1" height="21" uuid="2cc6032a-4ad1-4bdc-a5c3-8635ce862a4c"/>
+			</line>
+			<line>
+				<reportElement x="116" y="-2" width="1" height="21" uuid="1774be33-75fb-4b0f-b7d3-f5e46e69d277"/>
+			</line>
+			<line>
+				<reportElement x="180" y="-2" width="1" height="21" uuid="e2d9ef2a-258c-4de3-9de6-7d2c8e9aab1b"/>
+			</line>
+			<line>
+				<reportElement x="240" y="-2" width="1" height="21" uuid="559d18da-79b7-4c3d-a781-01a208e86d1f"/>
+			</line>
+			<line>
+				<reportElement x="305" y="-2" width="1" height="21" uuid="4b76b4c7-74bd-4080-875b-c80a944e4a00"/>
+			</line>
+			<line>
+				<reportElement x="368" y="-2" width="1" height="21" uuid="5b9ec322-c7dd-4180-be35-d3f99debb83f"/>
+			</line>
+			<line>
+				<reportElement x="430" y="-2" width="1" height="21" uuid="0aa8f742-55a0-44d9-8374-7c7706992f3a"/>
+			</line>
+			<line>
+				<reportElement x="493" y="-2" width="1" height="21" uuid="b49401f9-c0d3-4882-ada2-c8a9b3749838"/>
+			</line>
+			<line>
+				<reportElement x="552" y="-2" width="1" height="21" uuid="6d89999d-7d35-473e-b5e1-d98fcb32c3cc"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="58" height="18" uuid="ce847018-7cc4-4a1c-a2b3-452d6460251a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd/mm/yyyy"]]></patternExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

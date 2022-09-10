@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AccountsOpenedClosed" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="adc7d03f-a700-427c-bd1a-e00943436ac5">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="nameOfAccountHolder" class="java.lang.String"/>
+	<field name="accountNumber" class="java.lang.Long"/>
+	<field name="dateOfOpening" class="java.util.Date"/>
+	<field name="dateOfClosing" class="java.util.Date"/>
+	<field name="totalNumberOfAccountSubsisting" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="30" width="300" height="20" uuid="e96fd255-6f1b-4bc9-90cd-d5d5fcbbf81b"/>
+				<text><![CDATA[ACCOUNTS OPENED AND CLOSED REGISTER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<line>
+				<reportElement x="-1" y="6" width="561" height="1" uuid="8a566f55-d1f6-47ee-87eb-2d4048860f05"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="57" width="561" height="1" uuid="0f11e41a-dab4-4dc0-8f87-fada5c13001b"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="6" width="1" height="67" uuid="f1627566-6966-4da4-9905-9c01fc6bf6cc"/>
+			</line>
+			<line>
+				<reportElement x="33" y="6" width="1" height="67" uuid="e1870e5c-f5da-4c43-b3e2-18066f5ceea5"/>
+			</line>
+			<line>
+				<reportElement x="105" y="6" width="1" height="67" uuid="6618a32a-d749-49ec-9878-fa4a3e09322d"/>
+			</line>
+			<line>
+				<reportElement x="224" y="6" width="1" height="67" uuid="e8de0c15-21b8-4310-8760-251d628634ad"/>
+			</line>
+			<line>
+				<reportElement x="294" y="25" width="1" height="48" uuid="4fb5a461-a544-49d8-8d9e-93ba2a8ac148"/>
+			</line>
+			<line>
+				<reportElement x="363" y="6" width="1" height="67" uuid="bb797378-b0f8-4757-bb75-01be2feb07e7"/>
+			</line>
+			<line>
+				<reportElement x="431" y="6" width="1" height="67" uuid="7fd1cf08-723a-4a85-aad8-6be959f93153"/>
+			</line>
+			<line>
+				<reportElement x="493" y="6" width="1" height="67" uuid="25a98acd-3ea3-46f6-8258-95632c8cd267"/>
+			</line>
+			<line>
+				<reportElement x="560" y="6" width="1" height="67" uuid="eabb554c-efc2-4b63-9c34-5fa40521f48a"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="10" width="20" height="40" uuid="df103afd-7119-4a17-ab50-d2a934c6eef8"/>
+				<text><![CDATA[S. No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="10" width="50" height="40" uuid="2c314f84-f3d7-4f7c-8113-22fc82ead383"/>
+				<text><![CDATA[Account Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="10" width="60" height="40" uuid="e182451c-defc-499e-93a8-ae6e9bc9beac"/>
+				<text><![CDATA[Name of the Account Holder]]></text>
+			</staticText>
+			<line>
+				<reportElement x="225" y="25" width="138" height="1" uuid="c16e48ef-6b0e-49ae-b234-4b53452b5d6a"/>
+			</line>
+			<staticText>
+				<reportElement x="280" y="6" width="80" height="19" uuid="d1a04071-7056-490e-9caa-fd0da1979c08"/>
+				<text><![CDATA[Date of ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="29" width="53" height="22" uuid="481d8b59-6009-4141-b1cf-f00e77637a31"/>
+				<text><![CDATA[Opening]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="28" width="53" height="30" uuid="ce6414f0-69c1-4f55-b14f-2cb76bba7f2b"/>
+				<text><![CDATA[Closure/ Transfer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="9" width="60" height="42" uuid="ec28ed0d-88ac-4ec6-a6e0-94938e096850"/>
+				<text><![CDATA[Total No. of Accounts subsisting]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="57" width="20" height="15" uuid="53415fb9-e4fb-4d74-8d01-e63009e4504f"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="74" width="561" height="1" uuid="62f54b54-cbcb-49bd-8984-fbee5bc0c899"/>
+			</line>
+			<staticText>
+				<reportElement x="55" y="57" width="20" height="15" uuid="d00ca11f-52ec-4f85-a377-c920ac2e6a55"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="57" width="20" height="15" uuid="87268249-45f9-4ef6-82b9-df87511f0141"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="57" width="20" height="15" uuid="f84f4723-cb81-49c6-82eb-e177793860ae"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="58" width="20" height="15" uuid="8b4e02c7-1ea2-4447-b54f-72d444f302da"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="57" width="20" height="15" uuid="3a5557bb-8bfb-4678-82ad-65fbc9164c19"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="57" width="20" height="15" uuid="1ce2a9c9-7f8e-401d-8fef-f19edf182005"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="517" y="57" width="20" height="15" uuid="a34f0349-0140-4ee8-9437-de48f5997018"/>
+				<text><![CDATA[8]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement x="-1" y="29" width="561" height="2" uuid="0aee1679-0607-4cc8-ab70-0e3aff71c861"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="1" height="29" uuid="d0f98aa4-8044-45cf-8a2f-cf8a22ff5bf7"/>
+			</line>
+			<line>
+				<reportElement x="33" y="0" width="1" height="29" uuid="1d07ac82-8039-41fb-b139-eb6881843056"/>
+			</line>
+			<line>
+				<reportElement x="105" y="0" width="1" height="29" uuid="3c10dc62-8483-42ce-9608-72b646895fa8"/>
+			</line>
+			<line>
+				<reportElement x="224" y="-1" width="1" height="30" uuid="6a5ec4ff-7dc0-4080-a75a-3e4cdf54a87e"/>
+			</line>
+			<line>
+				<reportElement x="294" y="-1" width="1" height="30" uuid="5907371f-d303-460f-a452-caf0026319c9"/>
+			</line>
+			<line>
+				<reportElement x="363" y="-1" width="1" height="30" uuid="af9a7425-7ddd-4b17-badc-2ccbdb0baa4f"/>
+			</line>
+			<line>
+				<reportElement x="431" y="-1" width="1" height="30" uuid="3152ade8-b08e-4b71-9a5a-090a523c798e"/>
+			</line>
+			<line>
+				<reportElement x="493" y="-1" width="1" height="30" uuid="7b35ed22-08f1-433e-afac-28ab2fb661e9"/>
+			</line>
+			<line>
+				<reportElement x="560" y="-1" width="1" height="32" uuid="336f3cea-1f9d-4bc8-816e-4a79bb0b894c"/>
+			</line>
+			<textField>
+				<reportElement x="110" y="-1" width="114" height="30" uuid="591d2c12-f883-498c-87bb-7b27596a5147">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="62c387ec-9ecd-4552-863d-a3b05ebb8b97"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nameOfAccountHolder}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="65" height="29" uuid="5b95a2a0-ddb6-4339-abf2-59e5fe7964d6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c8b1f8bc-fb11-465a-a2db-e41c743f0547"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{accountNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="-1" width="53" height="30" uuid="5f370b5c-cbbe-482c-a3d5-ebda1fc568e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e7f27dc0-eaba-4e05-9ea5-badeb135c31a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dateOfOpening}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="-1" width="62" height="30" uuid="67d39f2b-2a4b-48b3-ba77-58b7663d6031">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a5d9a7d-d2d2-4737-80a4-c3c1beee7595"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dateOfClosing}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="-1" width="60" height="30" uuid="0e1381ff-11a4-4918-9adb-9151b2da847f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="04941487-0fb2-4d25-845b-fa67eeb3598a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{totalNumberOfAccountSubsisting}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

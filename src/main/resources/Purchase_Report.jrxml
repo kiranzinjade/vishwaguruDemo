@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Purchase_Report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5eaf830d-ee7c-4ee6-b169-274293522a9f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from purchase_register ]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="batch_details" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="batch_details"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="expiry_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="expiry_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="purchase_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="purchase_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="purchase_quantity" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="purchase_quantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="purchase_value" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="purchase_value"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="vendor_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="vendor_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="weight" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="weight"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="product_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="product_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<field name="vendorregister_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="vendorregister_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase_register"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="74" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="10" width="100" height="20" uuid="06da6ad5-f1e7-4b4c-9ae8-7105b18a44b4"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="10" width="60" height="20" uuid="f3d34dfb-7de9-443e-89e6-4590a024dfe0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill No  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="30" width="100" height="20" uuid="0f4e557b-29c4-4111-9a89-f872cda2e011"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="30" width="60" height="20" uuid="6ea79df0-3b88-485d-b4dd-7d7774789eb0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill Date  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="30" width="40" height="20" uuid="ae2c7586-72c4-4732-9f70-baf176e9b988"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mode  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="30" width="80" height="20" uuid="559687e5-fc66-4d2d-afb9-9bd182d1e487"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="10" width="80" height="20" uuid="25edfe78-ee41-4f60-9656-bd6d148a92ec"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vendor Name  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="30" width="80" height="20" uuid="aeb035ca-5790-4a6a-b12c-195b5f71c158"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="10" width="100" height="20" uuid="a8dfc2ad-e63f-4e8e-8e8f-f2a3ed8f2a73"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="30" width="100" height="20" uuid="a3cb3149-77d2-4455-a3b9-a8b20403cf17"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="50" width="80" height="20" uuid="6dfcebbd-abc0-4721-9939-9774c9edab80"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="50" width="100" height="20" uuid="569a7f84-9e4d-4a6f-bbd2-5c7f19e97396"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="260" splitType="Stretch">
+			<subreport>
+				<reportElement x="10" y="10" width="170" height="160" uuid="5b6a6545-0d10-4d5a-843d-f51880990bf2"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["E:\\vks vishwa\\vksvishwa-api\\VksVishwa\\src\\main\\resources\\purchase_SubReport.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="120" y="210" width="80" height="20" uuid="bd825b7f-8887-4481-b4c6-dfc61c63c51a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid Amount  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="210" width="120" height="20" uuid="155dde42-791e-4b6f-86af-6427382d0252"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="340" y="210" width="110" height="20" uuid="34e7940a-7041-4732-b61c-b11a3ff12cfb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance Amount :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="210" width="100" height="20" uuid="384eb485-3bac-4db2-9ba2-4f75dd0f5793"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="580" y="210" width="80" height="20" uuid="95ac19ab-8ec1-4b0f-8194-aeebcfc4e33e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="660" y="210" width="90" height="20" uuid="ca308408-afe3-4fa0-bef7-bd88e60a38ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

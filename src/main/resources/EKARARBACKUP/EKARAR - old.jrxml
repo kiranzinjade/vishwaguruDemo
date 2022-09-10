@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EKARAR" pageWidth="595" pageHeight="1345" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e8d9794e-25a4-4009-809e-4ca935b37149">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="Table Dataset 1" uuid="2d7abc56-527d-4f69-aa79-60a50bdb67b8"/>
+	<parameter name="FullName" class="java.lang.String"/>
+	<parameter name="age" class="java.lang.String"/>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="LoanAmount" class="java.lang.String"/>
+	<parameter name="KrushiSansthaName" class="java.lang.String"/>
+	<parameter name="SignDate" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="223" y="0" width="100" height="23" uuid="d9c31eff-9b43-4b6e-a3af-2f730a6eb067"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Unicode MS" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[नमुना " ल "]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="23" width="100" height="16" uuid="6a9210a5-c24f-46f6-87f8-698b8e678ff4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="8" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[[नियम ४​८ (१) पाहा]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="39" width="166" height="20" uuid="26880fa3-2a2c-4466-83f9-264ef2ea1a71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Unicode MS" size="12" isBold="true" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[कलम ४८ खालील प्रतिज्ञापत्र]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1133" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="14" height="20" uuid="f3a5f0e1-5717-43c1-86fd-9a6302933064"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial Unicode MS" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[मी]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="11" width="26" height="20" uuid="73a7c7e2-688a-4407-b7b6-db23d1b7a62e"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial Unicode MS" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ (वय]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="11" width="10" height="20" uuid="ff45e4dc-4bbf-4d42-8fa0-6051a5b56a8f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[),]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="11" width="41" height="20" uuid="b6374599-cbeb-4bd0-8faf-2242e3fb6754"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial Unicode MS" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[राहणार]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="14" y="11" width="173" height="20" uuid="d4623a3f-6e8d-45bb-98f1-bd227260d02e"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="11" width="20" height="20" uuid="1b3e73de-308e-4581-9256-d2c65c7bc94a"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="283" y="11" width="287" height="20" uuid="93883f2a-2ae4-4e56-9319-72af993d700f"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="41" width="182" height="20" uuid="32d218d5-898a-4ee7-9a06-0743a89eb9fa"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[मर्यादित / अमर्यादित जबाबदारी असलेल्या]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="570" height="77" uuid="1520afe7-ec71-4797-8f63-cba42917bf71"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[संस्थेचा मला सदस्य करुन घेतल्यामूळे व त्या संस्थेकडून कर्ज घेण्याची माझी इच्छा असल्यामुळे / त्या संस्थेकडून पूर्वी कर्ज घेतले असल्यामुळे महाराष्ट्र सहकारी संस्था अधिनियम​, १९६० याच्या कलम ४८(अ) / ४८(ब​) अन्वये आवश्यक असल्याप्रमाणे असे जाहीर करतो की,अनुसूचित​ निर्दिष्ट केलेली जमिन माझ्या मालकीची आहे / केलेल्या जमिनीत कूळ या नात्याने माझा हितसंबंध आहे , आणि मी याद्वारे उक्त जमिनीवर संस्था / हितसंबंधावर संस्थेने जे कोणतेही कर्ज  देईल / दिले आहे त्या कर्जाच्या रकमेची व रुपये]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="489" y="106" width="46" height="19" uuid="5f3e5a07-7f51-414a-9bf6-16027c3bca65"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoanAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="41" width="388" height="20" uuid="1509efc8-2201-4d39-b51a-116e898bcfa9"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{KrushiSansthaName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="125" width="570" height="42" uuid="7b5e3bf1-1b5e-40b6-9b8e-a432aa1c894b"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ या कमाल रकमेस अधीन,संस्था यानंतर मला ज्या कोणत्याही उचल करावयाच्या रकमा देईल, त्या सर्व रकमांची अशा कर्जाच्या रकमेवरील व उचल केलेल्या रकमांवरील व्याजासह , परतफ़ेड करण्यासाठी त्या संस्थेच्या नावे बोजा निर्माण करीत आहे.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="182" width="100" height="20" uuid="2f83a096-2e90-4cf9-ae8c-d0e94b6e8d65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[अनुसूची]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="205" width="53" height="81" uuid="adcd20a9-c53b-4a97-9775-8cf0d3487409"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="53" y="205" width="85" height="81" uuid="4b80606f-91ce-4b0d-934f-518feb950ba3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="205" width="85" height="81" uuid="c82073fe-09eb-426d-b7e8-154aad5f9325"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="223" y="205" width="120" height="20" uuid="7ef1fa20-0f3f-46f1-94a3-2ea589204b34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="223" y="225" width="120" height="20" uuid="7c4e9441-58b0-46a1-948a-7840b7f82215"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="223" y="245" width="60" height="41" uuid="a17171ad-485d-46a1-a07d-1ad2fb28117f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="283" y="245" width="60" height="41" uuid="821908e0-e502-4a54-b0c4-0dab8b2b2ef5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="343" y="205" width="102" height="20" uuid="ae25eb73-5b1e-4eda-a25e-eec9ec2d3810"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="445" y="205" width="110" height="50" uuid="38e8947e-1813-4019-8eb5-751954e1468e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="343" y="225" width="54" height="61" uuid="457d19ad-b561-4ee8-87b1-c14e8484b8d0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="397" y="225" width="48" height="61" uuid="bbaed3e7-c429-46bf-8eaf-543f6269ff95"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="445" y="255" width="58" height="31" uuid="7d898380-221b-4a34-996c-3de42217d570"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="503" y="255" width="52" height="31" uuid="a2d18f26-6eca-48fb-83d5-4458a56c7c5d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="286" width="53" height="81" uuid="6040708c-3a56-49c9-8e2d-39b389aa7788"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="53" y="286" width="85" height="81" uuid="81ff782b-daf1-4eb3-a08a-55560a472324"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="286" width="85" height="81" uuid="7b62c756-5dda-42a4-afe2-a30bcb288976"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="223" y="286" width="60" height="81" uuid="abf3fb96-13dc-41ee-a194-cd2550b95a4a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="283" y="286" width="60" height="81" uuid="b19b7565-8a17-452d-a64a-2c650f79a2a6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="343" y="286" width="54" height="81" uuid="16cf9644-b29e-4700-99cb-9871afcfdb91"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="397" y="286" width="48" height="81" uuid="346356a6-4631-4664-991d-cd767d2a8ca3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="445" y="286" width="58" height="81" uuid="9449449c-b3fa-4b39-be9d-0f018a3179f0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="503" y="286" width="52" height="81" uuid="c60bb346-fd18-43f7-85a8-c45b401c2887"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="385" width="138" height="39" uuid="51a3d397-333b-4115-a4d3-758c686a3b5e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="385" width="138" height="39" uuid="955ef308-6de1-440c-9f6a-091568fc5787"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="385" width="141" height="39" uuid="953d29c3-313f-4b78-b94d-5bf614bd2fed"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="417" y="385" width="138" height="61" uuid="d40f8f41-156b-4667-97eb-54b6986fe3e1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="424" width="72" height="119" uuid="2e6d775d-6955-43ec-96d0-414f88d9f3b6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="72" y="424" width="66" height="119" uuid="5a929c13-f3d1-48f8-8cce-928142002c0b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="424" width="72" height="22" uuid="25294d13-41ef-4368-b94c-4ded5bc0a73c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="72" y="424" width="66" height="22" uuid="a60fab81-98a9-4e8f-8abf-366641f542cc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="424" width="138" height="22" uuid="2af9be01-472b-4ce7-b71c-db93f6584848"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="424" width="67" height="22" uuid="dd2b3120-da4a-40f6-9365-326987cd051c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="343" y="424" width="74" height="22" uuid="059627f6-6dc6-4c16-9de5-6112288feb6c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="446" width="138" height="97" uuid="f57eac03-5d86-4c7f-b751-9103fb7f7c63"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="446" width="67" height="97" uuid="f0d62a49-78cf-4a36-9455-9dea02d078ef"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="343" y="446" width="74" height="97" uuid="e9a2dd26-0ea6-4d19-add4-d79d3ce2bb00"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="417" y="446" width="138" height="97" uuid="3b4e3b93-278a-4480-80d7-b7abb3f1684f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="206" width="38" height="50" uuid="113103be-ab26-4a72-ac29-20f094359b67"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[गावाचे नाव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="216" width="85" height="20" uuid="51149f0c-505a-4b67-b76f-86918cc3582c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[तालूक्याचे नाव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="216" width="85" height="20" uuid="da08d908-5f28-4b0d-a796-3c651612d7a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[जिल्ह्याचे नाव]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="205" width="120" height="20" uuid="7f90b868-37ab-4b1f-9d28-ef4f1f32b4e3"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[भूमापन क्रमांक ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="225" width="120" height="20" uuid="6dfefa6b-e424-4575-8521-1b1f3ac9794f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[शहर भूमापन क्रमांक]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="246" width="60" height="41" uuid="6cb891ef-8ccb-4b5d-9a4c-fdadce1d7cf7"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[प्लॉट क्रमांक]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="246" width="60" height="41" uuid="e5fa90bb-74ab-4dee-a1be-b85b23a73ff0"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[पोटहिस्सा]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="205" width="102" height="20" uuid="a4296dac-38bc-45a9-a6b6-73bf172605ff"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[चतू:सीमा]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="235" width="52" height="20" uuid="a92abc44-d073-40a6-92cf-13c675132a42"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[दक्षिण]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="256" width="52" height="20" uuid="772d2f23-fb07-472f-8021-03d7e64937c1"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[उत्तर]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="235" width="48" height="20" uuid="734409cd-e0c8-4080-8029-e59a2a4acf1d"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[पुर्व]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="256" width="48" height="20" uuid="cdca748d-317f-4605-a9e7-77262f1aa7bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[पश्चिम]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="206" width="109" height="20" uuid="aead4b6a-d076-48d5-ad94-bdc1293929a2"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[क्षेत्रफ़ळ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="256" width="58" height="20" uuid="4c203b37-1b2d-428e-9932-d5a8e314a9a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[एकर]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="503" y="256" width="51" height="20" uuid="85184ef6-1437-46ad-bc92-01614521560e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[गुंठे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="385" width="138" height="39" uuid="3e8fc16d-a4cb-40a0-a65a-1f6030a9ac53"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[आकारणी ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="426" width="72" height="20" uuid="625df99c-39e8-4430-9585-f1f0b169f841"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[रुपये]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="426" width="66" height="20" uuid="9da86e1a-e8d9-4447-bd3c-1f3ef4be21be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[पैसे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="385" width="138" height="39" uuid="19fc5ae5-b785-48a1-84fa-ad4a65d52534"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[अंदाजे किंमत]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="385" width="141" height="39" uuid="96d3294b-e743-4779-b34b-71fbc007096f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[भार कोणतेही असल्यास]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="424" width="66" height="20" uuid="1330b046-d443-479f-839e-626898a6f07f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[स्वरुप]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="424" width="75" height="20" uuid="2a660ccd-3b6d-4e33-bbc4-e50ddd330449"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[रक्कम]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="385" width="137" height="59" uuid="060fbc58-7c84-4080-b81f-da1e4472fd4c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[शेरा कोणताही असल्यास]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="578" width="103" height="20" uuid="6394e459-4190-4b2e-8d66-90925aa04146"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[याच्या साक्षीदाखल मी ,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="103" y="578" width="195" height="20" uuid="2ef2ab69-c7fb-4c05-a23c-b3613d85fc25"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="298" y="578" width="63" height="20" uuid="6243ec76-d2f3-4f40-b529-8f73158f0952"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[यावर दिनांक]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="361" y="578" width="98" height="20" uuid="b54f89ee-aaed-42de-addf-4ebcba09c3c7"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SignDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="459" y="578" width="20" height="20" uuid="d5ab2459-a442-4104-8a1e-653fb33e7e7b"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[माहे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="578" width="76" height="20" uuid="7024307a-fd5d-49ed-80b6-2e93b0e82799"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[__________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="598" width="53" height="20" uuid="374888cf-3f2a-4913-8828-022c01dfaeea"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[सन वीसशे]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="598" width="74" height="20" uuid="9605ad2f-25f9-4b4e-8bce-2eaa2061ecb1"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[____________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="598" width="232" height="20" uuid="9adc5cbc-a780-4caa-9a9e-e9f11fb3644d"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[रोजी सही करीत आहे. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="641" width="57" height="20" uuid="e1a1781e-bb2b-43cd-808f-8c86ee7a0348"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[साक्षीदार]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="661" width="407" height="20" uuid="a4ebc300-347b-4ef6-8d43-a2477cf2e24b"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[उपरीनामित व्यक्तिने पुढिल व्यक्तींच्या समक्ष सही करून स्वाधिन केले.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="695" width="407" height="20" uuid="3b9501cf-6ca1-4e3b-ac52-febb82671575"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(१) .............................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="729" width="407" height="20" uuid="3d112056-f2a7-4375-887b-a365201df9f6"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(२) .............................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="803" width="141" height="20" uuid="1be2101e-496e-4e1d-b5f8-c349cb4c07a0"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[अर्जदारची / कर्ज घेणाराची सही]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="834" width="142" height="20" uuid="1bdb3cfe-761c-4406-9c3c-6cdca6f01750"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[अभिप्रमाणित केले.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="868" width="554" height="38" uuid="a904f602-e323-4542-baf4-3de2cd022a75"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[        प्रतिज्ञापत्रान्वये निर्माण केलेल्या बोजाचा तपशील , अधिकारभिलेखात समाविष्ट करण्याची व संस्थेकडे तिच्या दप्तरात ठेवण्याकरिता , परत पाठविण्याची विनंती करुन ग्राम अधिका-याकडे पाठविण्यात आले.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="952" width="141" height="20" uuid="ea4b5926-00c5-471a-a297-bde7c8e362e7"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[अध्यक्ष / चिटणीस]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="972" width="324" height="25" uuid="0373ec05-30a4-4c44-a9cb-af3d21b33def"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{KrushiSansthaName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="997" width="255" height="25" uuid="4477f345-115d-49e0-9bec-765c0bea80a2"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{KrushiSansthaName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="255" y="997" width="299" height="25" uuid="228693a7-a1c7-4acf-b8a8-b37d278ec4db"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[संस्था मर्यादित / अमर्यादित हिच्या अध्यक्षाकडे परत पाठविले .]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1022" width="554" height="51" uuid="b8da6089-4c28-4abe-9a2d-96fc358b95d2"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[प्रतिज्ञापत्रान्वये निर्माण केलेला बोजा दिनांक .................... माहे ........................ रोजी अधिकाराभिलेखात योग्य रीतीने समाविष्ट केला आहे .]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="1113" width="141" height="20" uuid="f8dcbc24-95cb-4be5-8af3-2a7f1a62267e"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false" pdfFontName="C:/WINDOWS/fonts/ARIALUNI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ग्राम अधिकारी.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="105" width="19" height="20" uuid="18c13281-7db3-4c49-a6d8-676b333cfbc9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[/-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MembershipRegister_4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="438eb8f6-3edb-4e98-b89a-2359d40620b8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<parameter name="borrowingAmt" class="java.lang.Double"/>
+	<parameter name="shareAmount" class="java.lang.Double"/>
+	<parameter name="depositeAmt" class="java.lang.Double"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="date" class="java.util.Date"/>
+	<parameter name="id" class="java.lang.Long"/>
+	<parameter name="memberId" class="java.lang.Long"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM member JOIN loan_details ON member.id=loan_details.member_id JOIN saving_account ON member.id=saving_account.member_id JOIN
+ deposit_ledger ON saving_account.id = deposit_ledger.saving_account_id JOIN share_application ON member.id=share_application.member_id WHERE member.id=$P{memberId}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="aadhar_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="aadhar_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="application_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="application_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="board_resolution_no_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="board_resolution_no_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="cast" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cast"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="category"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dependents" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="dependents"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="dob" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="family_member" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="family_member"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="father_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="father_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="inactive_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="inactive_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="kmp_status" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="kmp_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_unique_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_unique_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="middle_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="mother_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mother_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="occupation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="occupation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="pan_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pan_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="phone_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="ration_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ration_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="religion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="religion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="member_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="COLUMN_32" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="COLUMN_33" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="COLUMN_34" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="COLUMN_35" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="COLUMN_36" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="COLUMN_37" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="benefiting_area" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="benefiting_area"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="cost_of_investment" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="cost_of_investment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="dccb_loan_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="dccb_loan_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="disbursement_amt" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="disbursement_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="disbursement_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="disbursement_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="extent_morgage" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="extent_morgage"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="installment_frequency" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="installment_frequency"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_acc_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_acc_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="loan_account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="loan_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_classfication" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_classfication"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_closer_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_closer_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_effective_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_effective_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_installment_end_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_installment_end_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_installment_start_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_installment_start_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_planned_closure_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="loan_planned_closure_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="loan_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="mortgage_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="mortgage_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="mortgage_deed_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="mortgage_deed_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="parent_acc_head_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="parent_acc_head_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="parent_acc_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="parent_acc_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="resolution_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="resolution_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="resolution_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="resolution_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="society_meeting_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="society_meeting_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_demand_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="loan_demand_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="loan_product_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="loan_product_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="loan_details"/>
+	</field>
+	<field name="COLUMN_66" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_67" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_68" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_69" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_70" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_71" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_closing_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_closing_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="account_opening_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="account_opening_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_76" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="deposit_account_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_account_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_78" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="COLUMN_79" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_80" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_81" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_82" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_83" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_84" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_85" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="balance_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="credit_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="credit_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="debit_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="debit_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="deposit_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="narration" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="narration"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="particulars" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="particulars"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="voucher_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="voucher_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="deposit_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="saving_account_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="saving_account_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_ledger"/>
+	</field>
+	<field name="COLUMN_96" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="COLUMN_97" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="COLUMN_98" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="COLUMN_99" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="COLUMN_100" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="COLUMN_101" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="COLUMN_102" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="application_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="application_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="application_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="number_of_shares" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="number_of_shares"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="share_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="share_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="share_application_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="share_application_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="share_price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="share_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="voucher_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="voucher_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="from_member_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="from_member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<field name="COLUMN_110" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="member_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="share_application"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="25" width="558" height="1" uuid="bac19627-bd33-4830-8f51-8072703b0fa9"/>
+			</line>
+			<line>
+				<reportElement x="2" y="78" width="558" height="1" uuid="bd8f3ddb-3fe1-4b41-addc-5b9030d1bf46"/>
+			</line>
+			<line>
+				<reportElement x="2" y="26" width="1" height="51" uuid="da497d61-5a03-4e2e-90df-72e652ffb6f5"/>
+			</line>
+			<line>
+				<reportElement x="79" y="26" width="1" height="51" uuid="09d16c19-160e-4605-ab51-cc27acc98cdc"/>
+			</line>
+			<line>
+				<reportElement x="180" y="26" width="1" height="51" uuid="1c940c0e-24c7-4781-8697-acf4c02707bf"/>
+			</line>
+			<line>
+				<reportElement x="278" y="26" width="1" height="51" uuid="dab97555-c3c6-4a08-9dba-da1d0b6b725f"/>
+			</line>
+			<line>
+				<reportElement x="380" y="26" width="1" height="51" uuid="403ed2e9-4b83-4017-b827-5b147d356683"/>
+			</line>
+			<line>
+				<reportElement x="478" y="26" width="1" height="51" uuid="ee532ce5-28f0-4595-9159-bea95617c1f6"/>
+			</line>
+			<line>
+				<reportElement x="559" y="26" width="1" height="51" uuid="db87c1b8-f8a6-4289-9c0a-858671d4eb4a"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="36" width="60" height="30" uuid="8241bec9-c77e-4380-afc0-c294875bb607"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="36" width="74" height="30" uuid="20f0ae3b-63b8-47fc-8e82-2f73451ce61e"/>
+				<text><![CDATA[Share capital Contributed (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="36" width="65" height="30" uuid="7b10f893-5c69-41ff-b9e5-95d4e10aa11f"/>
+				<text><![CDATA[Amount Borrowed (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="36" width="69" height="41" uuid="08de00c1-d21c-4b8e-ac3a-d6884b1abcb7"/>
+				<text><![CDATA[Deposits kept withsociety (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="36" width="60" height="30" uuid="42a2c7c1-7211-4564-8a6f-85864a988a26"/>
+				<text><![CDATA[Remarks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="36" width="60" height="30" uuid="38351385-cfe6-4c6d-a45e-b1b7910cddd3"/>
+				<text><![CDATA[Initial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="370" height="20" uuid="f35638f4-db3a-4343-b2b0-24a6381b8272"/>
+				<text><![CDATA[Particulars of Share Capital, Borrowings, etc]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement x="3" y="20" width="557" height="1" uuid="89a3a68c-74b0-436d-88e8-074f27410039"/>
+			</line>
+			<line>
+				<reportElement x="2" y="0" width="1" height="20" uuid="ed950967-e0b7-44e6-9bda-dceddd5f34af"/>
+			</line>
+			<line>
+				<reportElement x="79" y="1" width="1" height="20" uuid="c1a2750a-c265-46c6-97f3-2d972abc9c2f"/>
+			</line>
+			<line>
+				<reportElement x="180" y="0" width="1" height="21" uuid="eed892f8-4f03-4ef1-8757-801524e092fe"/>
+			</line>
+			<line>
+				<reportElement x="278" y="1" width="1" height="19" uuid="dba96dc9-ab13-4570-9986-44060c12aecd"/>
+			</line>
+			<line>
+				<reportElement x="380" y="0" width="1" height="20" uuid="c7c3ba49-5500-4436-bbfe-79d76206fcd3"/>
+			</line>
+			<line>
+				<reportElement x="478" y="0" width="1" height="21" uuid="3a54f2c0-0ffb-47ac-b5f9-22aa366261a4"/>
+			</line>
+			<line>
+				<reportElement x="559" y="0" width="1" height="20" uuid="b8eea69c-69f7-4103-9bd8-5acade2c7167"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="0" width="69" height="18" uuid="69e36475-870f-4d69-9be0-97ff9701e25c"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="1" width="90" height="17" uuid="01ec2212-755a-4624-91e5-332c45bf2328">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="806e2c32-8c2d-46e7-8312-8c03630e2a81"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{share_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="88" height="18" uuid="2246886e-200d-4c51-96ed-06215fc8ec3b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="463ab309-5c93-489c-8281-c2f0b99a6de6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{loan_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="1" width="100" height="17" uuid="3dceb922-2550-4a31-a246-dbd6b515383c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c1ab4aeb-b692-4690-99ba-a88e1eb6c913"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{balance_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

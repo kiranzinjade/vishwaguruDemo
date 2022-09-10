@@ -1,0 +1,1632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="kmp" printOrder="Horizontal" pageWidth="1849" pageHeight="1099" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="1809" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de7a5fbd-35b1-4de4-a7b2-95b7dcc8e8f2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="126"/>
+	<parameter name="fName" class="java.lang.String"/>
+	<parameter name="middleName" class="java.lang.String"/>
+	<parameter name="lastName" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="societyname" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT vikas.member_ship_application.member_id, vikas.member_ship_application.first_name,
+vikas.member_ship_application.middle_name,vikas.member_ship_application.last_name,
+vikas.member_ship_application.phone_number,vikas.share_application.share_amount,vikas.trn_land_details.land_type,
+vikas.trn_land_details.land_area,vikas.trn_land_details.member_id,vikas.member_annual_crops.member_id,
+vikas.member_annual_crops.crop_area,vikas.member_annual_crops.financial_from_year,vikas.member_annual_crops.financial_to_year,
+vikas.trn_loan_application.loan_amt,vikas.trn_loan_application.loan_sanction_amt,
+vikas.trn_loan_details.loan_account_number,vikas.trn_loan_details.loan_type,vikas.crop_annual_max_loan_limit.crop_name
+FROM vikas.member_ship_application
+JOIN vikas.share_application ON vikas.member_ship_application.member_id=vikas.share_application.member_id
+RIGHT JOIN vikas.trn_land_details ON
+vikas.trn_land_details.member_id=vikas.member_ship_application.member_id 
+INNER JOIN vikas.member_annual_crops ON  vikas.member_annual_crops.member_id=vikas.member_ship_application.member_id
+INNER JOIN vikas.trn_loan_application ON vikas.trn_loan_application.member_id=vikas.member_ship_application.member_id
+INNER JOIN  vikas.trn_loan_details ON vikas.trn_loan_details.loan_application_id=vikas.trn_loan_application.loan_application_id
+INNER  JOIN vikas.crop_annual_max_loan_limit ON  vikas.crop_annual_max_loan_limit.crop_id=vikas.member_annual_crops.crop_id
+WHERE vikas.member_ship_application.member_id=538601962 AND vikas.trn_loan_application.application_status='Approved' GROUP BY vikas.trn_land_details.land_id ;]]>
+	</queryString>
+	<field name="first_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="middle_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="share_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="land_type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="land_area" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Field_1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="634" y="15" width="524" height="34" uuid="9f406be7-b9c8-4ae6-8f7f-98cad73fce0b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bank Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="78" width="1809" height="1" uuid="5a018f78-a2f0-4508-b989-402470b23494"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="47" width="1809" height="1" uuid="fa0d676c-692a-433d-957e-97c4d9d84e62"/>
+			</line>
+			<line>
+				<reportElement x="905" y="0" width="1" height="47" uuid="b16864de-7ca9-4316-9601-f1b48f9c4d24"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="14" width="102" height="33" uuid="374bf6b2-4b7e-4103-9c9a-857cf2d1d900"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Society Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1108" y="14" width="193" height="33" uuid="a2e64bf2-5c15-4db1-8704-62d6a6e35e0b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kamal Maryada Patrak Year-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="818" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="181" width="1809" height="1" uuid="192e7b35-5590-4894-8735-dafc7f560bb7"/>
+			</line>
+			<line>
+				<reportElement x="200" y="0" width="1" height="181" uuid="aacf333d-b455-4507-9e6e-8149472cf63c"/>
+			</line>
+			<line>
+				<reportElement x="400" y="1" width="1" height="180" uuid="94ae1605-172f-4b0b-9038-9377499ba906"/>
+			</line>
+			<line>
+				<reportElement x="512" y="1" width="1" height="180" uuid="2e4df1e9-07b3-4317-abce-ed19b132e7a4"/>
+			</line>
+			<line>
+				<reportElement x="605" y="0" width="1" height="180" uuid="623999fe-cd5a-4ac1-a89a-8df783975ce2"/>
+			</line>
+			<line>
+				<reportElement x="1015" y="1" width="1" height="180" uuid="9a3e4ccf-baad-45da-a5d9-9e6bc72ce43b"/>
+			</line>
+			<line>
+				<reportElement x="1247" y="1" width="1" height="180" uuid="3377356c-f9a7-4dc1-a06a-ad9ea0c4b0ea"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="2" width="1" height="180" uuid="8ec98410-1ef4-4051-a6f7-818ada8a2230"/>
+			</line>
+			<line>
+				<reportElement x="1726" y="2" width="1" height="180" uuid="d2ed9a84-33e5-4198-8079-8a7f2d952495"/>
+			</line>
+			<line>
+				<reportElement x="1767" y="2" width="1" height="180" uuid="6433b7da-b3e3-4356-b1e0-a6dd6a784940"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="29" height="20" uuid="e3dc0a76-e1b7-4c51-8e24-8a37899ae53e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SrNo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="90" height="20" uuid="9d6af262-ff6e-43ff-ae76-b69d4c68b162"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Member Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="139" width="79" height="23" uuid="daa743fa-6773-4e1a-bdcb-d95564232a45"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mobile No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="14" width="196" height="33" uuid="cabce456-01f2-4f91-9958-ce943a309c0b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Land Owned By]]></text>
+			</staticText>
+			<line>
+				<reportElement x="201" y="47" width="198" height="1" uuid="673d24ed-a500-4304-8f66-12af9384e6c1"/>
+			</line>
+			<line>
+				<reportElement x="201" y="137" width="198" height="1" uuid="6692f619-8c01-4ab9-b3c4-35c50fb12125"/>
+			</line>
+			<line>
+				<reportElement x="261" y="48" width="1" height="89" uuid="7f7a2810-8282-49ab-93be-65354fd9c349"/>
+			</line>
+			<line>
+				<reportElement x="328" y="48" width="1" height="89" uuid="b3c809fc-a630-46b2-bc03-83546e15349a"/>
+			</line>
+			<staticText>
+				<reportElement x="402" y="50" width="110" height="93" uuid="18cd7ea4-7277-4926-bcc3-cd0fd05f77af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Medium /Long Term Loan Details]]></text>
+			</staticText>
+			<line>
+				<reportElement x="513" y="137" width="92" height="1" uuid="128d0386-d151-488a-b44e-e2131653afcd"/>
+			</line>
+			<line>
+				<reportElement x="561" y="138" width="1" height="43" uuid="f21d94ba-9c7f-43e7-957c-9f21aede3660"/>
+			</line>
+			<line>
+				<reportElement x="231" y="138" width="1" height="43" uuid="1fcaa822-8e44-45d0-9b1b-898075384265"/>
+			</line>
+			<line>
+				<reportElement x="261" y="138" width="1" height="42" uuid="801a8cdf-ccee-4758-8e1c-3b49ad345f5e"/>
+			</line>
+			<line>
+				<reportElement x="294" y="138" width="1" height="43" uuid="2d1b89b9-49d0-4718-9dba-06d0b2732069"/>
+			</line>
+			<line>
+				<reportElement x="327" y="139" width="1" height="41" uuid="2dd3dc16-3a69-46ce-9693-a57c34a27e34"/>
+			</line>
+			<line>
+				<reportElement x="361" y="138" width="1" height="43" uuid="2fb34f5a-1203-47da-8264-6de3dcccf2f9"/>
+			</line>
+			<line>
+				<reportElement x="606" y="136" width="125" height="1" uuid="e9c0381c-2f86-4df5-a2e7-a8df03dbb1a3"/>
+			</line>
+			<line>
+				<reportElement x="731" y="0" width="1" height="180" uuid="92a02f2b-8b73-499a-899a-5b89a57af6df"/>
+			</line>
+			<line>
+				<reportElement x="665" y="138" width="1" height="43" uuid="d86c6f95-e05a-4bfc-a5c5-17b165bf6587"/>
+			</line>
+			<line>
+				<reportElement x="773" y="49" width="1" height="131" uuid="91cea98d-7b95-4223-a670-dc83694e99a6"/>
+			</line>
+			<line>
+				<reportElement x="774" y="136" width="103" height="1" uuid="9d2ba056-bf07-4bbc-a7a1-0276f11093af"/>
+			</line>
+			<line>
+				<reportElement x="733" y="47" width="282" height="2" uuid="85bd4230-26ca-4a3d-ab3c-406730c5f23c"/>
+			</line>
+			<line>
+				<reportElement x="822" y="138" width="1" height="43" uuid="084ac386-ff1d-4aa9-bea3-b21454633278"/>
+			</line>
+			<line>
+				<reportElement x="877" y="50" width="1" height="131" uuid="9da8b620-52cb-454c-a840-c06fcb74bceb"/>
+			</line>
+			<staticText>
+				<reportElement x="201" y="67" width="60" height="46" uuid="133bf4d2-6449-4b7d-bc4e-fe1400c56fd3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Irrigation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="67" width="65" height="46" uuid="575b86e9-ac52-429a-8d18-2ac15776db55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Non-Irrigation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="67" width="70" height="46" uuid="fd35ea14-3cf5-4aaf-9c4b-b556dabbd6a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="150" width="29" height="20" uuid="652c1f5a-c244-4f51-87c6-d3ce06877d7e"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Htr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="150" width="29" height="20" uuid="47519e42-6ac2-448d-9295-898714f9bbb2"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[आर​.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="150" width="32" height="20" uuid="11f4e1af-5e61-4c73-bf33-059fd67b72a9"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Htr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="150" width="31" height="20" uuid="aac93ae9-aaa6-4a7f-9db4-3a290cd95d51"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[आर​.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="150" width="31" height="20" uuid="d42150f7-d2ce-4ee5-9392-fe55655a53c0"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Htr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="150" width="35" height="20" uuid="b674cee7-4f66-482a-bf41-b5ed15e0137e"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[आर​.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="51" width="92" height="63" uuid="16d2704c-767e-4e13-8a67-b0c20e4715a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Crop infusion Area for Last Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="607" y="51" width="123" height="63" uuid="14cf2513-e3db-4a08-bfff-462a4f6ca16e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Crop Loan Transaction  From Last Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="150" width="47" height="20" uuid="68a54b13-4600-42ad-b7e6-8c8b813bdf64"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Htr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="562" y="150" width="43" height="20" uuid="7566210b-fc5c-4efb-bd53-594e81e23768"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[आर​.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="606" y="139" width="59" height="40" uuid="d69018a4-a527-46b6-8b9f-5356037e84e0"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[The sanctioned limit is Rs.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="139" width="65" height="40" uuid="fdc3a369-0824-40de-8762-fcda6460fc62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Direct lifting of Rs.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="733" y="2" width="282" height="45" uuid="62eac9a7-44df-4b94-8326-392552cdf347"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Depending on the crop to be planted, the member demands loan
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="947" y="49" width="1" height="131" uuid="e85ec794-68d8-4a7a-a039-5a5898793eeb"/>
+			</line>
+			<staticText>
+				<reportElement x="733" y="67" width="40" height="103" uuid="055c7964-d2cc-47f0-9cbf-3c4af0227aa0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Crop Name
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="775" y="67" width="102" height="57" uuid="a549c630-2500-44dc-aacd-3cf5851bd699"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Land Area
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="878" y="67" width="69" height="83" uuid="3494b2c2-e35c-490a-be6e-e15594a10b1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Loan Rate/Hector]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="949" y="67" width="66" height="83" uuid="30bcbee0-c4f4-4931-86ec-00c36332c063"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Loan demand is Amt.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="775" y="150" width="47" height="20" uuid="1bf40ca6-ae54-47be-b174-1097bf3ce742"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Htr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="824" y="150" width="53" height="20" uuid="6ea8f93d-9c30-410f-8591-411667909fe8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[आर​.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1017" y="48" width="230" height="1" uuid="260bd397-dff1-42d9-bc3d-7ae666c176ef"/>
+			</line>
+			<line>
+				<reportElement x="1091" y="50" width="1" height="131" uuid="0f136084-811c-45f6-8b5e-9e8d6cf88555"/>
+			</line>
+			<line>
+				<reportElement x="1158" y="50" width="1" height="130" uuid="ea2d5f1f-6eb6-479b-b0a1-e257615dd73d"/>
+			</line>
+			<staticText>
+				<reportElement x="1017" y="2" width="230" height="46" uuid="4da0fcf7-f09b-412c-aff5-fb40e64b61dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Recommendation for crop approval
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1017" y="67" width="74" height="83" uuid="9b8767e5-53a8-4358-b139-241aa721094b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Amount of Society]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1092" y="67" width="66" height="83" uuid="bff02ed6-2fb1-4a9f-82a9-9860d303fbec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Amount Of Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1160" y="67" width="87" height="83" uuid="3196b749-d643-4e0e-8ede-7884ef003f9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Departmental Officer Amount
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1248" y="48" width="197" height="1" uuid="7744f3e3-f054-4bb6-826f-a79f3dfb376f"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="135" width="134" height="1" uuid="a9800e2e-2be7-45b6-bc27-7f2be0e13613"/>
+			</line>
+			<line>
+				<reportElement x="1382" y="51" width="1" height="130" uuid="bddd8431-0ac7-4be5-bf9b-7ef7a33c981a"/>
+			</line>
+			<line>
+				<reportElement x="1317" y="138" width="1" height="43" uuid="ad88d7e3-b380-4ab3-b31f-b8db8c086736"/>
+			</line>
+			<staticText>
+				<reportElement x="1249" y="150" width="68" height="20" uuid="9c7ec9f3-0111-4df2-ba45-47c11cb4d581"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Htr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1319" y="150" width="62" height="20" uuid="a24be85c-dacb-45d6-b0a2-fc17132c7f6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[आर​.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1249" y="67" width="132" height="57" uuid="f2569ce0-5efe-492f-b1da-8e58ab13dea7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Land Area
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1383" y="67" width="62" height="103" uuid="31bd7592-6e84-42fe-b79d-137c53933b37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1249" y="2" width="196" height="45" uuid="39ee0f50-02cd-4304-b4cb-f22ae214ba8e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Approval of the bank
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1447" y="48" width="279" height="1" uuid="107b9433-0c65-4fd1-8025-ceb116c31f90"/>
+			</line>
+			<line>
+				<reportElement x="1501" y="49" width="1" height="130" uuid="6de0996e-cb24-4cc0-b594-8ab47a8366de"/>
+			</line>
+			<line>
+				<reportElement x="1563" y="49" width="1" height="130" uuid="ca6c634e-64e6-427e-846e-76c234013079"/>
+			</line>
+			<line>
+				<reportElement x="1615" y="139" width="1" height="40" uuid="536d18f9-7db2-48cc-99a0-c999869c2db4"/>
+			</line>
+			<line>
+				<reportElement x="1664" y="49" width="1" height="130" uuid="69be5f03-30db-4332-9932-b2a41fc9157a"/>
+			</line>
+			<line>
+				<reportElement x="1564" y="138" width="100" height="1" uuid="42350f95-70b0-4f68-9e17-3d38655ec997"/>
+			</line>
+			<staticText>
+				<reportElement x="1447" y="2" width="278" height="45" uuid="4c7c6245-86d2-4087-9ae3-a563a13666d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Loan distribution details
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1447" y="67" width="54" height="103" uuid="c249fae1-6f00-4818-8377-387beffa7e74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1502" y="67" width="60" height="103" uuid="7452db04-0dba-42b4-a2ef-f0a05031dca4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Crop Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1564" y="67" width="100" height="57" uuid="8ddfffbe-9a3a-4651-bde7-67f5cf788a65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Land Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1564" y="150" width="51" height="20" uuid="971cd78c-8476-43ee-9b81-f0be33488959"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Htr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1617" y="150" width="46" height="20" uuid="6f9c0c21-e671-4c5f-9962-24c759634744"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[आर​.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1665" y="67" width="60" height="103" uuid="4a1e418d-e446-4d7f-8c58-116f2a4c8bc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1727" y="21" width="40" height="149" uuid="7de07004-ed89-4a15-9253-8e6f474d0319"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Member Sign]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1768" y="21" width="41" height="149" uuid="859936ec-704c-4143-9596-3e7c49cd5c6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Departmental Officer Sign]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="241" width="1809" height="1" uuid="8a56fd12-2f6b-4986-bf19-e454ee51aefb"/>
+			</line>
+			<line>
+				<reportElement x="148" y="182" width="1" height="59" uuid="f40c76bf-f7ef-4e88-b80a-ce0c7c54ae15"/>
+			</line>
+			<line>
+				<reportElement x="200" y="182" width="1" height="59" uuid="b4a4c5c6-ae23-4153-b3ac-fc2ab8b69903"/>
+			</line>
+			<line>
+				<reportElement x="230" y="182" width="1" height="59" uuid="229a688e-20e5-4498-95e4-f8756bb603a2"/>
+			</line>
+			<line>
+				<reportElement x="261" y="182" width="1" height="59" uuid="3d1bba90-2c95-47c9-b1f7-b0636634ca28"/>
+			</line>
+			<line>
+				<reportElement x="295" y="182" width="1" height="59" uuid="2454bbc2-7daf-47d3-b920-ca83b17a7e66"/>
+			</line>
+			<line>
+				<reportElement x="328" y="182" width="1" height="59" uuid="1e581fc3-0d4f-44b0-95ff-3a7b624cd54e"/>
+			</line>
+			<line>
+				<reportElement x="361" y="182" width="1" height="59" uuid="a3ad0f55-db48-4835-9460-66728b82770a"/>
+			</line>
+			<line>
+				<reportElement x="401" y="182" width="1" height="59" uuid="aaefe0d2-bdbd-464d-9ed8-25d6d591cf61"/>
+			</line>
+			<line>
+				<reportElement x="512" y="182" width="1" height="59" uuid="fe6c1229-5db7-4ede-b421-24341aa63e19"/>
+			</line>
+			<line>
+				<reportElement x="560" y="182" width="1" height="59" uuid="ccedefae-5910-400b-87ab-9216fc17d1b3"/>
+			</line>
+			<line>
+				<reportElement x="606" y="182" width="1" height="59" uuid="9ccb248e-a2ef-4c9c-a261-9fbdb3b229e7"/>
+			</line>
+			<line>
+				<reportElement x="664" y="182" width="1" height="59" uuid="d304174d-4608-4992-9727-c56423d6e848"/>
+			</line>
+			<line>
+				<reportElement x="730" y="182" width="1" height="59" uuid="3256b085-e903-4f6a-aed3-0069e94f0a07"/>
+			</line>
+			<line>
+				<reportElement x="774" y="182" width="1" height="59" uuid="e2860590-99f0-4953-a440-57a5dc87313d"/>
+			</line>
+			<line>
+				<reportElement x="823" y="182" width="1" height="59" uuid="dc062302-9465-406d-bd8a-fdcc92f68da0"/>
+			</line>
+			<line>
+				<reportElement x="877" y="182" width="1" height="59" uuid="7f2be59f-a3ab-452f-b3ba-66f050d3a6f7"/>
+			</line>
+			<line>
+				<reportElement x="948" y="182" width="1" height="59" uuid="2af101e4-0cd2-4f0c-84ff-1590ac43db91"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="183" width="1" height="58" uuid="29c27d15-fe04-4d43-9a7c-33b78692ede9"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="182" width="1" height="59" uuid="b6ab2a48-7d5b-4a14-91f9-f2748ec84373"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="182" width="1" height="59" uuid="28acf21d-05f3-49f2-b08f-c09cbaf8bfe0"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="182" width="1" height="59" uuid="b600f820-c1a8-46c6-9f89-1a9c081b78c0"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="182" width="1" height="59" uuid="8f815296-b79d-46aa-bbca-14658602b67b"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="182" width="1" height="59" uuid="9cf474f9-3b3d-4aad-b1b9-77661cde2e44"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="183" width="1" height="58" uuid="48568552-9718-468a-9bf3-e4d9ef5bbf0d"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="182" width="1" height="59" uuid="656ce4cf-2ca4-4754-95ad-8334d239aefb"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="182" width="1" height="59" uuid="c6c12664-fe3d-4222-9efe-fcc72aa71e85"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="182" width="1" height="59" uuid="dac06164-ed82-442e-8a8b-3962c37688c3"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="182" width="1" height="59" uuid="292d1a33-907e-4bb1-be99-50a39ae99b80"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="182" width="1" height="59" uuid="e07c8716-4af5-4deb-9b21-9445bee92134"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="182" width="1" height="59" uuid="5f08ebbe-334f-42df-bb7a-9c81ebad4113"/>
+			</line>
+			<line>
+				<reportElement x="606" y="243" width="1" height="59" uuid="d250d4ac-aac9-492c-bd4b-bff6c97a006f"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="244" width="1" height="58" uuid="978baa3a-a6c3-47df-b8e5-d21306fcb559"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="243" width="1" height="59" uuid="40904bdc-53f3-415c-8647-ad115b85e4cd"/>
+			</line>
+			<line>
+				<reportElement x="774" y="243" width="1" height="59" uuid="4b019095-06c3-4747-95e5-ead204a1b325"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="243" width="1" height="59" uuid="5ca708b7-adf2-42c5-9098-29d773efa3fe"/>
+			</line>
+			<line>
+				<reportElement x="512" y="243" width="1" height="59" uuid="e7d78992-cac8-4af4-a4da-b05043ab9e17"/>
+			</line>
+			<line>
+				<reportElement x="295" y="243" width="1" height="59" uuid="79b0467e-7b47-4af3-80e1-3a61ae5bacb9"/>
+			</line>
+			<line>
+				<reportElement x="560" y="243" width="1" height="59" uuid="d7ef01a4-1d57-4718-bcae-540c6a1f515a"/>
+			</line>
+			<line>
+				<reportElement x="361" y="243" width="1" height="59" uuid="74c07c9b-6d08-4816-833b-cbb46ff36f9f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="302" width="1809" height="1" uuid="4745e44a-f2b1-40ac-a54e-e9162b1f5010"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="244" width="1" height="58" uuid="1d50eff5-1f9a-41f3-859e-73c4bd542af0"/>
+			</line>
+			<line>
+				<reportElement x="664" y="243" width="1" height="59" uuid="fc50f64a-95f4-4dba-ad65-ba6bc1257f76"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="243" width="1" height="59" uuid="698a3df2-671c-4a91-8500-bf5d5f5dbb6a"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="243" width="1" height="59" uuid="1d6a94c4-be48-4f1f-98ef-69cd85a9cf04"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="243" width="1" height="59" uuid="696b1579-c8b9-4b31-aaeb-a8f3a52629f4"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="243" width="1" height="59" uuid="6cd74152-5328-437d-bdcd-46f0a9dd6721"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="243" width="1" height="59" uuid="88347eb3-32af-49f5-aab3-eaa2b4feac0e"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="243" width="1" height="59" uuid="1a9d583b-ffcf-45d7-92d8-dacf373dfc17"/>
+			</line>
+			<line>
+				<reportElement x="230" y="243" width="1" height="59" uuid="113b1c1d-6cf9-4c88-8dd5-7277550fbad5"/>
+			</line>
+			<line>
+				<reportElement x="823" y="243" width="1" height="59" uuid="ba8e61eb-6b8b-44f3-bc21-f14c5829ee49"/>
+			</line>
+			<line>
+				<reportElement x="261" y="243" width="1" height="59" uuid="e44678bb-5515-4ca3-a283-843f589e5bf5"/>
+			</line>
+			<line>
+				<reportElement x="948" y="243" width="1" height="59" uuid="b4b0cd56-489e-47b5-8e30-fb8f6fc8b262"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="243" width="1" height="59" uuid="4352f1ab-6b30-43de-841d-60d9fc46c3de"/>
+			</line>
+			<line>
+				<reportElement x="730" y="243" width="1" height="59" uuid="8097baf1-8be3-4a7f-8d54-a2e458e36d63"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="243" width="1" height="59" uuid="b3b973a4-0881-4b6b-8901-4905f4096b43"/>
+			</line>
+			<line>
+				<reportElement x="401" y="243" width="1" height="59" uuid="bba8eeb8-11bd-4539-bf3a-31d4d7cef603"/>
+			</line>
+			<line>
+				<reportElement x="0" y="242" width="1809" height="1" uuid="3c6a5cb9-17f7-4c8e-842e-66e5a3a9d416"/>
+			</line>
+			<line>
+				<reportElement x="148" y="243" width="1" height="59" uuid="2b01e252-b8e3-49b3-ba3c-33e9f7c731e4"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="243" width="1" height="59" uuid="a0aae0a0-d062-4152-a199-8ef74df84bfc"/>
+			</line>
+			<line>
+				<reportElement x="877" y="243" width="1" height="59" uuid="0b21ff29-0b7b-4aeb-8e95-2fa8743d6cff"/>
+			</line>
+			<line>
+				<reportElement x="328" y="243" width="1" height="59" uuid="a7c0523a-3701-4fad-8910-d662684071e3"/>
+			</line>
+			<line>
+				<reportElement x="200" y="243" width="1" height="59" uuid="45954eaa-f365-4ec2-9b43-82639f172d2c"/>
+			</line>
+			<line>
+				<reportElement x="606" y="302" width="1" height="59" uuid="8bb7be70-470d-4de6-bfab-1453606ded70"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="303" width="1" height="58" uuid="58b2d74d-c22b-409d-a429-49adc355f2b3"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="302" width="1" height="59" uuid="10767bca-e180-4836-974f-35515ab7d1eb"/>
+			</line>
+			<line>
+				<reportElement x="774" y="302" width="1" height="59" uuid="fa2bce97-37f1-4ba1-b956-ead8d390dd0f"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="302" width="1" height="59" uuid="66a7e7f2-8c30-43fb-98ac-16b15772f275"/>
+			</line>
+			<line>
+				<reportElement x="512" y="302" width="1" height="59" uuid="805889f2-cf0b-459c-9087-a0658f7f5404"/>
+			</line>
+			<line>
+				<reportElement x="295" y="302" width="1" height="59" uuid="04158c2c-5ccd-4cdd-b30d-b91b02d97eff"/>
+			</line>
+			<line>
+				<reportElement x="560" y="302" width="1" height="59" uuid="7556c207-bc32-46f2-ae70-19c0721d08f4"/>
+			</line>
+			<line>
+				<reportElement x="361" y="302" width="1" height="59" uuid="cd648548-23c0-4ccd-ac5f-c5aea2ffc7a3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="361" width="1809" height="1" uuid="ef4fa1f3-d9d2-4409-9cf9-d963dbafe7b6"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="303" width="1" height="58" uuid="609613e4-d923-4f7b-a372-b82290f35852"/>
+			</line>
+			<line>
+				<reportElement x="664" y="302" width="1" height="59" uuid="3c75e516-2b69-4a5c-9894-bbd5eb365661"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="302" width="1" height="59" uuid="7fd92898-d6ff-4e3f-89eb-35cdfbd05903"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="302" width="1" height="59" uuid="ca1dff3a-6c5d-45c7-9f0d-934190c1f923"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="302" width="1" height="59" uuid="85c2b31b-ad9d-4458-9dcf-10cc4f3fad1e"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="302" width="1" height="59" uuid="766f1fb6-894e-481d-92ca-654780896833"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="302" width="1" height="59" uuid="f27f5e85-4372-4fc5-b6a0-c720b8d9d104"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="302" width="1" height="59" uuid="2b604547-bacf-4aad-b82a-0f97a912c889"/>
+			</line>
+			<line>
+				<reportElement x="230" y="302" width="1" height="59" uuid="4ad78979-02e7-4421-b435-b2b1c38b8920"/>
+			</line>
+			<line>
+				<reportElement x="823" y="302" width="1" height="59" uuid="371ed80e-a9e0-4957-97f7-58407ae2a753"/>
+			</line>
+			<line>
+				<reportElement x="261" y="302" width="1" height="59" uuid="fb5b1503-21de-42ff-862f-709cd02de042"/>
+			</line>
+			<line>
+				<reportElement x="948" y="302" width="1" height="59" uuid="9fbc0f92-2e6c-4310-92cb-3b5e8356b264"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="302" width="1" height="59" uuid="3035c14c-0f97-4785-a780-42805576c731"/>
+			</line>
+			<line>
+				<reportElement x="730" y="302" width="1" height="59" uuid="40985c94-c53f-4246-8ae0-08860e848403"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="302" width="1" height="59" uuid="8c317dcd-8dd5-488f-8d65-a7932f20ea34"/>
+			</line>
+			<line>
+				<reportElement x="401" y="302" width="1" height="59" uuid="fccb7e30-b933-4d8a-9e38-af750b20ee89"/>
+			</line>
+			<line>
+				<reportElement x="0" y="301" width="1809" height="1" uuid="341653e1-131f-4754-84c9-cb9a66b1efca"/>
+			</line>
+			<line>
+				<reportElement x="148" y="302" width="1" height="59" uuid="d4760967-7528-4b2f-a305-56501cd1f7a5"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="302" width="1" height="59" uuid="16f71692-9cd3-44b1-a22b-e1021321544e"/>
+			</line>
+			<line>
+				<reportElement x="877" y="302" width="1" height="59" uuid="b0af00bd-5a8a-4d3e-a9af-53ff0cee9457"/>
+			</line>
+			<line>
+				<reportElement x="328" y="302" width="1" height="59" uuid="b7da83ac-690c-4b78-aebe-c070e853858f"/>
+			</line>
+			<line>
+				<reportElement x="200" y="302" width="1" height="59" uuid="b232e402-e922-469b-a670-d0994adfacc3"/>
+			</line>
+			<line>
+				<reportElement x="606" y="363" width="1" height="59" uuid="f5dbb3ad-2da9-42f8-9a8a-0c24d5f5f09d"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="364" width="1" height="58" uuid="e03c3c0e-cec1-4bd2-8603-b6a05708a4d5"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="363" width="1" height="59" uuid="80f6f0d6-ca4a-434e-902a-967ea98db77d"/>
+			</line>
+			<line>
+				<reportElement x="774" y="363" width="1" height="59" uuid="95bb9268-6577-4f45-b2f5-dbd8fa754bd4"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="363" width="1" height="59" uuid="db4ed346-9786-489a-a67e-f37a364a3412"/>
+			</line>
+			<line>
+				<reportElement x="512" y="363" width="1" height="59" uuid="f953e815-2672-49ba-ba63-5f7d0b01734a"/>
+			</line>
+			<line>
+				<reportElement x="295" y="363" width="1" height="59" uuid="3efded52-6bb9-4a53-bad3-d3e9378b597f"/>
+			</line>
+			<line>
+				<reportElement x="560" y="363" width="1" height="59" uuid="94214213-1aa7-49be-bec9-2c149fdcbc97"/>
+			</line>
+			<line>
+				<reportElement x="361" y="363" width="1" height="59" uuid="c19abad5-a3d1-4d6a-b493-653d8e5ee186"/>
+			</line>
+			<line>
+				<reportElement x="0" y="422" width="1809" height="1" uuid="8c64da42-48ed-4f0a-a36a-4c77a5efea3f"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="364" width="1" height="58" uuid="cc0645f1-4685-411c-8fd4-67a765b78c55"/>
+			</line>
+			<line>
+				<reportElement x="664" y="363" width="1" height="59" uuid="68721d17-2b21-4a82-9075-e5d87b5e6cca"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="363" width="1" height="59" uuid="542bb119-7693-4cf3-8aaf-cd81f5427785"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="363" width="1" height="59" uuid="fa7bb545-c73c-4b3c-bc40-ebfb7d59df3e"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="363" width="1" height="59" uuid="cda48b52-b391-4b42-8b08-6515ec810856"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="363" width="1" height="59" uuid="dfe05bdf-73d7-408e-8fb6-46b1c0874097"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="363" width="1" height="59" uuid="1defb690-d48a-4b1e-988f-3462cfbd337f"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="363" width="1" height="59" uuid="9ca7d9bf-0b35-482f-aa6d-17c8d43f40fd"/>
+			</line>
+			<line>
+				<reportElement x="230" y="363" width="1" height="59" uuid="2c801037-bdc1-4b32-92c5-83ac5627bd28"/>
+			</line>
+			<line>
+				<reportElement x="823" y="363" width="1" height="59" uuid="c7124a2b-07fa-4da6-ab1d-aec8ac59bd7a"/>
+			</line>
+			<line>
+				<reportElement x="261" y="363" width="1" height="59" uuid="06b7062c-eb49-4ffc-a789-04a2ccafec15"/>
+			</line>
+			<line>
+				<reportElement x="948" y="363" width="1" height="59" uuid="fcb0c9b9-5dd6-49b4-b5ee-531256b9e1fa"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="363" width="1" height="59" uuid="2604d196-0c08-4f1f-9558-b47543f68c3a"/>
+			</line>
+			<line>
+				<reportElement x="730" y="363" width="1" height="59" uuid="64905c1b-36ea-47b4-885c-a673e832656e"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="363" width="1" height="59" uuid="c6257edb-d54e-4c67-8a90-95ddc9d0c084"/>
+			</line>
+			<line>
+				<reportElement x="401" y="363" width="1" height="59" uuid="ce15e274-ef9d-48b4-9931-f32ecd1f5bc2"/>
+			</line>
+			<line>
+				<reportElement x="0" y="362" width="1809" height="1" uuid="c6026c5d-075b-4d51-888e-6fb3aee0d25f"/>
+			</line>
+			<line>
+				<reportElement x="148" y="363" width="1" height="59" uuid="63c0a56b-2227-4e54-b4c0-00d22ae44266"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="363" width="1" height="59" uuid="f1664909-43ac-4875-8f75-60cf19037512"/>
+			</line>
+			<line>
+				<reportElement x="877" y="363" width="1" height="59" uuid="ece69a4b-d6f0-4de0-be93-26b4e2d3e8e3"/>
+			</line>
+			<line>
+				<reportElement x="328" y="363" width="1" height="59" uuid="06409c25-c941-4bc7-9949-bd3597b51737"/>
+			</line>
+			<line>
+				<reportElement x="200" y="363" width="1" height="59" uuid="dc6f2f4f-67e7-450a-976c-cf344096442d"/>
+			</line>
+			<line>
+				<reportElement x="606" y="424" width="1" height="59" uuid="1d2503ef-fb5e-4497-acfa-211d66bf3eaf"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="425" width="1" height="58" uuid="8adbbcf2-ad47-42b9-8611-143ac7ce9553"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="424" width="1" height="59" uuid="0d351dd5-5953-419f-bf85-ed3b062e2bb3"/>
+			</line>
+			<line>
+				<reportElement x="774" y="424" width="1" height="59" uuid="77951861-31af-4612-81d3-907b4077295d"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="424" width="1" height="59" uuid="e5988d5d-db32-48a9-baa2-1092919568a6"/>
+			</line>
+			<line>
+				<reportElement x="512" y="424" width="1" height="59" uuid="11c5de0a-36d0-4651-9f8d-e515fb499383"/>
+			</line>
+			<line>
+				<reportElement x="295" y="424" width="1" height="59" uuid="c3a8e439-10b5-4770-a771-9bf8bc5a78ad"/>
+			</line>
+			<line>
+				<reportElement x="560" y="424" width="1" height="59" uuid="05d4da2a-d0ec-4664-babf-cb4f7bd523e8"/>
+			</line>
+			<line>
+				<reportElement x="361" y="424" width="1" height="59" uuid="48bf08bd-8c33-4f75-8c9b-4b9e5c4e0308"/>
+			</line>
+			<line>
+				<reportElement x="1" y="485" width="1809" height="1" uuid="86dcdb85-abe8-463c-81d4-e8b49e5e9045"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="425" width="1" height="58" uuid="f4f53bb7-8058-420c-8029-f8c8c9bac000"/>
+			</line>
+			<line>
+				<reportElement x="664" y="424" width="1" height="59" uuid="af52c9af-b100-435a-b6aa-8c1d7f57deff"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="424" width="1" height="59" uuid="55b1fdea-8ec8-4e06-b602-c6a4fc4d618f"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="424" width="1" height="59" uuid="eaedd461-9ad4-475d-8dca-8fae8faad07b"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="424" width="1" height="59" uuid="6a13d000-a989-45fe-bd06-4bd78c01f340"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="424" width="1" height="59" uuid="4b7e3905-dc2c-4b8c-9656-32b67af5be7d"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="424" width="1" height="59" uuid="5e50a78b-8ae1-43fd-9f36-24b5d1c15178"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="424" width="1" height="59" uuid="1da4a7d3-c59e-4b9a-bde1-9063f31cf3db"/>
+			</line>
+			<line>
+				<reportElement x="230" y="424" width="1" height="59" uuid="0dbc8f67-1679-4800-85f8-8ed23178b6ce"/>
+			</line>
+			<line>
+				<reportElement x="823" y="424" width="1" height="59" uuid="909d5c26-d6ea-407e-8f97-7c717718b27d"/>
+			</line>
+			<line>
+				<reportElement x="261" y="424" width="1" height="59" uuid="981ed660-36a6-45fb-ba5c-ad06e096052e"/>
+			</line>
+			<line>
+				<reportElement x="948" y="424" width="1" height="59" uuid="4ebb2fe4-c5df-46e0-93b1-670ccc33b2c5"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="424" width="1" height="59" uuid="508b8e96-7615-44ed-8258-869728f634bf"/>
+			</line>
+			<line>
+				<reportElement x="730" y="424" width="1" height="59" uuid="544d084b-9c19-49b8-a2be-e691f6f8239c"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="424" width="1" height="59" uuid="e4209c5e-6876-40d6-a464-9a9f6906ae22"/>
+			</line>
+			<line>
+				<reportElement x="401" y="424" width="1" height="59" uuid="abdff04e-b94b-4efd-ab27-28da5b985b20"/>
+			</line>
+			<line>
+				<reportElement x="1" y="421" width="1809" height="1" uuid="c2afe9dc-1f95-40a3-8e58-fb2cc6fe190e"/>
+			</line>
+			<line>
+				<reportElement x="148" y="424" width="1" height="59" uuid="a4725a3f-4608-4045-9792-dcdb22052f53"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="424" width="1" height="59" uuid="c8ff19c3-309d-46bb-98b5-48e5095d2d39"/>
+			</line>
+			<line>
+				<reportElement x="877" y="424" width="1" height="59" uuid="ee8a9ccb-e546-47d9-91ff-933a7cd4be10"/>
+			</line>
+			<line>
+				<reportElement x="328" y="424" width="1" height="59" uuid="03e5af99-3c28-4c23-a86d-a565a5d246c6"/>
+			</line>
+			<line>
+				<reportElement x="200" y="424" width="1" height="59" uuid="509cfb4e-3a2b-4141-9418-884fde118488"/>
+			</line>
+			<line>
+				<reportElement x="606" y="485" width="1" height="59" uuid="42c452da-9728-464f-9c8c-2ee5dc3ff497"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="486" width="1" height="58" uuid="5c06780c-3663-46f5-92eb-39747c40e30a"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="485" width="1" height="59" uuid="84ca6338-2387-4db5-8a30-25dac6d2884c"/>
+			</line>
+			<line>
+				<reportElement x="774" y="485" width="1" height="59" uuid="d2138052-5a9e-4780-befe-965f6d302377"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="485" width="1" height="59" uuid="35512f86-c854-4038-b623-e4939d78fa35"/>
+			</line>
+			<line>
+				<reportElement x="512" y="485" width="1" height="59" uuid="48be7ac3-2c81-497c-b7f1-42cf5827e51a"/>
+			</line>
+			<line>
+				<reportElement x="295" y="485" width="1" height="59" uuid="4f39d482-9041-4a09-a911-aa459bb88a05"/>
+			</line>
+			<line>
+				<reportElement x="560" y="485" width="1" height="59" uuid="644475f4-70c1-43c8-b791-4cf805794b20"/>
+			</line>
+			<line>
+				<reportElement x="361" y="485" width="1" height="59" uuid="1f43d652-c6ba-403a-b149-f692e479f6d3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="544" width="1809" height="1" uuid="b489040e-e69e-4be1-af5c-4c79314e72a5"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="486" width="1" height="58" uuid="0bf37ac3-e8af-4cbf-a151-282703bffd05"/>
+			</line>
+			<line>
+				<reportElement x="664" y="485" width="1" height="59" uuid="cad13415-dbdf-455b-ad5e-0ae2b58228d5"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="485" width="1" height="59" uuid="5a6ade69-6081-4a14-9177-86afdce98718"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="485" width="1" height="59" uuid="f83b26e9-305e-4b16-81da-c68256a075da"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="485" width="1" height="59" uuid="8d57918e-c6b2-43b0-88a3-739879997130"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="485" width="1" height="59" uuid="8be85d04-58dc-4374-99d3-edd5daa64ad3"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="485" width="1" height="59" uuid="f2a2134d-e56b-47fd-ada1-0807d9b66a97"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="485" width="1" height="59" uuid="255f3ca6-f528-42c6-9ed9-faf3a11af4df"/>
+			</line>
+			<line>
+				<reportElement x="230" y="485" width="1" height="59" uuid="0997cf8d-d361-46a6-bf06-dd741e386c7b"/>
+			</line>
+			<line>
+				<reportElement x="823" y="485" width="1" height="59" uuid="dba5d2e3-d695-418c-89f0-47690ca334f1"/>
+			</line>
+			<line>
+				<reportElement x="261" y="485" width="1" height="59" uuid="80b6fde3-3177-48e1-891b-4f8c80a12fdf"/>
+			</line>
+			<line>
+				<reportElement x="948" y="485" width="1" height="59" uuid="1d4ebeb1-fbc9-47cb-92cb-ad0f7ab324b2"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="485" width="1" height="59" uuid="6937929b-f3d6-45de-abfd-9b461718b833"/>
+			</line>
+			<line>
+				<reportElement x="730" y="485" width="1" height="59" uuid="fccd79d8-ece8-4292-b1ff-b89bb74c87f7"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="485" width="1" height="59" uuid="11a067a0-4c82-49a8-ae4f-ffa50806d785"/>
+			</line>
+			<line>
+				<reportElement x="401" y="485" width="1" height="59" uuid="2da8cfcc-df3a-429a-9c3f-c359a090f8b8"/>
+			</line>
+			<line>
+				<reportElement x="0" y="484" width="1809" height="1" uuid="8cacb0c2-8d2e-4c3c-a44d-d02f23b0e367"/>
+			</line>
+			<line>
+				<reportElement x="148" y="485" width="1" height="59" uuid="da59373b-fe3d-4f16-9377-63d6e51a0840"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="485" width="1" height="59" uuid="e973fdac-411e-4585-8e02-2531439d8d84"/>
+			</line>
+			<line>
+				<reportElement x="877" y="485" width="1" height="59" uuid="72f8fe09-8ef9-48da-adf1-ea7b9114d41d"/>
+			</line>
+			<line>
+				<reportElement x="328" y="485" width="1" height="59" uuid="e5391b09-9db8-450b-94e8-4eb8cb7c3e10"/>
+			</line>
+			<line>
+				<reportElement x="200" y="485" width="1" height="59" uuid="81c434d6-0c65-4dc1-b1cc-e29180422f1d"/>
+			</line>
+			<line>
+				<reportElement x="606" y="546" width="1" height="59" uuid="a524e9f5-3d21-4ebe-bbbd-98f8444b61e0"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="547" width="1" height="58" uuid="e9990df3-2ed4-492c-9e74-be138da59a3d"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="546" width="1" height="59" uuid="aab38012-02a0-41fc-b4cd-1b7903d26e10"/>
+			</line>
+			<line>
+				<reportElement x="774" y="546" width="1" height="59" uuid="687fc574-f3cd-48ed-a4a0-c22a75f0782b"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="546" width="1" height="59" uuid="11416611-611d-4455-b3a9-7212c9c02411"/>
+			</line>
+			<line>
+				<reportElement x="512" y="546" width="1" height="59" uuid="00561316-8121-4a9c-92a1-f1f943397637"/>
+			</line>
+			<line>
+				<reportElement x="295" y="546" width="1" height="59" uuid="4fbe59fb-971f-49ab-b20b-11ef6444b74c"/>
+			</line>
+			<line>
+				<reportElement x="560" y="546" width="1" height="59" uuid="f3c17746-79f2-4b19-a3b7-5c47b5a34c3a"/>
+			</line>
+			<line>
+				<reportElement x="361" y="546" width="1" height="59" uuid="884b7f84-ea5b-41ec-b299-d921dd040ccf"/>
+			</line>
+			<line>
+				<reportElement x="0" y="605" width="1809" height="1" uuid="309cb592-9905-4ca5-9322-81da1cb42cb0"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="547" width="1" height="58" uuid="055b8dee-4897-4c83-aa0b-651a54d91ef0"/>
+			</line>
+			<line>
+				<reportElement x="664" y="546" width="1" height="59" uuid="cf849773-29be-4142-a48a-92ace5d5a378"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="546" width="1" height="59" uuid="9065b8ae-081d-4992-a623-ac9f2a6e9a4e"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="546" width="1" height="59" uuid="62c7ad6a-1c46-41c6-be52-511bd6fea285"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="546" width="1" height="59" uuid="60fc71a1-9ce3-4a6c-ac7c-d2a3ea0970a1"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="546" width="1" height="59" uuid="7e371189-f5c5-445e-85e7-48b51942451c"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="546" width="1" height="59" uuid="8cb41df1-14fd-48b6-94c9-761a5e404651"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="546" width="1" height="59" uuid="2dc03844-c9ea-4fd8-aebb-69fe4730cb29"/>
+			</line>
+			<line>
+				<reportElement x="230" y="546" width="1" height="59" uuid="c0d361a2-3c57-4fe8-8e53-54363fda5b23"/>
+			</line>
+			<line>
+				<reportElement x="823" y="546" width="1" height="59" uuid="6b4f6425-214e-4e18-9757-9eb1f512dd7d"/>
+			</line>
+			<line>
+				<reportElement x="261" y="546" width="1" height="59" uuid="0a44c3d4-0c5f-4ad0-b900-76b50727e4ee"/>
+			</line>
+			<line>
+				<reportElement x="948" y="546" width="1" height="59" uuid="a8c7c91a-3d78-42ed-ba07-41bc66d0fa69"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="546" width="1" height="59" uuid="797ea577-092b-419c-ba77-7b46ea76835c"/>
+			</line>
+			<line>
+				<reportElement x="730" y="546" width="1" height="59" uuid="6100a3d1-2e21-4631-9227-dd023537b60b"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="546" width="1" height="59" uuid="34be0995-05ca-4042-9111-4d7fe94b5ca7"/>
+			</line>
+			<line>
+				<reportElement x="401" y="546" width="1" height="59" uuid="d655f5c8-5a52-4cdf-a643-9403fed5c178"/>
+			</line>
+			<line>
+				<reportElement x="0" y="545" width="1809" height="1" uuid="38d3f719-2ac8-4fa0-8c06-a8b958a8ddb9"/>
+			</line>
+			<line>
+				<reportElement x="148" y="546" width="1" height="59" uuid="ebba1037-791b-448d-b8fc-03bd474f3a2e"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="546" width="1" height="59" uuid="6661c4ae-a9a2-4e6b-8b0a-6eb460e63f4a"/>
+			</line>
+			<line>
+				<reportElement x="877" y="546" width="1" height="59" uuid="dd2e9424-1c5d-42bf-b7da-0e46e9994ca2"/>
+			</line>
+			<line>
+				<reportElement x="328" y="546" width="1" height="59" uuid="bb1cbd6d-b148-4ff2-a854-581a01b3f793"/>
+			</line>
+			<line>
+				<reportElement x="200" y="546" width="1" height="59" uuid="b71f6f8f-820a-41b2-bc0f-f0db7f219170"/>
+			</line>
+			<line>
+				<reportElement x="606" y="607" width="1" height="59" uuid="a3d4355a-7501-4f18-9ca6-172eb3457f89"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="608" width="1" height="58" uuid="46bcb6d4-f463-4073-9d42-5031f4c95475"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="607" width="1" height="59" uuid="c674d76f-7aa4-4d72-8096-1714067798ba"/>
+			</line>
+			<line>
+				<reportElement x="774" y="607" width="1" height="59" uuid="db9e819e-995c-42be-a803-5ec347e5285f"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="607" width="1" height="59" uuid="b56a50d4-60e0-40bf-a986-e8a71ba7db80"/>
+			</line>
+			<line>
+				<reportElement x="512" y="607" width="1" height="59" uuid="4951f811-479d-4c2a-8acc-94d5f7ce2046"/>
+			</line>
+			<line>
+				<reportElement x="295" y="607" width="1" height="59" uuid="106da7d2-4862-4e50-b576-fa0c4cb41bcb"/>
+			</line>
+			<line>
+				<reportElement x="560" y="607" width="1" height="59" uuid="fa0cec6b-f774-4460-ab34-d04945fb21f6"/>
+			</line>
+			<line>
+				<reportElement x="361" y="607" width="1" height="59" uuid="8bff0d52-4393-4339-a501-3779ceeec45f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="666" width="1809" height="1" uuid="f2c4008a-51c8-4af5-abe9-6f9e835b103d"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="608" width="1" height="58" uuid="a065cf0b-6138-4477-b5d7-df51629a2ac8"/>
+			</line>
+			<line>
+				<reportElement x="664" y="607" width="1" height="59" uuid="0739c908-c52e-4720-9f7c-67846f459245"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="607" width="1" height="59" uuid="f78b2d7a-c585-4e83-8a34-82df517f6734"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="607" width="1" height="59" uuid="b38740ff-e604-40ac-a398-daa8212261af"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="607" width="1" height="59" uuid="551cc7e4-af91-444c-83a1-ec71a9c36746"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="607" width="1" height="59" uuid="4718b571-0b00-4657-b09e-97767ba1b132"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="607" width="1" height="59" uuid="20ac0496-cd12-414d-90ac-af358e71509f"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="607" width="1" height="59" uuid="1bd0a18b-e13f-4ebf-aeba-0fa389620f80"/>
+			</line>
+			<line>
+				<reportElement x="230" y="607" width="1" height="59" uuid="9cd6f17a-0733-4c7c-bd61-fa9ad6de65ad"/>
+			</line>
+			<line>
+				<reportElement x="823" y="607" width="1" height="59" uuid="064510a0-e786-4cf3-abbe-d192b7c35d52"/>
+			</line>
+			<line>
+				<reportElement x="261" y="607" width="1" height="59" uuid="dfa1027f-168e-483c-9556-c7da1b2de049"/>
+			</line>
+			<line>
+				<reportElement x="948" y="607" width="1" height="59" uuid="1a7ae892-5385-4724-8d14-8c40375c4500"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="607" width="1" height="59" uuid="365a5ee1-914d-4720-9593-235b5237ba60"/>
+			</line>
+			<line>
+				<reportElement x="730" y="607" width="1" height="59" uuid="1731e933-bd71-4030-a0ec-7c9c439dda68"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="607" width="1" height="59" uuid="312ae98c-8a43-46cb-9b6f-f38b24db2b64"/>
+			</line>
+			<line>
+				<reportElement x="401" y="607" width="1" height="59" uuid="f01b09f2-4032-4d49-83a0-271c43449a42"/>
+			</line>
+			<line>
+				<reportElement x="1" y="606" width="1809" height="1" uuid="8cb75142-b7f1-4290-a90b-91f9581bae94"/>
+			</line>
+			<line>
+				<reportElement x="148" y="607" width="1" height="59" uuid="83e61414-894e-4cea-8ba4-4e7340c231dc"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="607" width="1" height="59" uuid="d20f842a-6473-4349-ac3b-7ee75a81efa3"/>
+			</line>
+			<line>
+				<reportElement x="877" y="607" width="1" height="59" uuid="c0492aed-07d3-4b68-8c44-3ca189e3cc7b"/>
+			</line>
+			<line>
+				<reportElement x="328" y="607" width="1" height="59" uuid="c9d4aab6-2410-4c8b-bf1c-471b67e90c14"/>
+			</line>
+			<line>
+				<reportElement x="200" y="607" width="1" height="59" uuid="0da29a98-aff7-4948-b65d-cbabfb9df0c0"/>
+			</line>
+			<line>
+				<reportElement x="606" y="668" width="1" height="59" uuid="8750ba41-a4ed-4bbc-be87-680873bb7caa"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="669" width="1" height="58" uuid="921a7eb2-62a6-4b58-9c5b-d39bef6026c0"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="668" width="1" height="59" uuid="e6b5ba9d-4f5f-4226-8f95-7c73ecad0027"/>
+			</line>
+			<line>
+				<reportElement x="774" y="668" width="1" height="59" uuid="a7230692-0a33-4956-b87a-ea753d768928"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="668" width="1" height="59" uuid="5083c5cb-de87-4230-99d5-9f92550d3963"/>
+			</line>
+			<line>
+				<reportElement x="512" y="668" width="1" height="59" uuid="69ed464d-90db-4c90-98f9-a9a7fc47da0c"/>
+			</line>
+			<line>
+				<reportElement x="295" y="668" width="1" height="59" uuid="cc7234c4-2ced-4c38-b0a5-cb1240a894e3"/>
+			</line>
+			<line>
+				<reportElement x="560" y="668" width="1" height="59" uuid="2b26b00f-ad18-4361-b2a3-359c87eea427"/>
+			</line>
+			<line>
+				<reportElement x="361" y="668" width="1" height="59" uuid="f9d5b696-bda5-496d-a347-9db92a9073e5"/>
+			</line>
+			<line>
+				<reportElement x="0" y="727" width="1809" height="1" uuid="9be1605a-54e5-4f2d-8c70-86cdbccd00e0"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="669" width="1" height="58" uuid="bb5eab7d-a949-42c0-8f8a-0f9b8089d86b"/>
+			</line>
+			<line>
+				<reportElement x="664" y="668" width="1" height="59" uuid="1bf56444-c7dc-497a-ab72-e9ddb3beec14"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="668" width="1" height="59" uuid="709a2343-895e-46dd-9286-a4b3d8f5b95b"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="668" width="1" height="59" uuid="325d2ede-bbea-4fee-b959-0c4e425653c9"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="668" width="1" height="59" uuid="ff888ece-efe9-4ece-a28a-8faa03f63413"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="668" width="1" height="59" uuid="295b6f66-1310-43e7-a41e-df1cdb95f0d1"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="668" width="1" height="59" uuid="bb594c4c-0fdf-4ea5-b91e-c0b13cd1b3b1"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="668" width="1" height="59" uuid="aa8c5ccf-6a2e-49c0-97bd-f9afb885ce3d"/>
+			</line>
+			<line>
+				<reportElement x="230" y="668" width="1" height="59" uuid="d7108b3e-efb5-48dc-b9a4-f19549280a09"/>
+			</line>
+			<line>
+				<reportElement x="823" y="668" width="1" height="59" uuid="df8a6253-b013-4473-99a1-d7de40671772"/>
+			</line>
+			<line>
+				<reportElement x="261" y="668" width="1" height="59" uuid="04b9864a-86b3-4c3f-aabf-f94814d412b6"/>
+			</line>
+			<line>
+				<reportElement x="948" y="668" width="1" height="59" uuid="4c40f318-d2f5-4513-8b46-351373159511"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="668" width="1" height="59" uuid="2cfb2bc0-70ea-4f65-9feb-da02313693cd"/>
+			</line>
+			<line>
+				<reportElement x="730" y="668" width="1" height="59" uuid="ae90630c-ca65-4ad0-b51e-2b3bb0824639"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="668" width="1" height="59" uuid="dcf203db-0078-4b84-bd47-fbf981b72ac1"/>
+			</line>
+			<line>
+				<reportElement x="401" y="668" width="1" height="59" uuid="4f27d949-14cc-445f-a01d-d1996499115c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="667" width="1809" height="1" uuid="018d938b-bb5b-4a14-ba03-5ed9f7e796c8"/>
+			</line>
+			<line>
+				<reportElement x="148" y="668" width="1" height="59" uuid="99a2a0c2-a5b0-45e3-8641-a97208deb991"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="668" width="1" height="59" uuid="58830b0a-278f-4ba7-bb6c-65b8d086507f"/>
+			</line>
+			<line>
+				<reportElement x="877" y="668" width="1" height="59" uuid="fba41aa0-ac81-45aa-bd87-520d6e0c516d"/>
+			</line>
+			<line>
+				<reportElement x="328" y="668" width="1" height="59" uuid="a6a920f8-4346-4a17-a9ad-9c1cf1a55ecf"/>
+			</line>
+			<line>
+				<reportElement x="200" y="668" width="1" height="59" uuid="449d25d8-79ac-4e61-8f77-dd2c1460aef3"/>
+			</line>
+			<line>
+				<reportElement x="606" y="729" width="1" height="59" uuid="57bb0009-31a9-4b4c-b802-4990406d1cc2"/>
+			</line>
+			<line>
+				<reportElement x="1445" y="730" width="1" height="58" uuid="387d9017-d2ad-4aca-9478-c03dad93016e"/>
+			</line>
+			<line>
+				<reportElement x="1502" y="729" width="1" height="59" uuid="aa7bb702-d296-4805-9383-f382d0408e1b"/>
+			</line>
+			<line>
+				<reportElement x="774" y="729" width="1" height="59" uuid="6cc4e710-fad6-4295-b3da-967f6d8c133b"/>
+			</line>
+			<line>
+				<reportElement x="1092" y="729" width="1" height="59" uuid="85e9174d-1789-499d-b649-ac94c3378bde"/>
+			</line>
+			<line>
+				<reportElement x="512" y="729" width="1" height="59" uuid="1ad4d1f9-5e4c-42c7-a4c9-31206cb00a71"/>
+			</line>
+			<line>
+				<reportElement x="295" y="729" width="1" height="59" uuid="e42f1978-d9d6-4f65-8679-8fcbeb1ce9cd"/>
+			</line>
+			<line>
+				<reportElement x="560" y="729" width="1" height="59" uuid="44d0b926-4338-4872-8752-3ca432796589"/>
+			</line>
+			<line>
+				<reportElement x="361" y="729" width="1" height="59" uuid="77521770-2700-41be-919c-1b5707a2d140"/>
+			</line>
+			<line>
+				<reportElement x="0" y="788" width="1809" height="1" uuid="2f5412fe-8604-4269-8186-0014ea834ec1"/>
+			</line>
+			<line>
+				<reportElement x="1016" y="730" width="1" height="58" uuid="8641339e-d984-4b72-bf07-d03418740e7c"/>
+			</line>
+			<line>
+				<reportElement x="664" y="729" width="1" height="59" uuid="a6f16b63-0ad2-4de7-84ec-3a9779fd7d62"/>
+			</line>
+			<line>
+				<reportElement x="1616" y="729" width="1" height="59" uuid="8f3603b3-7a17-46d8-96e4-4789f7800f9b"/>
+			</line>
+			<line>
+				<reportElement x="1766" y="729" width="1" height="59" uuid="784278dd-91fb-4f63-97f2-6ad7fb46f0be"/>
+			</line>
+			<line>
+				<reportElement x="1562" y="729" width="1" height="59" uuid="fbb5ba96-ff68-45b9-b73d-c9bd7926c1f7"/>
+			</line>
+			<line>
+				<reportElement x="1159" y="729" width="1" height="59" uuid="a4d05f41-a79c-497d-a2a7-c0d12c90208e"/>
+			</line>
+			<line>
+				<reportElement x="1725" y="729" width="1" height="59" uuid="816f52ae-3bd8-445d-9d94-d2c1b59624a7"/>
+			</line>
+			<line>
+				<reportElement x="1663" y="729" width="1" height="59" uuid="7f0c69cb-359f-45c5-a56c-0491db21eff4"/>
+			</line>
+			<line>
+				<reportElement x="230" y="729" width="1" height="59" uuid="62a5ff2e-88e2-4dc1-8fa2-41e0d508d1e1"/>
+			</line>
+			<line>
+				<reportElement x="823" y="729" width="1" height="59" uuid="d0211121-c266-4bce-baf4-6ae6552f3a22"/>
+			</line>
+			<line>
+				<reportElement x="261" y="729" width="1" height="59" uuid="f9221bbb-2de0-4f9d-81d3-82842d12ee88"/>
+			</line>
+			<line>
+				<reportElement x="948" y="729" width="1" height="59" uuid="9716d6e6-6606-4267-acd7-b12ce5a7852b"/>
+			</line>
+			<line>
+				<reportElement x="1248" y="729" width="1" height="59" uuid="e18f0e48-07a6-4c4a-ac77-7ba97cf4adad"/>
+			</line>
+			<line>
+				<reportElement x="730" y="729" width="1" height="59" uuid="726952e4-4eb7-42de-94f7-2cbf67c9022a"/>
+			</line>
+			<line>
+				<reportElement x="1381" y="729" width="1" height="59" uuid="d975d4de-5504-4248-b3d3-c24e203a388f"/>
+			</line>
+			<line>
+				<reportElement x="401" y="729" width="1" height="59" uuid="f76aab70-3b75-4786-b448-8927d93ca382"/>
+			</line>
+			<line>
+				<reportElement x="0" y="728" width="1809" height="1" uuid="09979aa5-9620-4e2f-9537-b5e40dc9596a"/>
+			</line>
+			<line>
+				<reportElement x="148" y="729" width="1" height="59" uuid="2e3267da-52dd-4369-abc2-70d79cdc0422"/>
+			</line>
+			<line>
+				<reportElement x="1318" y="729" width="1" height="59" uuid="d3fb46de-9f2d-4ed3-bda0-12c210ac2f7e"/>
+			</line>
+			<line>
+				<reportElement x="877" y="729" width="1" height="59" uuid="766204b4-ac9a-4114-819d-d48c79ae39e5"/>
+			</line>
+			<line>
+				<reportElement x="328" y="729" width="1" height="59" uuid="249b9745-aac4-4dc4-a99d-0cd87413b814"/>
+			</line>
+			<line>
+				<reportElement x="200" y="729" width="1" height="59" uuid="7e5d7078-15b2-40c9-aa4b-269fd221ba63"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="264" width="147" height="20" uuid="69450fec-77f2-4d3a-b6e8-5fecca143136"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Season Year-
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="322" width="147" height="20" uuid="a3dd56b0-1326-497b-a2cb-48373fb390f3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Loan Account No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="383" width="148" height="20" uuid="3523bb3e-73e7-44be-83db-48b384f4780f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Society Shares Amt.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="446" width="148" height="20" uuid="3241283e-7845-4dae-911d-86c3c56d731a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[SA.KA.Shares Amt.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="507" width="148" height="20" uuid="8ca01d13-dc36-43d0-9986-edc293a2c25d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Jindagi Patrak No.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="569" width="148" height="20" uuid="2f85d264-613e-467d-a2fa-9066c9d0ea84"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Jindagi Patrak Amt.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="608" width="148" height="58" uuid="6b96e11f-2b97-4302-9440-834c058e0767"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[E-Karar Registartion Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="692" width="148" height="20" uuid="6163f735-d360-4fb2-a057-9423790596cf"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[E-Karar  Patrak Amt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="732" y="244" width="42" height="57" uuid="06df2c07-e10e-4c30-9f2c-28564ed7258c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Sugarcane]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="731" y="629" width="42" height="20" uuid="398f17a7-122e-46ae-b6ad-0c9e6eac576c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Rabbi
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="732" y="446" width="42" height="20" uuid="b7f6579c-b1c4-4e38-b630-0f8b9df6fd94"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Kahrip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="732" y="746" width="42" height="20" uuid="0b0f6987-6239-4f8b-be15-e63f25796ad4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="46" width="100" height="21" uuid="924b8ac9-812c-4300-9efd-7e8d2ad7eda4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{fName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="68" width="98" height="20" uuid="d530ea5a-0d57-46ab-8115-c0a7c510ead9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{middleName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="68" width="100" height="20" uuid="34196a29-64a6-4439-b465-928c51822ef5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="139" width="120" height="22" uuid="38afd931-583c-483e-b012-abbbd5889d21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="364" width="51" height="57" uuid="9ad7939f-3b64-4526-996e-0aa2ff850407"/>
+				<textFieldExpression><![CDATA[$F{share_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="203" width="28" height="20" uuid="c0b8ec86-6af6-498c-9c05-06180644eb86"/>
+				<textFieldExpression><![CDATA[$F{land_area}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="775" y="203" width="48" height="20" uuid="ced22292-390e-4989-a3b5-48f3322c2eb5"/>
+				<textFieldExpression><![CDATA[$F{land_area}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>

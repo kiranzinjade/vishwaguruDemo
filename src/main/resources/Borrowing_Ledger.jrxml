@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Borrowing_Ledger" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e3e3d23-0a3a-4267-a92b-6947a5ee766a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="236"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="518"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="468"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="141"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="852"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\vks vishwa\\vksvishwa-api\\VksVishwa\\src\\main\\resources"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bankId" class="java.lang.Long"/>
+	<queryString>
+		<![CDATA[SELECT * from borrowing_ledger JOIN borrowing_ledger_trans ON borrowing_ledger_trans.borrowing_ledger_id=borrowing_ledger.id JOIN society_bank_master ON borrowing_ledger.bank_id=society_bank_master.id WHERE society_bank_master.id=$P{bankId}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="created_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="is_deleted" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="last_modified" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="last_modified_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="crop" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="crop"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="due_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="due_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="duration" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="duration"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="rate_of_interest" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="rate_of_interest"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="loan_amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="loan_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="loan_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="loan_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="purpose" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="purpose"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="bank_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="bank_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger"/>
+	</field>
+	<field name="COLUMN_16" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="COLUMN_17" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="COLUMN_18" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="COLUMN_19" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="COLUMN_20" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="COLUMN_21" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="credit" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="credit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="debit" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="debit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="initials" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="initials"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="interest_due" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="interest_due"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="interest_paid" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="interest_paid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="no_of_days" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="no_of_days"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="particulars" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="particulars"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="remarks" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="remarks"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="total_interest" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="total_interest"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="trans_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="trans_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="borrowing_ledger_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="borrowing_ledger_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowing_ledger_trans"/>
+	</field>
+	<field name="COLUMN_34" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="COLUMN_35" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="COLUMN_36" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="created_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="COLUMN_37" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.label" value="is_deleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="COLUMN_38" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="COLUMN_39" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="last_modified_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="account_no" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="account_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="bank_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bank_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="branch_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="branch_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="ifsc_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ifsc_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<field name="deposit_type_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="deposit_type_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="society_bank_master"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="300" y="0" width="167" height="27" uuid="207a626f-62f0-451a-8315-27f079a160b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Borrowing Ledger]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="11" width="120" height="20" uuid="031131c4-fa53-449b-bd0e-a78edfe5649a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Borrowings From :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="8" width="150" height="23" uuid="7ecac3ef-0b19-483f-853a-bfd82b0682af"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bank_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="434">
+			<subreport>
+				<reportElement x="9" y="3" width="200" height="200" uuid="ef09fef9-4fe4-4a59-b6e1-7b02d483a749"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="bankId">
+					<subreportParameterExpression><![CDATA[$P{bankId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["Sample_borrowing_ledger1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="0" y="217" width="200" height="200" uuid="ec88f5fb-e682-41ed-864d-d98922c1534c"/>
+				<subreportParameter name="bankId">
+					<subreportParameterExpression><![CDATA[$P{bankId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["Borrowing_Ledger_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

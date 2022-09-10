@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="share_cretificate" pageWidth="595" pageHeight="742" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="da5a4ab2-b2ae-4896-b135-5226b50be7d9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="certificate_title" class="java.lang.String"/>
+	<parameter name="title_address" class="java.lang.String"/>
+	<parameter name="authorised_capital" class="java.lang.String"/>
+	<parameter name="sharenos" class="java.lang.String"/>
+	<parameter name="shareprice" class="java.lang.String"/>
+	<parameter name="paragraph2" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.Long"/>
+	<parameter name="certNo" class="java.lang.String"/>
+	<parameter name="holdername" class="java.lang.String"/>
+	<parameter name="sharesHeld" class="java.lang.String"/>
+	<parameter name="shareRs" class="java.lang.String"/>
+	<parameter name="amountInWords" class="java.lang.String"/>
+	<parameter name="shareNoFrom" class="java.lang.String"/>
+	<parameter name="ShareNoTo" class="java.lang.String"/>
+	<parameter name="certDate" class="java.lang.String"/>
+	<parameter name="dateInWords" class="java.lang.String"/>
+	<parameter name="paragraph1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="143" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="550" height="50" uuid="c64ee5d7-be15-46bf-8f93-afe3779c3989"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{certificate_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="50" width="550" height="20" uuid="bde50274-9bcf-41b6-bbe4-c98462ef3882"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="550" height="30" uuid="b86df657-2e18-420c-b438-eafe706bfc33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Share Certificate]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="100" width="548" height="43" isPrintWhenDetailOverflows="true" uuid="88f35af0-c8ae-40b7-b7bc-27179407b371"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{paragraph1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="366" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="550" height="80" isPrintWhenDetailOverflows="true" uuid="e35790ef-f1e4-4490-a072-53f95be733d3"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{paragraph2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="2" y="100" width="548" height="250" uuid="14465360-88d2-428c-9114-78b8904c7b1b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="12" y="110" width="88" height="30" uuid="bc1e1816-979d-416e-8d0f-d1e5e92eb54b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Member No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="110" width="120" height="30" uuid="b5d5e0a8-5cb0-4471-b7db-66aff220fb0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificate Number.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="110" width="145" height="30" uuid="f912242c-fa2e-423b-84fa-8c1b72de96fb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="110" width="55" height="30" uuid="c4bbbdb5-8fcb-4744-9088-47b7f1359bf4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{certNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="150" width="98" height="30" uuid="f5f5f09a-7039-4374-8ff9-59a1c595875f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name of Holder.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="150" width="370" height="30" isPrintWhenDetailOverflows="true" uuid="4034f49d-82ea-403b-991c-83d3b5b39a5d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{holdername}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="200" width="150" height="20" uuid="448a6df6-b953-48f6-bbd5-12dd74449f04"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numbers of Shares Held.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="162" y="200" width="100" height="20" uuid="7513df77-ed3f-4497-a9dd-87eae23c4723"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sharesHeld}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="200" width="20" height="31" uuid="a01d22fe-7601-4746-8e42-ceb40eb37c83"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rs.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="385" y="200" width="151" height="31" uuid="5d0d54c2-33bb-4eae-8a09-fb4927810072"/>
+			</rectangle>
+			<textField>
+				<reportElement x="385" y="200" width="151" height="30" uuid="5a71773e-6e55-416f-a0aa-20d4da267371"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{shareRs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="240" width="32" height="20" uuid="44fae0e0-d2fa-4cc1-ad39-eacb9c60d3c1"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rs.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="45" y="240" width="464" height="30" isPrintWhenDetailOverflows="true" uuid="322ee06d-582e-469d-add3-9ca4aedce48d"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amountInWords}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="280" width="108" height="20" uuid="9e5c571d-7096-4240-a1eb-94e1067d2620"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Distinctive Nos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="280" width="20" height="20" uuid="f77c9cb0-2d00-4104-965e-bcb32ea05cbb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="280" width="62" height="20" uuid="2504f75b-1e82-4b9c-864a-45c8e02b1e94"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{shareNoFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="280" width="110" height="20" uuid="a89fd8db-3b85-400c-99df-46813804ac87"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ShareNoTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="320" width="40" height="20" uuid="7f2b46d7-f806-46db-ab31-6598eb4f3974"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Date.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="320" width="150" height="20" uuid="c0b827cb-d967-4c7b-a591-fdab1f30caa4"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{certDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="290" height="20" uuid="e484c14e-8e05-4ce7-93e2-562d1e7ed67f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Given under the common seal of the Bank on this]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="20" width="260" height="30" isPrintWhenDetailOverflows="true" uuid="0927d9fa-f47a-4367-bbee-1ab3591cd699"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateInWords}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="100" width="90" height="20" uuid="3ef90cc4-92a9-4a5e-910d-170b527451dd"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECTOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="100" width="220" height="20" uuid="b0f038e0-90b0-40a8-b632-85716b8de617"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INCHARGE GENERAL MANAGER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="100" width="90" height="20" uuid="38418982-96ed-469b-8f17-0ff04369f466"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECTOR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CashBookReport" printOrder="Horizontal" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c334eb68-e1b2-46c0-aab7-bcb3a916050f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Vikas"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="SocietyName" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\VKS-Project\\vksvishwa-api\\VksVishwa\\src\\main\\resources\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id" class="java.lang.Integer"/>
+	<parameter name="transDate" class="java.util.Date"/>
+	<parameter name="creditTotal" class="java.lang.Double"/>
+	<parameter name="debitTotal" class="java.lang.Double"/>
+	<parameter name="creditSum" class="java.lang.Double"/>
+	<parameter name="debitSum" class="java.lang.Double"/>
+	<parameter name="balance" class="java.lang.Double"/>
+	<parameter name="lastBalance" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[select * from cashbook]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="170" y="10" width="462" height="30" uuid="e376486d-dff0-4507-b2d6-faba47d8c5e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SocietyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="267" y="10" width="214" height="28" uuid="78e45cff-e761-442c-8e56-d103c2f3e236"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CASH BOOK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="539" y="10" width="80" height="28" uuid="24f0d493-4f17-462b-9a40-24257373aef0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="619" y="10" width="139" height="28" uuid="e5343a22-1386-4b55-8f5b-5b29c16e9314"/>
+			</rectangle>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="640" y="9" width="100" height="29" uuid="289a01b0-3e25-47b2-ab8f-6665ca10de4e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{transDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="212" splitType="Stretch">
+			<subreport>
+				<reportElement x="380" y="10" width="200" height="200" uuid="77153a1c-19ee-49a1-99cb-fe4b04b3cdf1"/>
+				<subreportParameter name="transDate">
+					<subreportParameterExpression><![CDATA[$P{transDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="id">
+					<subreportParameterExpression><![CDATA[$P{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SocietyName">
+					<subreportParameterExpression><![CDATA[$P{SocietyName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="creditTotal">
+					<subreportParameterExpression><![CDATA[$P{creditTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="debitTotal">
+					<subreportParameterExpression><![CDATA[$P{debitTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="creditSum">
+					<subreportParameterExpression><![CDATA[$P{creditSum}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="debitSum">
+					<subreportParameterExpression><![CDATA[$P{debitSum}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="balance">
+					<subreportParameterExpression><![CDATA[$P{balance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastBalance">
+					<subreportParameterExpression><![CDATA[$P{lastBalance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["CashBookReport1_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="0" y="10" width="200" height="200" uuid="7c08e36e-fd94-4a1b-982f-acdda37c696f"/>
+				<subreportParameter name="id">
+					<subreportParameterExpression><![CDATA[$P{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="transDate">
+					<subreportParameterExpression><![CDATA[$P{transDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SocietyName">
+					<subreportParameterExpression><![CDATA[$P{SocietyName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="creditTotal">
+					<subreportParameterExpression><![CDATA[$P{creditTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="debitTotal">
+					<subreportParameterExpression><![CDATA[$P{debitTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="creditSum">
+					<subreportParameterExpression><![CDATA[$P{creditSum}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="debitSum">
+					<subreportParameterExpression><![CDATA[$P{debitSum}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="balance">
+					<subreportParameterExpression><![CDATA[$P{balance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastBalance">
+					<subreportParameterExpression><![CDATA[$P{lastBalance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["CashBookReport1_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>
